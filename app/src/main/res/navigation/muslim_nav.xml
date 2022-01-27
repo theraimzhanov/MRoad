@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/muslim_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.motion.muslimcollection.ui.homefragment.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mechetFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.MechetFragment"
+        tools:layout="@layout/fragment_mechet" />
+    <fragment
+        android:id="@+id/eatFragment"
+        android:name="com.motion.muslimcollection.ui.to_eat.EatFragment"
+        tools:layout="@layout/fragment_to_eat" />
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
+        tools:layout="@layout/fragment_lessons" />
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Muslim Collection</string>
+    <string name="home">Главная</string>
+    <string name="ss">Мечеть</string>
+    <string name="eat">Покушать</string>
+    <string name="lessons">Уроки</string>
+    <string name="tv_res">Другие ресурсы</string>
+    <string name="tv_settings">Настройки</string>
+    <string name="tv_share">Поделится с друзьями</string>
+    <string name="tv_app">О приложении</string>
+</resources>
