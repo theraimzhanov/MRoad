@@ -19,8 +19,7 @@ abstract class BaseFragment(private val layout: Int) :
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         showBottomNavigation()
         return inflater.inflate(layout, container, false)
@@ -51,7 +50,6 @@ abstract class BaseFragment(private val layout: Int) :
     open fun setupUI() {}
 
     abstract fun showConnectedState()
-
 
     open fun showDisconnectState() {}
 }
