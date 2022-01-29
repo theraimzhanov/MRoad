@@ -16,7 +16,11 @@
     <fragment
         android:id="@+id/mechetFragment"
         android:name="com.motion.muslimcollection.ui.mechet.MechetFragment"
-        tools:layout="@layout/fragment_mechet" />
+        tools:layout="@layout/fragment_mechet" >
+        <action
+            android:id="@+id/action_mechetFragment_to_addMechetFragment"
+            app:destination="@id/addMechetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/eatFragment"
         android:name="com.motion.muslimcollection.ui.to_eat.EatFragment"
@@ -25,4 +29,9 @@
         android:id="@+id/lessonsFragment"
         android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
         tools:layout="@layout/fragment_lessons" />
+    <fragment
+        android:id="@+id/addMechetFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.screenmechet.addmechet.AddMechetFragment"
+        android:label="fragment_add_mechet"
+        tools:layout="@layout/fragment_add_mechet" />
 </navigation>
