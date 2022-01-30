@@ -24,7 +24,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-        requireActivity().toolbar_text.text = resources.getString(R.string.lessons)
+      //  requireActivity().toolbar_text.text = resources.getString(R.string.lessons)
     }
     private fun navigation(){
         button.setOnClickListener{
