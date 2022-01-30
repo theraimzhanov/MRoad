@@ -42,4 +42,17 @@
     <string name="name_madrasah">Имя медресе</string>
     <string name="name_libarary">Имя библиотека</string>
     <string name="work_time">Время работа</string>
+    <string name="name_cofe">Название кафе</string>
+    <string name="no_yes_rooms">Намазкана есть/нет</string>
+    <string name="sertificat_hint">Сертификат халал присуствует</string>
+    <string name="banquet_hint">Банкетный зал на сколько человек р....</string>
+    <string name="name_shop">Название магазин/гипермаркет</string>
+    <string name="sait_shop">Сайт магазина/гипермаркета</string>
+    <string name="sport_yes_no">Спиртное продается да/нет</string>
+    <string name="shop_halal">Продукты халалные есть/нет</string>
+    <string name="todo">TODO</string>
+    <string name="tv_fastfud">Название фаст-фуд</string>
+    <string name="hi_work">Режим работы от/до</string>
+    <string name="sait">Сайт</string>
+    <string name="mosqoe_in">Мечети</string>
 </resources>

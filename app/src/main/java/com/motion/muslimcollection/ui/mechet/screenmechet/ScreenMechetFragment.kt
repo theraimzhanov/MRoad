@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 class ScreenMechetFragment : BaseFragment(R.layout.fragment_screen_mechet) {
     override fun setupObservers() {
@@ -18,6 +19,11 @@ class ScreenMechetFragment : BaseFragment(R.layout.fragment_screen_mechet) {
 
     override fun setupUI() {
         super.setupUI()
+    }
+    override fun showBottomNavigation() {
+        super.showBottomNavigation()
+        requireActivity().toolbar.visibility = View.GONE
+
     }
 
 

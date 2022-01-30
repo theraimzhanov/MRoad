@@ -2,7 +2,7 @@
 <resources>
     <style name="toolbar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_height">60dp</item>
         <item name="layout_constraintLeft_toLeftOf">parent</item>
         <item name="layout_constraintRight_toRightOf">parent</item>
         <item name="layout_constraintTop_toTopOf">parent</item>
@@ -428,6 +428,19 @@
         <item name="android:textSize">16dp</item>
         <item name="android:background">@drawable/btn_dobav_shape</item>
     </style>
+    <style name="con_style">
+        <item name="android:layout_width">119dp</item>
+        <item name="android:layout_height">104dp</item>
+        <item name="android:background">@drawable/bnt_icon_shape</item>
+    </style>
+    <style name="tex_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+
 
 
 </resources>
