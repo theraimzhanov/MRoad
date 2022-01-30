@@ -1,10 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    style="@style/tryfragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mechet.MechetFragment">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:background="#06483A"
+        android:theme="?attr/hintAnimationEnabled"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
 
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/text_meshet_toolbar"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        style="@style/rectangle"
+        android:layout_marginLeft="@dimen/marginleft"
+        android:layout_marginTop="@dimen/margintop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/meshet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/text_meshet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="193dp"
+        android:layout_marginLeft="83dp"/>
+
+    <ImageView
+        style="@style/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/marginleft"
+        android:layout_marginTop="248dp"/>
+    
+    <ImageView
+        style="@style/islamskoe_kolledj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        style="@style/text_islamskoe_kolledj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margintop"
+        android:layout_marginLeft="197dp"/>
+
+    <ImageView
+        style="@style/molelnye_comnata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/text_molelnye_comnata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="248dp"
+        android:layout_marginLeft="197dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/medrese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/text_medrese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/rectangle"
+        android:layout_marginTop="@dimen/margintop3"
+        android:layout_marginLeft="@dimen/marginleft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <ImageView
+        style="@style/islamskoe_universitet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/text_islamskoe_universitet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        style="@style/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margintop3"
+        android:layout_marginLeft="197dp"/>
+
+    <ImageView
+        style="@style/islamskoe_biblioteka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        style="@style/text_islamskoe_biblioteka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+<ImageView
+    style="@style/meshet_image"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

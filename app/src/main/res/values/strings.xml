@@ -8,4 +8,24 @@
     <string name="tv_settings">Настройки</string>
     <string name="tv_share">Поделится с друзьями</string>
     <string name="tv_app">О приложении</string>
+    <string name="meshet">Мечеть</string>
+    <string name="kafe">Кафе</string>
+    <string name="restoran">Рестораны</string>
+    <string name="shop">Магазины</string>
+    <string name="fast_fud">Фаст-фуды</string>
+    <string name="e_dobavki">Е добавки</string>
+    <string name="molelnye_comnata">Молельные комнаты</string>
+    <string name="islamskoe_kolledj">Исламские колледжи</string>
+    <string name="medrese">Медресе</string>
+    <string name="namaz">Намаз</string>
+    <string name="islamskoe_universitet">Исламские университеты</string>
+    <string name="islamskoe_biblioteka">Исламские библиотеки</string>
+    <string name="akyda">Акыйда</string>
+    <string name="fikh">Фикх</string>
+    <string name="hadis">Хадис</string>
+    <string name="siro">Сиро</string>
+    <string name="kuran">Куран</string>
+    <string name="tafsir">Тафсир</string>
+    <string name="dua">Дуа</string>
+    <string name="voprosy_i_otvety_ot_ulemov">Вопрос и ответы от улемов</string>
 </resources>

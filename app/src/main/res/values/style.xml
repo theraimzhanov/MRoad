@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="toolbar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">80dp</item>
         <item name="layout_constraintLeft_toLeftOf">parent</item>
         <item name="layout_constraintRight_toRightOf">parent</item>
         <item name="layout_constraintTop_toTopOf">parent</item>
@@ -12,6 +11,25 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="text_meshet_toolbar">
+        <item name="android:text">@string/meshet</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="text_uroki_toolbar">
+        <item name="android:text">@string/lessons</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20sp</item>
     </style>
@@ -19,7 +37,335 @@
         <item name="android:colorBackground">@color/muslim</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20dp</item>
-
-
+    </style>
+    <style name="text_meshet">
+        <item name="android:layout_width">58dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:text">@string/meshet</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginLeft">83dp</item>
+        <item name="android:layout_marginTop">193dp</item>
+    </style>
+    <style name="rectangle">
+        <item name="android:src">@drawable/rectangle</item>
+        <item name="android:layout_width">119dp</item>
+        <item name="android:layout_height">104dp</item>
+    </style>
+    <style name="tryfragment">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#031E3B</item>
+    </style>
+    <style name="meshet">
+        <item name="android:src">@drawable/meshet</item>
+        <item name="android:layout_width">53dp</item>
+        <item name="android:layout_height">62dp</item>
+        <item name="android:layout_marginLeft">86dp</item>
+        <item name="android:layout_marginTop">124dp</item>
+    </style>
+    <style name="meshet_image">
+        <item name="android:src">@drawable/meshet_image</item>
+        <item name="android:layout_width">331dp</item>
+        <item name="android:layout_height">266dp</item>
+    </style>
+    <style name="text_kafe">
+        <item name="android:text">@string/kafe</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">39dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:layout_marginTop">190dp</item>
+        <item name="android:layout_marginLeft">93dp</item>
+    </style>
+    <style name="text_restoran">
+        <item name="android:layout_width">71dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:text">@string/restoran</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">193dp</item>
+        <item name="android:layout_marginLeft">227dp</item>
+    </style>
+    <style name="restoran_image">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:src">@drawable/restoran</item>
+        <item name="android:layout_marginTop">133dp</item>
+        <item name="android:layout_marginLeft">230dp</item>
+    </style>
+    <style name="shop_image">
+        <item name="android:src">@drawable/shop</item>
+        <item name="android:layout_width">54dp</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_marginTop">261dp</item>
+        <item name="android:layout_marginLeft">88dp</item>
+    </style>
+    <style name="text_shop">
+        <item name="android:text">@string/shop</item>
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_marginTop">323dp</item>
+        <item name="android:layout_marginLeft">86dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="fast_fud">
+        <item name="android:src">@drawable/fast_fud</item>
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">62dp</item>
+        <item name="android:layout_marginTop">254dp</item>
+        <item name="android:layout_marginLeft">235dp</item>
+    </style>
+    <style name="text_fast_fud">
+        <item name="android:layout_width">84dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:text">@string/fast_fud</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">320dp</item>
+        <item name="android:layout_marginLeft">220dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="e_dobavki">
+        <item name="android:src">@drawable/e_dobavki</item>
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginTop">390dp</item>
+        <item name="android:layout_marginLeft">88dp</item>
+    </style>
+    <style name="text_e_dobavki">
+        <item name="android:text">@string/e_dobavki</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_marginTop">445dp</item>
+        <item name="android:layout_marginLeft">80dp</item>
+    </style>
+    <style name="islamskoe_kolledj">
+        <item name="android:src">@drawable/islamskoe_kolledj</item>
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginTop">254dp</item>
+        <item name="android:layout_marginLeft">90dp</item>
+    </style>
+    <style name="text_islamskoe_kolledj">
+        <item name="android:text">@string/islamskoe_kolledj</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginTop">314dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+    <style name="molelnye_comnata">
+        <item name="android:src">@drawable/molelnye_comnata</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">47dp</item>
+        <item name="android:layout_marginTop">129dp</item>
+        <item name="android:layout_marginLeft">234dp</item>
+    </style>
+    <style name="text_molelnye_comnata">
+        <item name="android:text">@string/molelnye_comnata</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">76dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">182dp</item>
+        <item name="android:layout_marginLeft">222dp</item>
+    </style>
+    <style name="medrese">
+        <item name="android:src">@drawable/medrese</item>
+        <item name="android:layout_width">66dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">261dp</item>
+        <item name="android:layout_marginLeft">225dp</item>
+    </style>
+    <style name="text_medrese">
+        <item name="android:text">@string/medrese</item>
+        <item name="android:layout_width">69dp</item>
+        <item name="android:layout_height">17dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginTop">314dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:layout_marginLeft">224dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="islamskoe_universitet">
+        <item name="android:src">@drawable/islamskoe_universitety</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">389dp</item>
+        <item name="android:layout_marginLeft">88dp</item>
+    </style>
+    <style name="text_islamskoe_universitet">
+        <item name="android:text">@string/islamskoe_universitet</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:layout_width">92dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">443dp</item>
+        <item name="android:layout_marginLeft">69dp</item>
+    </style>
+    <style name="islamskoe_biblioteka">
+        <item name="android:src">@drawable/islamskoe_biblioteka</item>
+        <item name="android:layout_width">34dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">389dp</item>
+        <item name="android:layout_marginLeft">241dp</item>
+    </style>
+    <style name="text_islamskoe_biblioteka">
+        <item name="android:text">@string/islamskoe_biblioteka</item>
+        <item name="android:layout_width">78dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">443dp</item>
+        <item name="android:layout_marginLeft">219dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="namaz">
+        <item name="android:src">@drawable/namaz</item>
+        <item name="android:layout_width">58dp</item>
+        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_marginTop">124dp</item>
+        <item name="android:layout_marginLeft">86dp</item>
+    </style>
+    <style name="text_namaz">
+        <item name="android:text">@string/namaz</item>
+        <item name="android:layout_width">49dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">189dp</item>
+        <item name="android:layout_marginLeft">91dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="akyda">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">125dp</item>
+        <item name="android:layout_marginLeft">237dp</item>
+    </style>
+    <style name="text_akyda">
+        <item name="android:text">@string/akyda</item>
+        <item name="android:layout_width">58dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">189dp</item>
+        <item name="android:layout_marginLeft">230dp</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">#06483A</item>
+    </style>
+    <style name="fikh">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">252dp</item>
+        <item name="android:layout_marginLeft">92dp</item>
+    </style>
+    <style name="text_fikh">
+        <item name="android:text">@string/fikh</item>
+        <item name="android:layout_width">39dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">318dp</item>
+        <item name="android:layout_marginLeft">95dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="hadis">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">252dp</item>
+        <item name="android:layout_marginLeft">238dp</item>
+    </style>
+    <style name="text_hadis">
+        <item name="android:text">@string/hadis</item>
+        <item name="android:layout_width">46dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">318dp</item>
+        <item name="android:layout_marginLeft">240dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="siro">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">384dp</item>
+        <item name="android:layout_marginLeft">91dp</item>
+    </style>
+    <style name="text_siro">
+        <item name="android:text">@string/siro</item>
+        <item name="android:layout_width">41dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">448dp</item>
+        <item name="android:layout_marginLeft">94dp</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">#06483A</item>
+    </style>
+    <style name="kuran">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">384dp</item>
+        <item name="android:layout_marginLeft">238dp</item>
+    </style>
+    <style name="text_kuran">
+        <item name="android:text">@string/kuran</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">448dp</item>
+        <item name="android:layout_marginLeft">241dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="tafsir">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">513dp</item>
+        <item name="android:layout_marginLeft">91dp</item>
+    </style>
+    <style name="text_tafsir">
+        <item name="android:text">@string/tafsir</item>
+        <item name="android:layout_width">57dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">578dp</item>
+        <item name="android:layout_marginLeft">85dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="dua">
+        <item name="android:src">@drawable/akyda</item>
+        <item name="android:layout_width">43dp</item>
+        <item name="android:layout_height">57dp</item>
+        <item name="android:layout_marginTop">516dp</item>
+        <item name="android:layout_marginLeft">238dp</item>
+    </style>
+    <style name="text_dua">
+        <item name="android:text">@string/dua</item>
+        <item name="android:layout_width">57dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:layout_marginTop">581dp</item>
+        <item name="android:layout_marginLeft">245dp</item>
+        <item name="android:textColor">#06483A</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="card_view">
+        <item name="android:layout_width">268dp</item>
+        <item name="android:layout_height">58dp</item>
+        <item name="android:layout_marginTop">631dp</item>
+        <item name="android:layout_marginLeft">51dp</item>
+    </style>
+    <style name="voprosy_i_otvety_ot_ulemov">
+        <item name="android:text">@string/voprosy_i_otvety_ot_ulemov</item>
+        <item name="android:layout_width">208dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>
