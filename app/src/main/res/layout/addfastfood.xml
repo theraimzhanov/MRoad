@@ -1,86 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.to_eat.shops.addshops.AddShopsFragment">
-
+    tools:context=".ui.to_eat.fastfood.addfastfood.AddFastfoodFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/et_shop_name"
+            android:id="@+id/et_fast_fud_name"
             style="@style/et_text"
             android:layout_marginTop="90dp"
             android:autofillHints=""
-            android:hint="@string/name_shop"
+            android:hint="@string/tv_fastfud"
             android:inputType="textCapWords"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_certificate"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_certificate"
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_contacts"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_contacts"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/et_shop_certificate"
+            android:id="@+id/et_fast_fud_certificate"
             style="@style/et_text"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
+            android:autofillHints=""
             android:hint="@string/sertificat_hint"
             android:inputType="textCapWords"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_name"
-            android:autofillHints="" />
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud_name" />
 
         <EditText
-            android:id="@+id/et_shop_rooms"
+            android:id="@+id/et_fast_fud_rooms"
             style="@style/et_text"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
+            android:autofillHints=""
             android:hint="@string/no_yes_rooms"
             android:inputType="number"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_certificate"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_certificate"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_certificate"
-            android:autofillHints="" />
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_certificate"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_certificate"
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud_certificate" />
 
         <EditText
-            android:id="@+id/et_shop_contacts"
+            android:id="@+id/et_fast_fud_contacts"
             style="@style/et_text"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
+            android:autofillHints=""
             android:hint="@string/contacts"
             android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_rooms"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_rooms"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_rooms"
-            android:autofillHints="" />
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_rooms"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_rooms"
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud_rooms" />
 
 
         <EditText
-            android:id="@+id/et_restaurant_address"
+            android:id="@+id/et_fast_fud_address"
             style="@style/et_text"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-            android:hint="@string/sait_shop"
+            android:hint="@string/hi_work"
             android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_contacts"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_contacts"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_contacts" />
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_contacts"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_contacts"
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud_contacts" />
 
         <EditText
-            android:id="@+id/et_banquet_address"
+            android:id="@+id/et_fast_fud"
             style="@style/et_text"
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
-            android:hint="@string/sport_yes_no"
+            android:autofillHints=""
+            android:hint="@string/address"
             android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="@+id/et_restaurant_address"
-            app:layout_constraintStart_toStartOf="@+id/et_restaurant_address"
-            app:layout_constraintTop_toBottomOf="@+id/et_restaurant_address"
-            android:autofillHints="" />
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_address"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_address"
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud_address" />
 
 
         <EditText
@@ -89,24 +88,12 @@
             android:layout_height="48dp"
             android:layout_marginTop="15dp"
             android:autofillHints=""
-            android:hint="@string/shop_halal"
+            android:hint="@string/sait"
             android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="@+id/et_banquet_address"
-            app:layout_constraintStart_toStartOf="@+id/et_banquet_address"
-            app:layout_constraintTop_toBottomOf="@+id/et_banquet_address"
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud"
+            app:layout_constraintTop_toBottomOf="@+id/et_fast_fud"
             tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <EditText
-            android:id="@+id/et_shop_work"
-            style="@style/et_text"
-            android:layout_height="48dp"
-            android:layout_marginTop="15dp"
-            android:hint="@string/shop_halal"
-            android:inputType="textPostalAddress"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_halal"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_halal"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_halal"
-            android:autofillHints="" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -115,9 +102,9 @@
             android:layout_marginTop="15dp"
 
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/et_shop_contacts"
-            app:layout_constraintStart_toStartOf="@+id/et_shop_contacts"
-            app:layout_constraintTop_toBottomOf="@+id/et_shop_work">
+            app:layout_constraintEnd_toEndOf="@+id/et_fast_fud_contacts"
+            app:layout_constraintStart_toStartOf="@+id/et_fast_fud_contacts"
+            app:layout_constraintTop_toBottomOf="@+id/et_shop_halal">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="100dp"
@@ -145,13 +132,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="2dp"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/icon_ph"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_ph_text"
-                    tools:ignore="ImageContrastCheck"
-                    android:contentDescription="@string/todo" />
+                    tools:ignore="ImageContrastCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -172,13 +159,13 @@
                     android:layout_width="48dp"
                     android:layout_height="39dp"
                     android:layout_marginTop="25dp"
+                    android:contentDescription="@string/todo"
                     android:src="@drawable/icon_ph"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ImageContrastCheck"
-                    android:contentDescription="@string/todo" />
+                    tools:ignore="ImageContrastCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -188,6 +175,7 @@
                 android:layout_height="100dp"
                 android:layout_marginStart="6dp"
                 android:background="@drawable/tv_shape">
+
                 <TextView
                     style="@style/tv_add_photo"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -198,13 +186,13 @@
                     android:layout_width="48dp"
                     android:layout_height="39dp"
                     android:layout_marginTop="25dp"
+                    android:contentDescription="TODO"
                     android:src="@drawable/icon_ph"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ImageContrastCheck"
-                    android:contentDescription="TODO" />
+                    tools:ignore="ImageContrastCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -220,4 +208,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

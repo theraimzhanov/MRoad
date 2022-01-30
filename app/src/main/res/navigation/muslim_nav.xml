@@ -17,9 +17,25 @@
         android:id="@+id/mechetFragment"
         android:name="com.motion.muslimcollection.ui.mechet.MechetFragment"
         tools:layout="@layout/fragment_mechet" >
+
         <action
-            android:id="@+id/action_mechetFragment_to_addMechetFragment"
-            app:destination="@id/addMechetFragment" />
+            android:id="@+id/action_mechetFragment_to_screenMechetFragment"
+            app:destination="@id/screenMechetFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_islamicCollegesFragment"
+            app:destination="@id/islamicCollegesFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_islamic_universitiesFragment"
+            app:destination="@id/islamic_universitiesFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_madrasahFragment"
+            app:destination="@id/madrasahFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_add_Prayer_RoomsFragment"
+            app:destination="@id/add_Prayer_RoomsFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
     </fragment>
     <fragment
         android:id="@+id/eatFragment"
@@ -34,4 +50,58 @@
         android:name="com.motion.muslimcollection.ui.mechet.screenmechet.addmechet.AddMechetFragment"
         android:label="fragment_add_mechet"
         tools:layout="@layout/fragment_add_mechet" />
+    <fragment
+        android:id="@+id/screenMechetFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.screenmechet.ScreenMechetFragment"
+        android:label="fragment_screen_mechet"
+        tools:layout="@layout/fragment_screen_mechet" >
+        <action
+            android:id="@+id/action_screenMechetFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/islamicCollegesFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.Islamiccolleges.IslamicCollegesFragment"
+        android:label="fragment_islamic_colleges"
+        tools:layout="@layout/fragment_islamic_colleges" >
+        <action
+            android:id="@+id/action_islamicCollegesFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/islamic_universitiesFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.Islamicuniversities.Islamic_universitiesFragment"
+        android:label="fragment_islamic_universities"
+        tools:layout="@layout/fragment_islamic_universities" >
+        <action
+            android:id="@+id/action_islamic_universitiesFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/madrasahFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.madrasah.MadrasahFragment"
+        android:label="fragment_madrasah"
+        tools:layout="@layout/fragment_madrasah" >
+        <action
+            android:id="@+id/action_madrasahFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/add_Prayer_RoomsFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.prayerrooms.addprayerrooms.Add_Prayer_RoomsFragment"
+        android:label="fragment_add_prayer_rooms"
+        tools:layout="@layout/fragment_add_prayer_rooms" >
+        <action
+            android:id="@+id/action_add_Prayer_RoomsFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.Islamiclibrary.libraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
 </navigation>

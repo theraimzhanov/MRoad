@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class IslamicCollegesFragment : BaseFragment(R.layout.fragment_islamic_colleges) {
@@ -20,6 +21,10 @@ class IslamicCollegesFragment : BaseFragment(R.layout.fragment_islamic_colleges)
 
     override fun setupUI() {
         super.setupUI()
+    }
+    override fun showBottomNavigation() {
+        super.showBottomNavigation()
+        requireActivity().toolbar_text.text = resources.getString(R.string.islamskoe_kolledj)
     }
 
 

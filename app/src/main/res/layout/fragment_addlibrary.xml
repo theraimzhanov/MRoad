@@ -30,8 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_library_name" />
 
-
-
         <EditText
             android:id="@+id/et_library_worktime"
             style="@style/et_text"

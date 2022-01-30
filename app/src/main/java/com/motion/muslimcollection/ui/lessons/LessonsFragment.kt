@@ -19,17 +19,13 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
 
     override fun setupUI() {
         super.setupUI()
-        navigation()
+
 
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-      //  requireActivity().toolbar_text.text = resources.getString(R.string.lessons)
+        requireActivity().toolbar_text.text = resources.getString(R.string.lessons)
     }
-    private fun navigation(){
-        button.setOnClickListener{
-           requireActivity().supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment,AddMechetFragment()).commit()
-        }
-    }
+
 
 }
