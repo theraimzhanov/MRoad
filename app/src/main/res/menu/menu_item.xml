@@ -2,16 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+
     <item
         android:icon="@drawable/img_menu"
         android:title=""
         android:menuCategory="alternative"
        app:showAsAction="always">
         <menu>
+
             <item
+                android:actionLayout="@layout/menu_tem_"
                 android:icon="@drawable/img_earth"
                 android:title="@string/tv_res"
-
                 android:id="@+id/menu_res"
                 app:showAsAction="never" />
             <item
@@ -29,7 +32,6 @@
                 android:title="@string/tv_app"
                 android:id="@+id/menu_app"
                 app:showAsAction="never" />
-
             />
 
 

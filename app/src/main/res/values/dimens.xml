@@ -5,4 +5,6 @@
     <dimen name="marginleftn">200dp</dimen>
     <dimen name="margintop2">248dp</dimen>
     <dimen name="margintop3">377dp</dimen>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
