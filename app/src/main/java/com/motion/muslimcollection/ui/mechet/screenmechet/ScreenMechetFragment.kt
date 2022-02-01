@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.motion.muslimcollection.ui.main.MainActivity
+
+import kotlinx.android.synthetic.main.fragment_mechet.*
+import kotlinx.android.synthetic.main.fragment_screen_mechet.*
 
 class ScreenMechetFragment : BaseFragment(R.layout.fragment_screen_mechet) {
     override fun setupObservers() {
@@ -19,12 +22,12 @@ class ScreenMechetFragment : BaseFragment(R.layout.fragment_screen_mechet) {
 
     override fun setupUI() {
         super.setupUI()
-    }
-    override fun showBottomNavigation() {
-        super.showBottomNavigation()
-        requireActivity().toolbar.visibility = View.GONE
-
+        nextFr()
     }
 
-
+    fun nextFr() {
+        add_mechet_next.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_screenMechetFragment_to_addMechetFragment)
+        }
+    }
 }

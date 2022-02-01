@@ -12,7 +12,8 @@
     <string name="kafe">Кафе</string>
     <string name="restoran">Рестораны</string>
     <string name="shop">Магазины</string>
-    <string name="fast_fud">Фаст-фуды</string>
+    <string name="fast_fud">Фаст-фуды </string>
+    <string name="fast_fu">Фаст-фуды </string>
     <string name="e_dobavki">Е добавки</string>
     <string name="molelnye_comnata">Молельные комнаты</string>
     <string name="islamskoe_kolledj">Исламские колледжи</string>
@@ -55,4 +56,15 @@
     <string name="hi_work">Режим работы от/до</string>
     <string name="sait">Сайт</string>
     <string name="mosqoe_in">Мечети</string>
+    <string name="list">Список</string>
+    <string name="n_coll">Исламский\nколледжи</string>
+    <string name="n_uni">Исламские\nуниверситеты</string>
+    <string name="n_rooms">Молельное\nкомнаты</string>
+    <string name="n_lib">Исламские\nбиблиотека</string>
+    <string name="res_">Ресторан</string>
+    <string name="coff">Кафе</string>
+    <string name="resto">Рестораны</string>
+    <string name="shop_a">Магазины</string>
+    <string name="fass">Фаст-фуды</string>
+    <string name="e_d_text">Е добавки</string>
 </resources>

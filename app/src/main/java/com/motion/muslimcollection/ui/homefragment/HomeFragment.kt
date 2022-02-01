@@ -16,38 +16,17 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
     override fun setupUI() {
         super.setupUI()
+        nextMenuItem()
 
     }
 
-    override fun showBottomNavigation() {
-        super.showBottomNavigation()
-        requireActivity().toolbar_text.text = resources.getString(R.string.home)
+
+    private fun nextMenuItem(){
+        btn_menu.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_homeFragment_to_menuFragment)
+        }
+
     }
-      override fun onCreateOptionsMenu( menu: Menu, inflater: MenuInflater) {
-       inflater.inflate(R.menu.menu_item, menu)
-       super.onCreateOptionsMenu(menu, inflater)
-   }
-   override fun onOptionsItemSelected(item: MenuItem): Boolean {
-       return when (item.itemId) {
-           R.id.menu_res -> {
-
-               true
-           }
-           R.id.menu_set -> {
-
-               true
-           }
-           R.id.menu_share -> {
-
-               true
-           }
-           R.id.menu_app -> {
-
-               true
-           }
-           else -> super.onOptionsItemSelected(item)
-       }
-   }
 
 }
 

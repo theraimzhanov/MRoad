@@ -9,17 +9,15 @@ class Prayer_RoomsFragment : BaseFragment(R.layout.fragment_prayer_rooms) {
         override fun setupObservers() {
 
         }
-
         override fun showConnectedState() {
 
         }
-
         override fun setupUI() {
                 super.setupUI()
         }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-        requireActivity().toolbar_text.text = resources.getString(R.string.molelnye_comnata)
+
     }
 
 

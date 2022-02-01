@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.lessons.LessonsFragment">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/toolbar"
@@ -18,21 +17,260 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/Theme.Menu"
         tools:ignore="MissingConstraints">
-
-       <!-- <TextView
+        <TextView
+            android:text="@string/lessons"
             android:id="@+id/toolbar_text"
-            style="@style/text_uroki_toolbar"/>-->
+            style="@style/text_meshet_toolbar" />
+
     </androidx.appcompat.widget.Toolbar>
 
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_lesmosqoe_next"
+        style="@style/con_style"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="119dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_mos"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/i_namaz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_mos"
+            style="@style/tex_style"
+            android:text="@string/mosqoe_in"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_mos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_akuyda_next"
+        style="@style/con_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_lesmosqoe_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_lesmosqoe_next">
+
+        <ImageView
+            android:id="@+id/img_room"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_ak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_room"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/akyda"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_room" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_fikh_next"
+        style="@style/con_style"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_lesmosqoe_next"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lesmosqoe_next">
+
+
+        <ImageView
+            android:id="@+id/img_collge"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_ak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_collage"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/fikh"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_collge" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_hadis_next"
+        style="@style/con_style"
+        app:layout_constraintEnd_toEndOf="@+id/btn_akuyda_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_fikh_next">
+
+
+        <ImageView
+            android:id="@+id/img_mad"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_ak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_mad"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/hadis"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_mad" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_siro_nextt"
+        style="@style/con_style"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_fikh_next"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fikh_next">
+
+
+        <ImageView
+            android:id="@+id/img_uni"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_ak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_uni"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/siro"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_uni" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/con_style"
+        android:id="@+id/btn_kurann_next"
+        app:layout_constraintEnd_toEndOf="@+id/btn_hadis_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_siro_nextt">
+
+
+        <ImageView
+            android:id="@+id/img_lib"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/lib"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_lib"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/kuran"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_lib" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_tafsir_next"
+        style="@style/con_style"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/btn_siro_nextt"
+        app:layout_constraintTop_toBottomOf="@+id/btn_siro_nextt">
+
+
+        <ImageView
+            android:id="@+id/img_ku"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/lib"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_ku"
+            style="@style/tex_style"
+            android:gravity="center"
+            android:text="@string/tafsir"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_ku" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btn_dua_next"
+        style="@style/con_style"
+        app:layout_constraintEnd_toEndOf="@+id/btn_kurann_next"
+        app:layout_constraintTop_toTopOf="@+id/btn_tafsir_next">
+
+
+        <ImageView
+            android:id="@+id/img_dua"
+            android:layout_width="53dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/lib"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_dua"
+            style="@style/tex_style"
+            android:text="@string/dua"
+            android:textColor="@color/muslim"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_dua" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

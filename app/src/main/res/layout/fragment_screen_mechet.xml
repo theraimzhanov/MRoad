@@ -3,10 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mechet.screenmechet.ScreenMechetFragment">
 
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_"
+        style="@style/toolbar"
+        android:background="#06483A"
+        android:visibility="visible">
+<LinearLayout
+    android:layout_marginStart="15dp"
+    android:layout_width="60dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_height="40dp">
 
+    <ImageView
+        android:id="@+id/toolbar_back"
+        android:visibility="visible"
+        style="@style/next_img" />
+    <TextView
+        android:text="@string/list"
+        style="@style/next_text"/>
+</LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/add_mechet_next"
+            android:layout_width="65dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/toolbar_scanner"
+                android:visibility="visible"
+                style="@style/scanner"/>
+            <TextView
+                android:text="@string/tv_add_text_btn"
+                style="@style/next_text"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_tool"
+            style="@style/text_toolbar"
+            android:text="@string/mosqoe_in"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.Toolbar>
 
 </androidx.core.widget.NestedScrollView>

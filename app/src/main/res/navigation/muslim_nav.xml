@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_homeFragment_to_mechetFragment"
             app:destination="@id/mechetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/mechetFragment"
@@ -36,6 +39,12 @@
         <action
             android:id="@+id/action_mechetFragment_to_libraryFragment"
             app:destination="@id/libraryFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_prayer_RoomsFragment"
+            app:destination="@id/prayer_RoomsFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_mechetMapsFragment"
+            app:destination="@id/mechetMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/eatFragment"
@@ -58,6 +67,9 @@
         <action
             android:id="@+id/action_screenMechetFragment_to_mechetFragment"
             app:destination="@id/mechetFragment" />
+        <action
+            android:id="@+id/action_screenMechetFragment_to_addMechetFragment"
+            app:destination="@id/addMechetFragment" />
     </fragment>
     <fragment
         android:id="@+id/islamicCollegesFragment"
@@ -103,5 +115,32 @@
         <action
             android:id="@+id/action_libraryFragment_to_mechetFragment"
             app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prayer_RoomsFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.prayerrooms.Prayer_RoomsFragment"
+        android:label="fragment_prayer_rooms"
+        tools:layout="@layout/fragment_prayer_rooms" >
+        <action
+            android:id="@+id/action_prayer_RoomsFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mechetMapsFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.screenmechet.mapmechet.MechetMapsFragment"
+        android:label="fragment_mechet_maps"
+        tools:layout="@layout/fragment_mechet_maps" >
+        <action
+            android:id="@+id/action_mechetMapsFragment_to_mechetFragment"
+            app:destination="@id/mechetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.motion.muslimcollection.ui.mechet.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

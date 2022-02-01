@@ -24,7 +24,6 @@ class IslamicCollegesFragment : BaseFragment(R.layout.fragment_islamic_colleges)
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-        requireActivity().toolbar_text.text = resources.getString(R.string.islamskoe_kolledj)
     }
 
 
