@@ -13,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class MainActivity : BaseActivity(R.layout.activity_main),SensorEventListener {
@@ -35,13 +36,6 @@ class MainActivity : BaseActivity(R.layout.activity_main),SensorEventListener {
     override fun setupUI() {
         navigat()
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager?
-        setSupportActionBar(toolbar)
-        supportActionBar?.apply {
-            toolbar_text.text = "Center"
-            title = ""
-            this.elevation = 15F
-
-        }
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
         val navController = navHostFragment?.findNavController()
@@ -80,7 +74,7 @@ class MainActivity : BaseActivity(R.layout.activity_main),SensorEventListener {
                 azimuth = (Math.toDegrees(SensorManager.getOrientation(rotationMatrix,orientation)[0].toDouble())+265).toInt()%265
         }
         azimuth = Math.round(azimuth.toFloat())
-        line.rotation = (-azimuth).toFloat()
+     //   line.rotation = (-azimuth).toFloat()
 
      val  where = when (azimuth){
          in 281..349->"NW"
@@ -91,8 +85,9 @@ class MainActivity : BaseActivity(R.layout.activity_main),SensorEventListener {
          in 81..100->"SE"
          in 11..80->"NE"
          else ->"n"
+
      }
-     textView.text = "$azimuth^$where"
+   //  textView.text = "$azimuth^$where"
        /* var degr = 245
         degr.toFloat()
         val degree:Int = p0?.values?.get(0)?.toInt() !!

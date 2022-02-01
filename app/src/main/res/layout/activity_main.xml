@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+ <!--   <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/toolbar"
         android:background="#06483A"
@@ -23,14 +23,11 @@
             style="@style/text_toolbar"
             android:text=""
             android:visibility="visible" />
-<ImageView
-            android:id="@+id/img_toolbar"
-            android:visibility="visible"
-            style="@style/img_toolbar" />
+
 
     </androidx.appcompat.widget.Toolbar>
-
-    <ImageView
+-->
+  <!--  <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,7 +35,7 @@
         android:src="@drawable/compass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
@@ -68,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_menu" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -90,5 +87,5 @@
 
 
 
-
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

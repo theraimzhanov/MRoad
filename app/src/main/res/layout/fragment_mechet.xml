@@ -18,6 +18,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:text="@string/meshet"
             android:id="@+id/toolbar_text"
             style="@style/text_meshet_toolbar" />
     </androidx.appcompat.widget.Toolbar>

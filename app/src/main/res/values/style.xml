@@ -3,6 +3,7 @@
     <style name="toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
+        <item name="android:colorBackground">@color/muslim</item>
         <item name="layout_constraintLeft_toLeftOf">parent</item>
         <item name="layout_constraintRight_toRightOf">parent</item>
         <item name="layout_constraintTop_toTopOf">parent</item>
@@ -17,7 +18,6 @@
         <item name="android:textSize">20sp</item>
     </style>
     <style name="text_meshet_toolbar">
-        <item name="android:text">@string/meshet</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
@@ -437,10 +437,28 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">5dp</item>
+
         <item name="android:layout_marginBottom">10dp</item>
     </style>
+    <style name="next_img">
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:src">@drawable/icon_list</item>
+    </style>
+    <style name="next_text">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 
-
-
+    <style name="scanner">
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_width">15dp</item>
+        <item name="android:src">@drawable/add</item>
+    </style>
 
 </resources>
