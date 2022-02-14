@@ -5,17 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.motion.muslimcollection.utils.networkConnectivityChecker.NetworkConnectivityChecker
 
-abstract class BaseActivity(private val layout: Int) :
-    AppCompatActivity() {
-
-
+abstract class BaseActivity(private val layout: Int) : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout)
         setupUI()
         NetworkConnectivityChecker.observe(this, liveDataObserver)
     }
-
     override fun onResume() {
         super.onResume()
         NetworkConnectivityChecker.checkForConnection()
