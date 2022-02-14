@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recycler_margin_horizontal">20dp</dimen>
+    <dimen name="marginTopRecyclerView">50dp</dimen>
+    <dimen name="paddingAll">18dp</dimen>
+</resources>

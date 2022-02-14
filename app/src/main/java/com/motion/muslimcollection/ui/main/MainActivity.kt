@@ -5,6 +5,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import androidx.activity.result.ActivityResultLauncher
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -15,8 +16,8 @@ import com.motion.muslimcollection.core.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
-
 class MainActivity : BaseActivity(R.layout.activity_main),SensorEventListener {
+
     private var haveSensorRotationsVectors = false
     private var rotationVectors: Sensor? = null
     private var havMagnetometr = false

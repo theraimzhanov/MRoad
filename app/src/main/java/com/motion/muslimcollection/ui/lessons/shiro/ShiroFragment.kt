@@ -18,6 +18,10 @@ class ShiroFragment : BaseFragment(R.layout.fragment_shiro) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

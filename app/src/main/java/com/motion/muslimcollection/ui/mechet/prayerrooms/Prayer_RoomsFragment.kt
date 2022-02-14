@@ -4,7 +4,6 @@ import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-
 class Prayer_RoomsFragment : BaseFragment(R.layout.fragment_prayer_rooms) {
         override fun setupObservers() {
 
@@ -12,7 +11,12 @@ class Prayer_RoomsFragment : BaseFragment(R.layout.fragment_prayer_rooms) {
         override fun showConnectedState() {
 
         }
-        override fun setupUI() {
+
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
+    override fun setupUI() {
                 super.setupUI()
         }
     override fun showBottomNavigation() {

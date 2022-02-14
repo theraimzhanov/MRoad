@@ -16,6 +16,10 @@ class EatFragment : BaseFragment(R.layout.fragment_to_eat) {
     override fun showConnectedState() {
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/muslim_nav"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -143,4 +143,59 @@
             android:id="@+id/action_menuFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.motion.muslimcollection.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_country_Language_Fragment"
+            app:destination="@id/country_Language_Fragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_country_Language_Fragment2"
+            app:destination="@id/country_Language_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/country_Language_Fragment"
+        android:name="com.motion.muslimcollection.splash.countrylanguage.Country_Language_Fragment"
+        android:label="fragment_country__language_"
+        tools:layout="@layout/fragment_country__language_" >
+        <action
+            android:id="@+id/action_country_Language_Fragment_to_countryFragment"
+            app:destination="@id/countryFragment" />
+        <action
+            android:id="@+id/action_country_Language_Fragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_country_Language_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryFragment"
+        android:name="com.motion.muslimcollection.splash.countrylanguage.CountryFragment"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country" >
+        <action
+            android:id="@+id/action_countryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_countryFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_countryFragment_to_country_Language_Fragment"
+            app:destination="@id/country_Language_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.motion.muslimcollection.splash.countrylanguage.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.motion.muslimcollection.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

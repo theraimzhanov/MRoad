@@ -33,17 +33,14 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-
-
-
-    <androidx.drawerlayout.widget.DrawerLayout
+    <!--<androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="480dp"
         android:background="@drawable/img_mechit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

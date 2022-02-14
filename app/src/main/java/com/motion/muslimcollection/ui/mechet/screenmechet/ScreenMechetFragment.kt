@@ -20,6 +20,10 @@ class ScreenMechetFragment : BaseFragment(R.layout.fragment_screen_mechet) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun setupUI() {
         super.setupUI()
         nextFr()

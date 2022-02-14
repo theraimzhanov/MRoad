@@ -19,6 +19,10 @@ class IslamicCollegesFragment : BaseFragment(R.layout.fragment_islamic_colleges)
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

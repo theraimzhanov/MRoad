@@ -18,6 +18,10 @@ class ShopsFragment : BaseFragment( R.layout.fragment_shops) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

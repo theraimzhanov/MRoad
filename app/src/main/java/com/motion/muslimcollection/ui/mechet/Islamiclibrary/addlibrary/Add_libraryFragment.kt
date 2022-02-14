@@ -17,6 +17,10 @@ class Add_libraryFragment : BaseFragment(R.layout.fragment_addlibrary) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

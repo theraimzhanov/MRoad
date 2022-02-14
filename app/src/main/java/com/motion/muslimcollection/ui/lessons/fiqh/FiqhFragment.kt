@@ -13,6 +13,10 @@ class FiqhFragment : BaseFragment(R.layout.fragment_fiqh) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

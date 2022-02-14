@@ -18,5 +18,9 @@ class DuaFragment : BaseFragment(R.layout.fragment_dua) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
 
 }

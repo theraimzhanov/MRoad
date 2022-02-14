@@ -17,6 +17,10 @@ class QuranFragment : BaseFragment(R.layout.fragment_quran) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

@@ -9,11 +9,22 @@ import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class HomeFragment : BaseFragment(R.layout.fragment_home) {
+
     override fun setupObservers() {
         setHasOptionsMenu(true)
     }
     override fun showConnectedState() {
     }
+
+    override fun showBottomNavigation() {
+        super.showBottomNavigation()
+        requireActivity().bottomNavigationView.visibility = View.VISIBLE
+    }
+
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
         nextMenuItem()

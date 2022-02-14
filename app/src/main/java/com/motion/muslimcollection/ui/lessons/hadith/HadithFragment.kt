@@ -11,6 +11,10 @@ class HadithFragment : BaseFragment(R.layout.fragment_hadith) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

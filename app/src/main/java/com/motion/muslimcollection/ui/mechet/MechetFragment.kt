@@ -13,6 +13,10 @@ class MechetFragment : BaseFragment(R.layout.fragment_mechet) {
     override fun showConnectedState() {
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
         nextFr()

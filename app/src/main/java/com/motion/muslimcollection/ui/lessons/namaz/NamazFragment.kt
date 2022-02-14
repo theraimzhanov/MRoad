@@ -13,6 +13,10 @@ class NamazFragment : BaseFragment(R.layout.fragment_namaz) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+        TODO("Not yet implemented")
+    }
+
     override fun setupUI() {
         super.setupUI()
 

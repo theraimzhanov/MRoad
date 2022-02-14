@@ -10,6 +10,10 @@ class TafsirFragment : BaseFragment(R.layout.fragment_tafsir) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun setupUI() {
         super.setupUI()
     }

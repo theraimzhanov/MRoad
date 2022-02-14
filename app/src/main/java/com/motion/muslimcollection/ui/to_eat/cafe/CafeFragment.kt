@@ -11,5 +11,9 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
 
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
 
 }

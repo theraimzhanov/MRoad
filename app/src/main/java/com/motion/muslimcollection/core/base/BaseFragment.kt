@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.core.base
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import com.motion.muslimcollection.utils.networkConnectivityChecker.NetworkConne
 
 abstract class BaseFragment(private val layout: Int) :
     Fragment() {
+    private lateinit var sharedPreferences: SharedPreferences
 
     private val liveDataObserver: Observer<Boolean> = Observer { isConnected ->
         if (!isConnected) {
@@ -52,6 +54,7 @@ abstract class BaseFragment(private val layout: Int) :
     abstract fun showConnectedState()
 
     open fun showDisconnectState() {}
+    abstract fun saveOnBoard(b: Boolean)
 }
 
 

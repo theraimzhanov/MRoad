@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".splash.countrylanguage.CountryFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:background="#06483A"
+        android:theme="?attr/hintAnimationEnabled"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:id="@+id/toolbar_text"
+            style="@style/text_toolbar"
+            android:text="Страна"
+            android:visibility="visible" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RadioGroup
+        android:id="@+id/group_country"
+        style="@style/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/recycler_margin_horizontal"
+        android:layout_marginTop="@dimen/marginTopRecyclerView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/country_1"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Австралия" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_2"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Азия" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_3"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Африка" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_4"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Европа" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_5"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="США" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_6"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Кыргызстан" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_7"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Россия" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_8"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Северная Америка" />
+
+        <View style="@style/view_line" />
+
+        <RadioButton
+            android:id="@+id/country_9"
+            style="@style/radio_btn"
+            android:padding="@dimen/paddingAll"
+            android:text="Южная Америка" />
+
+        <View style="@style/view_line" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
