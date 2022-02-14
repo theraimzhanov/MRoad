@@ -7,8 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.homefragment.HomeFragment">
-
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         style="@style/toolbar"
@@ -34,6 +32,7 @@
 
 
     <!--<androidx.drawerlayout.widget.DrawerLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="480dp"
