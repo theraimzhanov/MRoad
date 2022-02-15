@@ -23,13 +23,10 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
         requireActivity().bottomNavigationView.visibility = View.GONE
 
     }
-    /*override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }*/
 
     override fun setupObservers() {
-
     }
+
     override fun setupUI() {
         super.setupUI()
         sharedPreferences =
@@ -49,7 +46,6 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
 
     private fun installRadioButton() {
         val state = sharedPreferences?.getInt("position", 0)
-        //requireActivity().toolbar_text.text = sharedPreferences.getString("country", "Кыргызстан")
         when (state) {
             1 -> country_1.isChecked = true
             2 -> country_2.isChecked = true
@@ -62,6 +58,7 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
             9 -> country_9.isChecked = true
         }
     }
+
     private fun setValue() {
         group_country.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
@@ -77,6 +74,7 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
             }
         }
     }
+
     @SuppressLint("CommitPrefEdits")
     private fun saveLocale(value: String, position: Int) {
         //requireActivity().toolbar_text.text = value
@@ -85,8 +83,12 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
             putString("country", value)
         }.apply()
     }
+
     private fun navigate() {
         val oneTime = sharedPreferences?.getBoolean("oneTime", false)
+
+
+
         /*requireActivity().toolbar_back.setOnClickListener {
             when (oneTime) {
                 true -> (activity as MainActivity).navController.navigate(R.id.action_countryFragment_to_homeFragment)
@@ -95,14 +97,7 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
                     (activity as MainActivity).navController.navigate(R.id.action_countryFragment_to_country_Language_Fragment)
             }
         }*/
-    }
 
-    /*override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_country, container, false)
-    }*/
+    }
 
 }

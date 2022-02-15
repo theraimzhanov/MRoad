@@ -15,12 +15,17 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun showConnectedState() {
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun showBottomNavigation() {
         super.showBottomNavigation()
         requireActivity().bottomNavigationView.visibility = View.VISIBLE
     }
 
-    override fun saveOnBoard(b: Boolean) {
+
+
 
     }
     private fun closeScreen(){
@@ -42,6 +47,8 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun onOptionsMenuClosed(menu: Menu) {
         super.onOptionsMenuClosed(menu)
     }*/
+
+
 
     override fun setupUI() {
         super.setupUI()

@@ -68,8 +68,13 @@
         android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
         tools:layout="@layout/fragment_lessons" >
         <action
+
+            android:id="@+id/action_lessonsFragment_to_namazFragment"
+            app:destination="@id/namazFragment" />
+
             android:id="@+id/action_lessonsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/addMechetFragment"
@@ -215,4 +220,17 @@
         android:name="com.motion.muslimcollection.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/namazFragment"
+        android:name="com.motion.muslimcollection.ui.lessons.namaz.NamazFragment"
+        android:label="fragment_namaz"
+        tools:layout="@layout/fragment_namaz" >
+        <action
+            android:id="@+id/action_namazFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+        <argument
+            android:name="lesscategor"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -10,8 +10,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_country__language_.*
 
 class Country_Language_Fragment : BaseFragment(R.layout.fragment_country__language_) {
-
-
     override fun setupObservers() {
 
     }
@@ -38,7 +36,6 @@ class Country_Language_Fragment : BaseFragment(R.layout.fragment_country__langua
         next.setOnClickListener {
             saveOnBoard(true)
             (activity as MainActivity).navController.navigate(R.id.action_country_Language_Fragment_to_homeFragment)
-
         }
     }
     @SuppressLint("CommitPrefEdits")
