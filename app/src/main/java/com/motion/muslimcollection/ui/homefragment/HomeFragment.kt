@@ -5,6 +5,7 @@ import androidx.activity.OnBackPressedCallback
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
@@ -32,9 +33,19 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     }
 
+   /* override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home ->btn_menu()
+            R.id.
+        }
+    }
+    override fun onOptionsMenuClosed(menu: Menu) {
+        super.onOptionsMenuClosed(menu)
+    }*/
+
     override fun setupUI() {
         super.setupUI()
-        closeScreen()
+        //closeScreen()
 
 
     }
