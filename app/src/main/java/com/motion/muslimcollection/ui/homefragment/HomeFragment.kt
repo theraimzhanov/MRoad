@@ -15,14 +15,16 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun showConnectedState() {
     }
 
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+
     override fun showBottomNavigation() {
         super.showBottomNavigation()
         requireActivity().bottomNavigationView.visibility = View.VISIBLE
     }
 
-    override fun saveOnBoard(b: Boolean) {
 
-    }
 
     override fun setupUI() {
         super.setupUI()
