@@ -1,10 +1,10 @@
 package com.motion.muslimcollection.ui.mechet
 
+import androidx.activity.OnBackPressedCallback
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_mechet.*
-
 
 class MechetFragment : BaseFragment(R.layout.fragment_mechet) {
     override fun setupObservers() {
@@ -14,12 +14,23 @@ class MechetFragment : BaseFragment(R.layout.fragment_mechet) {
     }
 
     override fun saveOnBoard(b: Boolean) {
-        TODO("Not yet implemented")
+
+    }
+
+    private fun closeScreen(){
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_homeFragment)
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
+//closeScreen()//setupUI()
     }
 
     override fun setupUI() {
         super.setupUI()
         nextFr()
+       closeScreen()
     }
     fun nextFr(){
 

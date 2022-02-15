@@ -1,8 +1,12 @@
 package com.motion.muslimcollection.ui.lessons
 
 
+
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+
+import androidx.activity.OnBackPressedCallback
+
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.di.viewModules
@@ -39,12 +43,29 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
 
         })
 
+
+    override fun saveOnBoard(b: Boolean) {
+
+    }
+    private fun closeScreen(){
+        val callback = object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+                (activity as MainActivity).navController.navigate(R.id.action_lessonsFragment_to_homeFragment)
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
+//closeScreen()//setupUI()
     }
     override fun saveOnBoard(b: Boolean) {
 
     }
     override fun setupUI() {
         super.setupUI()
+
+        closeScreen()
+
+
+
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()

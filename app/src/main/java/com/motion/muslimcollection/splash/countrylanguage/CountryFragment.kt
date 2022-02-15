@@ -87,6 +87,17 @@ class CountryFragment : BaseFragment(R.layout.fragment_country) {
     private fun navigate() {
         val oneTime = sharedPreferences?.getBoolean("oneTime", false)
 
+
+
+        /*requireActivity().toolbar_back.setOnClickListener {
+            when (oneTime) {
+                true -> (activity as MainActivity).navController.navigate(R.id.action_countryFragment_to_homeFragment)
+
+                false ->
+                    (activity as MainActivity).navController.navigate(R.id.action_countryFragment_to_country_Language_Fragment)
+            }
+        }*/
+
     }
 
 }
