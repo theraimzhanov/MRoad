@@ -21,7 +21,7 @@ fun provideRetrofit(okHttpClient: OkHttpClient): Service {
 
     return Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl(BASE_URL)
+        .baseUrl("muslimroad.herokuapp.com/")
         .client(okHttpClient)
         .build().create(Service::class.java)
 

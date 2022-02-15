@@ -1,12 +1,8 @@
 package com.motion.muslimcollection.ui.lessons
 
 
-
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-
-import androidx.activity.OnBackPressedCallback
-
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.di.viewModules
@@ -25,14 +21,17 @@ import org.koin.android.ext.android.inject
 
 
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
+
     private val lessonViewModel: LessonViewModel by inject()
-    private val adapter:AdapterLessonCategories by lazy {
+    private val adapter: AdapterLessonCategories by lazy {
         AdapterLessonCategories()
     }
+
     override fun setupObservers() {
     }
+
     override fun showConnectedState() {
-        lessonCategories()
+        lesson()
         adapter.setItemClickListener(object : ItemClickListener {
             override fun onItemClick(position: Int) {
                 val id = position
@@ -43,61 +42,47 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
 
         })
 
+    }
 
     override fun saveOnBoard(b: Boolean) {
+    }
 
-    }
-    private fun closeScreen(){
-        val callback = object : OnBackPressedCallback(true){
-            override fun handleOnBackPressed() {
-                (activity as MainActivity).navController.navigate(R.id.action_lessonsFragment_to_homeFragment)
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
-//closeScreen()//setupUI()
-    }
-    override fun saveOnBoard(b: Boolean) {
-
-    }
     override fun setupUI() {
         super.setupUI()
-
-        closeScreen()
-
-
-
     }
+
     override fun showBottomNavigation() {
         super.showBottomNavigation()
 
     }
-    fun lessonCategories() {
-        lessonViewModel.load.observe(this,{loading_codes.visible = it})
-        lessonViewModel.getLessCategorId.observe(this) { resources ->
-            resources.data?.let {
-                adapter.setList(resources.)
-            }
+
+    fun lesson() {
+        lessonViewModel.laodi.observe(this, { loading_codes.visible = it })
+        lessonViewModel.lessonAll()
+        lessonViewModel.lessonsAll.observe(this, { resources ->
             when (resources.status) {
                 Status.LOADING -> {
-                    lessonViewModel.load.postValue(true)
+                    lessonViewModel.laodi.postValue(true)
                 }
                 Status.SUCCESS -> {
-                    lessonViewModel.load.postValue(false)
+                    lessonViewModel.laodi.postValue(false)
                     resources.data?.let {
-                       if (it!!.isNotEmpty()){
-                           adapter.setList(resources.data)
-                       }
+                        if (it.isNotEmpty()){
+                            adapter.setList(resources.data)
+                            Log.d("TAG", "onBindViewHolder:"+resources.data)
+
+                        }
                         initrecyclerView()
                     }
                 }
-                Status.ERROR->{
-                     lessonViewModel.load.postValue(false)
+                Status.ERROR -> {
+                    lessonViewModel.laodi.postValue(false)
                     context?.showMessage(resources.message)
                 }
             }
-        }
+        })
     }
-    fun   initrecyclerView(){
+    fun initrecyclerView() {
         recycler_codes.layoutManager = LinearLayoutManager(context)
         recycler_codes.adapter = adapter
     }

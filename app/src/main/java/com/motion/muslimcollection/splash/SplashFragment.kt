@@ -31,9 +31,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
             }
 
         }, 2000)
-
-
-        }, 1500)
+        
 
     }
     override fun showConnectedState() {

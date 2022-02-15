@@ -17,16 +17,11 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun saveOnBoard(b: Boolean) {
 
     }
-
     override fun showBottomNavigation() {
         super.showBottomNavigation()
         requireActivity().bottomNavigationView.visibility = View.VISIBLE
     }
 
-
-
-
-    }
     private fun closeScreen(){
         val callback = object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
@@ -34,15 +29,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
-
     }
-
-
     override fun setupUI() {
         super.setupUI()
         closeScreen()
-
-
     }
 
 }

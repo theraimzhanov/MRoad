@@ -10,7 +10,7 @@ val remoteDataSourceModule = module {
 
 class RemoteDataSource(private val apiService: Service) : BaseDataSource() {
 
-    suspend fun Lesson_Categories_All() = getResult {
+    suspend fun LessonAllCategories() = getResult {
         apiService.getLessonCategories()
     }
      suspend fun Lesson_Categories_ID(id:Int) = getResult {
