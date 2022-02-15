@@ -32,7 +32,7 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
                 false -> (activity as MainActivity).navController.navigate(R.id.action_splashFragment_to_country_Language_Fragment)
             }
 
-        }, 2000)
+        }, 1500)
     }
 
     override fun showConnectedState() {

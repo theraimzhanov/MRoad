@@ -9,9 +9,9 @@
         android:id="@+id/homeFragment"
         android:name="com.motion.muslimcollection.ui.homefragment.HomeFragment"
         tools:layout="@layout/fragment_home" >
-        <action
+        <!--<action
             android:id="@+id/action_homeFragment_to_mechetFragment"
-            app:destination="@id/mechetFragment" />
+            app:destination="@id/mechetFragment" />-->
         <action
             android:id="@+id/action_homeFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
@@ -19,8 +19,11 @@
     <fragment
         android:id="@+id/mechetFragment"
         android:name="com.motion.muslimcollection.ui.mechet.MechetFragment"
-        tools:layout="@layout/fragment_mechet" >
+        tools:layout="@layout/fragment_mechet">
 
+        <action app:popUpTo="@layout/fragment_home"
+            android:id="@+id/ghghghgh"
+            />
         <action
             android:id="@+id/action_mechetFragment_to_screenMechetFragment"
             app:destination="@id/screenMechetFragment" />
@@ -45,15 +48,29 @@
         <action
             android:id="@+id/action_mechetFragment_to_mechetMapsFragment"
             app:destination="@id/mechetMapsFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_mechetFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/eatFragment"
         android:name="com.motion.muslimcollection.ui.to_eat.EatFragment"
-        tools:layout="@layout/fragment_to_eat" />
+        tools:layout="@layout/fragment_to_eat" >
+        <action
+            android:id="@+id/action_eatFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/lessonsFragment"
         android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
-        tools:layout="@layout/fragment_lessons" />
+        tools:layout="@layout/fragment_lessons" >
+        <action
+            android:id="@+id/action_lessonsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addMechetFragment"
         android:name="com.motion.muslimcollection.ui.mechet.screenmechet.addmechet.AddMechetFragment"
