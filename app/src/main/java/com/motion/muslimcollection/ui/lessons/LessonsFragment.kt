@@ -34,6 +34,15 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     override fun showConnectedState() {
         initRecyclerView()
         initData()
+        lessonAdapter.setItemClickListener(object :ItemClickListener{
+            override fun onItemClick(position: Int) {
+                val id = lessonAdapter.currentList[position].id             /*  adapter.getList()[position].id*/
+                val action = LessonsFragmentDirections.actionLessonsFragmentToNamazFragment(id)
+                (activity as MainActivity).navController.navigate(action)
+                Log.d("TAG", "onItemClick:$id ")
+            }
+
+        })
 
     }
     private fun initRecyclerView() {
@@ -55,7 +64,6 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
                     lessonViewModel.laodi.postValue(false)
                     it.data?.let {
                         lessonAdapter.submitList(it)
-                        Log.d("TAG", "initData: "+it)
                     }
                 }
                 Status.ERROR -> {

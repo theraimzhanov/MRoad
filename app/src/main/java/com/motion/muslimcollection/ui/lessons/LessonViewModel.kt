@@ -12,8 +12,7 @@ class LessonViewModel(private val repository: LessonRepository):BaseViewModel() 
     var laodi = MutableLiveData<Boolean>()
     private var _lesson = MutableLiveData<Resource<GetLessonCategoriesItem>>()
     fun getLessonId(id: Int) {
-        _lesson =
-            repository.getCategoriesId(id) as MutableLiveData<Resource<GetLessonCategoriesItem>>
+        _lesson = repository.getCategoriesId(id) as MutableLiveData<Resource<GetLessonCategoriesItem>>
     }
 
     val item: LiveData<Resource<GetLessonCategoriesItem>>

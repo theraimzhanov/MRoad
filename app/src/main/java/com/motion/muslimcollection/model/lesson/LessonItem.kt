@@ -1,11 +1,12 @@
 package com.motion.muslimcollection.model.lesson
 
-class LessonsItem(val  name:String,var lesson:String = START_LESSON)
-{
+import com.motion.muslimcollection.model.categless.Category
+import java.util.*
 
-
-companion object{
-    const val START_ID = -1
-    const val START_LESSON = "LESSON"
-}
-}
+data class LessonsItem(
+    val name: String,
+    val author: String,
+    val audio: String,
+    val category: Category,
+    val id: Int
+)
