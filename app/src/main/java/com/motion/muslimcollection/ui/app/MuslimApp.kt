@@ -10,6 +10,7 @@ class MuslimApp : Application() {
     override fun onCreate() {
         super.onCreate()
         NetworkConnectivityChecker.init(this.applicationContext)
+
         startKoin {
             androidContext(this@MuslimApp)
             modules(koinModules)

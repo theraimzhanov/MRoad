@@ -1,6 +1,5 @@
 package com.motion.muslimcollection.ui.lessons
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,45 +7,33 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.ItemClickListener
-import com.motion.muslimcollection.model.lesson.LessonsCategoriesItem
+import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
 
-class AdapterLessonCategories():RecyclerView.Adapter<AdapterLessonCategories.LessonViewHolder>() {
-    private var list: List<LessonsCategoriesItem> = emptyList()
-    fun setList(list: List<LessonsCategoriesItem>) {
+
+class AdapterLessonCategories(var list: List<GetLessonCategoriesItem>) : RecyclerView.Adapter<AdapterLessonCategories.LessonViewHolder>() {
+
+    @JvmName("setList1")
+    fun setList(list: List<GetLessonCategoriesItem>) {
         this.list = list
         notifyDataSetChanged()
     }
-    fun getList(): List<LessonsCategoriesItem> {
-        return list
-    }
-    private lateinit var click: ItemClickListener
-    fun setItemClickListener(clickListener: ItemClickListener) {
-        click = clickListener
-    }
-    class LessonViewHolder(itemView:View,clickListener: ItemClickListener):RecyclerView.ViewHolder(itemView) {
-        val name = itemView.findViewById<TextView>(R.id.text_categories)
-        init {
-            itemView.setOnClickListener {
 
-                clickListener.onItemClick(adapterPosition,)
-
-            }
-        }
+    class LessonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val name = itemView.findViewById<TextView>(R.id.tv_less_namaz)
+        val lesson = itemView.findViewById<TextView>(R.id.tv_lesss_body)
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
         val itemView: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.listlessoncategories, parent, false)
-        return LessonViewHolder(itemView, click)
+        return LessonViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        val code = list[position]
-        holder.name.text = code.name
-        Log.d("TAG", "onBindViewHolder:"+code.name)
+        val lesson = list[position]
+        holder.name.text = lesson.name
+        holder.lesson.text = lesson.lessons
     }
-
-    override fun getItemCount() = list.size
-
-
+    override fun getItemCount(): Int {
+        return list.size
+    }
 }
