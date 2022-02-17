@@ -70,11 +70,12 @@
         <action
 
             android:id="@+id/action_lessonsFragment_to_namazFragment"
-            app:destination="@id/namazFragment" />
+            app:destination="@id/namazFragment" /><![CDATA[
 
-            android:id="@+id/action_lessonsFragment_to_homeFragment"
+        android:id="@+id/action_lessonsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
 
+    ]]>
     </fragment>
     <fragment
         android:id="@+id/addMechetFragment"
@@ -233,4 +234,14 @@
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/vacancyFragment"
+        android:name="com.motion.muslimcollection.ui.vacancy.VacancyFragment"
+        android:label="fragment_vacancy"
+        tools:layout="@layout/fragment_vacancy" />
+    <fragment
+        android:id="@+id/addVacancyFragment"
+        android:name="com.motion.muslimcollection.ui.vacancy.AddVacancyFragment"
+        android:label="fragment_add_vacancy"
+        tools:layout="@layout/fragment_add_vacancy" />
 </navigation>

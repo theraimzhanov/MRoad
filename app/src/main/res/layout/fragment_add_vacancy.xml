@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.vacancy.AddVacancyFragment">
+
+<LinearLayout
+    android:id="@+id/layout_vacancy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginVertical="15dp"
+    android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/nameWorker"
+        android:hint="ФИО"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/nameCompany"
+        android:hint="Компания"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/requirements"
+        android:hint="Требования"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/salary"
+        android:hint="ЗП"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/obligation"
+        android:hint="Обьязанность"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/religion"
+        android:hint="Условия для религиозных"
+        android:textColorHint="#8E8B8B"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/btnAddVacancy"
+        android:background="#06483A"
+        android:paddingVertical="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="Добавить" />
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

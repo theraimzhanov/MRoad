@@ -24,10 +24,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         requireActivity().bottomNavigationView.visibility = View.VISIBLE
     }
 
-
-
-
-    }
     private fun closeScreen(){
         val callback = object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
