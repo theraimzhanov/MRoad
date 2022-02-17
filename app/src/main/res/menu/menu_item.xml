@@ -32,11 +32,8 @@
                 android:title="@string/tv_app"
                 android:id="@+id/menu_app"
                 app:showAsAction="never" />
-            />
-
 
         </menu>
-
 
     </item>
 

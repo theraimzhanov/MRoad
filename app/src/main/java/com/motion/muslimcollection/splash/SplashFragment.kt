@@ -22,8 +22,8 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         sharedPreferences =
             requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val click = sharedPreferences.getBoolean("click", false)
-        Helper.setLang(requireContext())
-        Helper.changeTheme(requireContext())
+      /*  Helper.setLang(requireContext())
+        Helper.changeTheme(requireContext())*/
         Handler().postDelayed({
             when (click) {
                 true -> (activity as MainActivity).navController.navigate(R.id.action_splashFragment_to_homeFragment)
@@ -31,13 +31,15 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
             }
 
         }, 2000)
+
         
 
+
     }
+
     override fun showConnectedState() {
     }
     override fun saveOnBoard(b: Boolean) {
     }
-
 
 }

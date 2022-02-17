@@ -19,6 +19,7 @@ import org.koin.android.ext.android.inject
 
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
 
+
     private val lessonViewModel: LessonViewModel by inject()
     private lateinit var adapter: AdapterLessonCategories
 
@@ -35,6 +36,15 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     override fun showBottomNavigation() {
         super.showBottomNavigation()
 
+    override fun setupObservers() {
+
+    }
+
+    override fun showConnectedState() {
+
+    }
+
+    override fun saveOnBoard(b: Boolean) {
     }
 
     override fun showConnectedState() {
@@ -74,5 +84,6 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
         recycler_codes.adapter = adapter
         recycler_codes.setHasFixedSize(true)
     }
+=======
 }
 
