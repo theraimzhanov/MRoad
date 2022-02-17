@@ -1,8 +1,10 @@
 package com.motion.muslimcollection.model.lessoncategories
 
+import com.motion.muslimcollection.model.lesson.LessonsItem
+
 data class GetLessonCategoriesItem(
     val id: Int ,
-    val lessons: String,
+    val lessons:List<LessonsItem>? = null,
     val name: String
 ){
     companion object{

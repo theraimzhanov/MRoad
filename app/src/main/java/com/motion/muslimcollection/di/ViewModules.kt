@@ -12,7 +12,5 @@ import org.koin.dsl.module
 val viewModules: Module = module {
     viewModel { MainViewModel() }
     viewModel { LessonViewModel(get()) }
-}
-
-viewModel {VacancyViewModel(get()) }
+    viewModel { VacancyViewModel(get()) }
 }

@@ -12,78 +12,58 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_lessons.*
+import kotlinx.android.synthetic.main.fragment_vacancy.*
 import kotlinx.android.synthetic.main.listlessoncategories.*
 import org.koin.android.ext.android.inject
 
 
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
-
-
     private val lessonViewModel: LessonViewModel by inject()
-    private lateinit var adapter: AdapterLessonCategories
-
-    override fun setupObservers() {
-    }
-
+    private lateinit var lessonAdapter: LessonAdapter
     override fun saveOnBoard(b: Boolean) {
     }
-
-    override fun setupUI() {
-        super.setupUI()
-    }
-
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-
+    }
     override fun setupObservers() {
 
     }
 
     override fun showConnectedState() {
+        initRecyclerView()
+        initData()
 
     }
-
-    override fun saveOnBoard(b: Boolean) {
+    private fun initRecyclerView() {
+        with(recycler_codes){
+            lessonAdapter = LessonAdapter()
+            adapter = lessonAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
     }
-
-    override fun showConnectedState() {
-        val list:List<GetLessonCategoriesItem> = emptyList()
-        adapter = AdapterLessonCategories(list)
-        lesson()
-    }
-
-
-    fun lesson() {
-        lessonViewModel.laodi.observe(this, { loading_codes.visible = it })
-        lessonViewModel.lessonAll()
-        lessonViewModel.lessonsAll.observe(this) { resource ->
-            when (resource.status) {
+    private fun initData() {
+        lessonViewModel.laodi.observe(this) { loading_codes.visible = it }
+        lessonViewModel.getLessonAll()
+        lessonViewModel.list.observe(this){ it ->
+            when(it.status){
                 Status.LOADING -> {
                     lessonViewModel.laodi.postValue(true)
                 }
                 Status.SUCCESS -> {
                     lessonViewModel.laodi.postValue(false)
-                    resource.data?.let {
-
+                    it.data?.let {
+                        lessonAdapter.submitList(it)
+                        Log.d("TAG", "initData: "+it)
                     }
-
                 }
                 Status.ERROR -> {
                     lessonViewModel.laodi.postValue(false)
-                    context?.showMessage(resource.message)
+                    context?.showMessage(it.message)
                 }
             }
         }
-
     }
-
-
-   fun initrecyclerView() {
-        recycler_codes.layoutManager = LinearLayoutManager(requireContext())
-        recycler_codes.adapter = adapter
-        recycler_codes.setHasFixedSize(true)
-    }
-=======
 }
 

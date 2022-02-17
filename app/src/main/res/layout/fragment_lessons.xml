@@ -36,7 +36,6 @@
         android:layout_width="match_parent"
         android:id="@+id/recycler_codes"
         android:layout_height="0dp"
-        app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/listlessoncategories"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
