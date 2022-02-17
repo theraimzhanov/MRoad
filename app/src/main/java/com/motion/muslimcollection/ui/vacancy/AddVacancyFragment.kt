@@ -74,7 +74,6 @@ class AddVacancyFragment : BaseFragment(R.layout.fragment_add_vacancy) {
                 }
                 Status.SUCCESS -> {
                     viewModel.laoding.postValue(false)
-
                 }
                 Status.ERROR -> {
                     viewModel.laoding.postValue(false)
