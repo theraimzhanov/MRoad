@@ -70,7 +70,10 @@
         <action
 
             android:id="@+id/action_lessonsFragment_to_namazFragment"
-            app:destination="@id/namazFragment" /><![CDATA[
+            app:destination="@id/namazFragment" />
+        <action
+            android:id="@+id/action_lessonsFragment_to_addVacancyFragment"
+            app:destination="@id/addVacancyFragment" /><![CDATA[
 
         android:id="@+id/action_lessonsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

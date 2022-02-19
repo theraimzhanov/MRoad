@@ -13,68 +13,140 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginHorizontal="32dp"
-    android:layout_marginVertical="15dp"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="20dp"
     android:orientation="vertical"
     >
-    <EditText
-        android:id="@+id/nameWorker"
-        android:hint="ФИО"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/nameCompany"
-        android:hint="Компания"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/requirements"
-        android:hint="Требования"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/salary"
-        android:hint="ЗП"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/obligation"
-        android:hint="Обьязанность"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/religion"
-        android:hint="Условия для религиозных"
-        android:textColorHint="#8E8B8B"
-        android:textSize="20sp"
-        android:layout_marginBottom="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <TextView
-        android:id="@+id/btnAddVacancy"
-        android:background="#06483A"
-        android:paddingVertical="12dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nameWorker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ФИО"
+            android:textSize="15dp"
+            android:inputType="textCapWords"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nameCompany"
+        android:layout_marginTop="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameCompany"
+            android:hint="Компания"
+            android:textColorHint="#8E8B8B"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_requirements"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/requirements"
+            android:hint="Требования"
+            android:textColorHint="#8E8B8B"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_salary"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/salary"
+            android:hint="ЗП"
+            android:textColorHint="#8E8B8B"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_obligation"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/obligation"
+            android:hint="Обьязанность"
+            android:textColorHint="#8E8B8B"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_religion"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/religion"
+            android:hint="Условия для религиозных"
+            android:textColorHint="#8E8B8B"
+            android:textSize="15dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/btnAddVacancy"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:background="@color/muslim"
         android:textColor="@color/white"
         android:gravity="center"
         android:text="Добавить" />
 </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/loadingVacancy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
