@@ -24,7 +24,7 @@ class MechetFragment : BaseFragment(R.layout.fragment_mechet) {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
-//closeScreen()//setupUI()
+
     }
 
     override fun setupUI() {

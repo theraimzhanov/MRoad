@@ -12,47 +12,31 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     override fun setupObservers() {
         setHasOptionsMenu(true)
     }
+
     override fun showConnectedState() {
     }
 
     override fun saveOnBoard(b: Boolean) {
-
     }
 
+    override fun setupUI() {
+        super.setupUI()
+        closeScreen()
+    }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
         requireActivity().bottomNavigationView.visibility = View.VISIBLE
     }
 
-    private fun closeScreen(){
-        val callback = object : OnBackPressedCallback(true){
+    private fun closeScreen() {
+        val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 activity?.finish()
             }
         }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,callback)
-
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
-   /* override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            android.R.id.home ->btn_menu()
-            R.id.
-        }
-    }
-    override fun onOptionsMenuClosed(menu: Menu) {
-        super.onOptionsMenuClosed(menu)
-    }*/
-
-
-
-    override fun setupUI() {
-        super.setupUI()
-        //closeScreen()
-
-
-    }
 
 }
-
 

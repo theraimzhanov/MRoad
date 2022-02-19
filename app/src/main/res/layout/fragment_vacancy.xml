@@ -16,10 +16,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerViewVacancy"
-    tools:listitem="@layout/vacancy_item"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewVacancy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/vacancy_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

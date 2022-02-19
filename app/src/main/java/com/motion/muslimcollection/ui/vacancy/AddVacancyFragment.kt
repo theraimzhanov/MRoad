@@ -175,7 +175,9 @@ viewModel.resetErrorInputName()
                 }
                 Status.SUCCESS -> {
                     viewModel.laoding.postValue(false)
+
                     context?.showMessage(it.message)
+
                 }
                 Status.ERROR -> {
                     viewModel.laoding.postValue(false)
