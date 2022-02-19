@@ -1,6 +1,8 @@
 package com.motion.muslimcollection.ui.vacancy
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,71 +12,170 @@ import android.widget.Toast
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
+import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.model.vacancies.VacancyItem
 import com.motion.muslimcollection.network.result.Status
+import kotlinx.android.synthetic.main.fragment_add_vacancy.*
+import kotlinx.android.synthetic.main.vacancy_item.*
+import org.koin.android.ext.android.bind
 import org.koin.android.ext.android.inject
 
 
 class AddVacancyFragment : BaseFragment(R.layout.fragment_add_vacancy) {
 
-    private val viewModel:VacancyViewModel by inject()
+    private val viewModel: VacancyViewModel by inject()
 
     override fun setupObservers() {
     }
+
     override fun saveOnBoard(b: Boolean) {
     }
 
 
     override fun showConnectedState() {
         observeViewModel()
+        addVacancy()
+        addTextChangeListeners()
     }
+
+    private fun addTextChangeListeners() {
+        nameWorker.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+viewModel.resetErrorInputName()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+        })
+        nameCompany.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputCompany()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
+        requirements.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputRequirements()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
+        salary.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputSalary()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
+        obligation.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputObligation()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
+        religion.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputReligion()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
+    }
+
 
     private fun observeViewModel() {
-     viewModel.errorInputName.observe(viewLifecycleOwner){
-        if (it){
-            context?.showMessage("Заполните фио")
+        viewModel.errorInputName.observe(viewLifecycleOwner) {
+
         }
-     }
-        viewModel.errorInputCompany.observe(viewLifecycleOwner){
-            if (it){
-                context?.showMessage("Заполните компания")
-            }
+        viewModel.errorInputCompany.observe(viewLifecycleOwner) {
+
         }
-        viewModel.errorInputRequirements.observe(viewLifecycleOwner){
-            if (it){
-                context?.showMessage("Заполните требования")
-            }
+        viewModel.errorInputRequirements.observe(viewLifecycleOwner) {
+
         }
-        viewModel.errorInputSalary.observe(viewLifecycleOwner){
-            if (it){
-                context?.showMessage("Заполните зп")
-            }
+        viewModel.errorInputSalary.observe(viewLifecycleOwner) {
+
         }
-        viewModel.errorInputObligation.observe(viewLifecycleOwner){
-            if (it){
-                context?.showMessage("Заполните обьязанность")
-            }
+        viewModel.errorInputObligation.observe(viewLifecycleOwner) {
+
         }
-        viewModel.errorInputReligion.observe(viewLifecycleOwner){
-            if (it){
-                context?.showMessage("Заполните условия для религиозных")
-            }
+        viewModel.errorInputReligion.observe(viewLifecycleOwner) {
+
+        }
+        viewModel.shouldCloseScreen.observe(viewLifecycleOwner) {
+            requireActivity().onBackPressed()
         }
     }
 
-    private fun addData(name:String?,company:String?
-                        ,requirements:String,salary:String?
-                        ,obligation:String?,religion:String?) {
-        viewModel.laoding.observe(this) {  }
+    private fun addVacancy() {
+        btnAddVacancy.setOnClickListener {
+            addData(
+                nameWorker?.text.toString().trim(),
+                nameCompany?.text.toString().trim(),
+                requirements?.text.toString().trim(),
+                salary?.text.toString().trim(),
+                obligation?.text.toString().trim(),
+                religion?.text.toString().trim()
+            )
+        }
+    }
+
+    private fun addData(
+        name: String?,
+        company: String?,
+        requirements: String,
+        salary: String?,
+        obligation: String?,
+        religion: String?
+    ) {
+        viewModel.laoding.observe(this) { loadingVacancy.visible = it }
         viewModel.addVacancyItem(name, company, requirements, salary, obligation, religion)
-        viewModel.add.observe(this){ it ->
-            when(it.status){
+        viewModel.add.observe(this) { it ->
+            when (it.status) {
                 Status.LOADING -> {
                     viewModel.laoding.postValue(true)
                 }
                 Status.SUCCESS -> {
                     viewModel.laoding.postValue(false)
-
+                    context?.showMessage(it.message)
                 }
                 Status.ERROR -> {
                     viewModel.laoding.postValue(false)
