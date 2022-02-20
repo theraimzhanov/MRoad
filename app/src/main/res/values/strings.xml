@@ -68,4 +68,5 @@
     <string name="fass">Фаст-фуды</string>
     <string name="e_d_text">Е добавки</string>
     <string name="drugie_resource">Другие ресурсы</string>
+    <string name="error"> запольните поля</string>
 </resources>

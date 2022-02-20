@@ -28,9 +28,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
         super.showBottomNavigation()
     }
     override fun setupObservers() {
-
     }
-
     override fun showConnectedState() {
 
 btnAddVacancy.setOnClickListener {
