@@ -8,12 +8,22 @@ val remoteDataSourceModule = module {
     factory { RemoteDataSource(get()) }
 }
 class RemoteDataSource(private val apiService: Service) : BaseDataSource() {
+    //бул катгория
     suspend fun LessonAllCategories() = getResult {
         apiService.getLessonCategories()
     }
+    //бул катгория айдиси менен
      suspend fun Lesson_Categories_ID(id:Int) = getResult {
          apiService.getLessonCategoriesID(id)
      }
+    //бул сабактар
+    suspend fun LessonAll() = getResult {
+        apiService.getLessonAll()
+    }
+    //бул сабактар айдиси менен
+    suspend fun getLessonId(id:Int) = getResult {
+        apiService.getLessonID(id)
+    }
 
     suspend fun getVacancyList() = getResult {
         apiService.getVacancyList()

@@ -11,12 +11,14 @@
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/drawable/tv_shape.xml" value="0.186" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/addfastfood.xml" value="0.1875" />
+        <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/audiolist.xml" value="0.1" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_cafe.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_madrasah.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_mechet.xml" value="0.16" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_prayer_rooms.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_shops.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_universities.xml" value="0.1936725096194955" />
+        <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_add_vacancy.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_addlibrary.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_addrestaurant.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_akyida.xml" value="0.20521590423257802" />
@@ -37,6 +39,7 @@
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_mechet_maps.xml" value="0.1875" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_menu.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_namaz.xml" value="0.20521590423257802" />
+        <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_pliyer.xml" value="0.20081595648232095" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_prayer_rooms.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_quran.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/fragment_restaurant.xml" value="0.20521590423257802" />
@@ -51,21 +54,6 @@
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/vacancy_item.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/menu/menu_item.xml" value="0.20521590423257802" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable-v24/et_vacancy.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable-v24/shape_abdu_country_lang.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/bnt_icon_shape.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/btn_dobav_shape.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/btn_nav_shape.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/et_shape.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/lessons_shape.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/shape_et.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/shape_vacancy.xml" value="0.2555" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/stroke.xml" value="0.1045" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/fragment_add_vacancy.xml" value="0.11764705882352941" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/fragment_lessons.xml" value="0.25" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/fragment_library.xml" value="0.25" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/fragment_vacancy.xml" value="0.264" />
-        <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/vacancy_item.xml" value="0.4" />
       </map>
     </option>
   </component>

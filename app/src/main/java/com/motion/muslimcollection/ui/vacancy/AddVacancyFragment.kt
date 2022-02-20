@@ -123,21 +123,57 @@ viewModel.resetErrorInputName()
 
     private fun observeViewModel() {
         viewModel.errorInputName.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_nameWorker.error = massage
 
         }
         viewModel.errorInputCompany.observe(viewLifecycleOwner) {
+                val massage = if (it){
+                    getString(R.string.error)
+                }else{
+                    null
+                }
+                til_nameCompany.error = massage
 
         }
         viewModel.errorInputRequirements.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_requirements.error = massage
 
         }
         viewModel.errorInputSalary.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_salary.error = massage
 
         }
         viewModel.errorInputObligation.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_obligation.error = massage
 
         }
         viewModel.errorInputReligion.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_religion.error = massage
 
         }
         viewModel.shouldCloseScreen.observe(viewLifecycleOwner) {
