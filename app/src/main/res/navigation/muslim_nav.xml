@@ -15,6 +15,18 @@
         <action
             android:id="@+id/action_homeFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_appFragment"
+            app:destination="@id/appFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_otherResourceFragment"
+            app:destination="@id/otherResourceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_workFragment"
+            app:destination="@id/workFragment" />
     </fragment>
     <fragment
         android:id="@+id/mechetFragment"
@@ -70,13 +82,12 @@
         <action
 
             android:id="@+id/action_lessonsFragment_to_namazFragment"
-            app:destination="@id/namazFragment" />
-        <action
-            android:id="@+id/action_lessonsFragment_to_addVacancyFragment"
-            app:destination="@id/addVacancyFragment" /><![CDATA[
+            app:destination="@id/namazFragment" /><![CDATA[
+
 
         android:id="@+id/action_lessonsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
 
     ]]>
     </fragment>
@@ -251,6 +262,28 @@
         android:label="fragment_add_vacancy"
         tools:layout="@layout/fragment_add_vacancy" />
     <fragment
+
+        android:id="@+id/appFragment"
+        android:name="com.motion.muslimcollection.ui.menu.AppFragment"
+        android:label="fragment_app"
+        tools:layout="@layout/fragment_app" />
+    <fragment
+        android:id="@+id/otherResourceFragment"
+        android:name="com.motion.muslimcollection.ui.menu.OtherResourceFragment"
+        android:label="fragment_other_resource"
+        tools:layout="@layout/fragment_other_resource" />
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.motion.muslimcollection.ui.menu.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" >
+        <action
+            android:id="@+id/action_workFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
+        <action
+            android:id="@+id/action_workFragment_to_addVacancyFragment"
+            app:destination="@id/addVacancyFragment" />
+
         android:id="@+id/pliyerFragment"
         android:name="com.motion.muslimcollection.ui.lessons.pliyer.PliyerFragment"
         android:label="fragment_pliyer"
@@ -262,5 +295,6 @@
             android:name="audio"
             app:argType="integer"
             android:defaultValue="0" />
+
     </fragment>
 </navigation>
