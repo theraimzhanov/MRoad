@@ -85,8 +85,10 @@
             app:destination="@id/namazFragment" /><![CDATA[
 
 
+
         android:id="@+id/action_lessonsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
 
 
     ]]>
@@ -232,7 +234,7 @@
         tools:layout="@layout/fragment_language" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.motion.muslimcollection.SettingsFragment"
+        android:name="com.motion.muslimcollection.ui.menu.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
@@ -243,13 +245,13 @@
         <action
             android:id="@+id/action_namazFragment_to_lessonsFragment"
             app:destination="@id/lessonsFragment" />
-        <argument
-            android:name="lesscategor"
-            android:defaultValue="0"
-            app:argType="integer" />
         <action
-            android:id="@+id/action_namazFragment_to_pliyerFragment"
-            app:destination="@id/pliyerFragment" />
+            android:id="@+id/action_namazFragment_to_pliyerFragment42"
+            app:destination="@id/pliyerFragment4" />
+        <argument
+            android:name="post"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/vacancyFragment"
@@ -282,19 +284,30 @@
             app:destination="@id/vacancyFragment" />
         <action
             android:id="@+id/action_workFragment_to_addVacancyFragment"
-            app:destination="@id/addVacancyFragment" />
+            app:destination="@id/addVacancyFragment" /><![CDATA[
 
         android:id="@+id/pliyerFragment"
         android:name="com.motion.muslimcollection.ui.lessons.pliyer.PliyerFragment"
         android:label="fragment_pliyer"
         tools:layout="@layout/fragment_pliyer" >
-        <action
-            android:id="@+id/action_pliyerFragment_to_namazFragment"
-            app:destination="@id/namazFragment" />
+        ]]>
         <argument
             android:name="audio"
             app:argType="integer"
             android:defaultValue="0" />
 
+    </fragment>
+    <fragment
+        android:id="@+id/pliyerFragment4"
+        android:name="com.motion.muslimcollection.ui.lessons.pliyer.PliyerFragment"
+        android:label="fragment_pliyer"
+        tools:layout="@layout/fragment_pliyer" >
+        <argument
+            android:name="modul"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_pliyerFragment4_to_namazFragment"
+            app:destination="@id/namazFragment" />
     </fragment>
 </navigation>

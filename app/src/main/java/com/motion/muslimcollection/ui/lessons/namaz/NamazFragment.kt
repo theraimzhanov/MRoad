@@ -28,11 +28,11 @@ class NamazFragment : BaseFragment(R.layout.fragment_namaz) {
     }
     override fun showConnectedState() {
         initRecyclerView()
-        initData(args.lesscategor)
+        initData(args.post)
         _adapter.setItemClickListener(object : ItemClickListener {
             override fun onItemClick(position: Int) {
                 val id = _adapter.currentList[position].id             /*  adapter.getList()[position].id*/
-                val action = NamazFragmentDirections.actionNamazFragmentToPliyerFragment(id)
+                val action = NamazFragmentDirections.actionNamazFragmentToPliyerFragment42(id)
                 (activity as MainActivity).navController.navigate(action)
                 Log.d("TAG", "onItemClick:$id ")
             }
