@@ -1,4 +1,5 @@
 package com.motion.muslimcollection.data.remote
+import com.motion.muslimcollection.model.lesson.LessonsItem
 import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
 import com.motion.muslimcollection.model.vacancies.VacancyItem
 import retrofit2.Response
@@ -14,6 +15,12 @@ interface Service {
        //lesson_Categories_id
        @GET("/lesson/v1/categories/{id}/")
        suspend fun getLessonCategoriesID(@Path("id")id:Int):Response<GetLessonCategoriesItem>
+       //сабактар
+       @GET("/lesson/v1/lessons/")
+       suspend fun getLessonAll():Response<List<LessonsItem>>
+       //сабактар айдиси менен
+       @GET("/lesson/v1/lessons/{id}/")
+       suspend fun getLessonID(@Path("id")id:Int):Response<LessonsItem>
 
        @GET("/vacancy/v1/vacancies/")
        suspend fun getVacancyList():Response<List<VacancyItem>>
