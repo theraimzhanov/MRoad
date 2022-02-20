@@ -33,9 +33,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
 
     override fun showConnectedState() {
 
-btnAddVacancy.setOnClickListener {
-    (activity as MainActivity).navController.navigate(R.id.action_lessonsFragment_to_addVacancyFragment)
-}
+
 
         initRecyclerView()
         initData()
