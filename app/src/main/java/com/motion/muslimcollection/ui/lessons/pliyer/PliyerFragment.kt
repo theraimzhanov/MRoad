@@ -2,6 +2,7 @@ package com.motion.muslimcollection.ui.lessons.pliyer
 
 import android.media.AudioAttributes
 import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,14 +21,14 @@ import kotlinx.android.synthetic.main.fragment_pliyer.*
 import org.koin.android.ext.android.inject
 
 class PliyerFragment : BaseFragment(R.layout.fragment_pliyer) {
+
     private val lessonViewModel: LessonViewModel by inject()
     val args: PliyerFragmentArgs by navArgs()
     override fun setupObservers() {
-
     }
 
     override fun showConnectedState() {
-        initData(args.audio)
+        initData(args.modul)
     }
     override fun saveOnBoard(b: Boolean) {
     }
@@ -41,23 +42,11 @@ class PliyerFragment : BaseFragment(R.layout.fragment_pliyer) {
                 }
                 Status.SUCCESS -> {
                     lessonViewModel.laodi.postValue(false)
-
                     audio.text = it.data?.audio
-                    var  a =it.data?.audio
-
+                    val  a =it.data?.audio.toString()
                     play.setOnClickListener {
-                        val url = a // your URL here
-                        val mediaPlayer = MediaPlayer().apply {
-                            setAudioAttributes(
-                                AudioAttributes.Builder()
-                                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                                    .build()
-                            )
-                            setDataSource(url)
-                            prepare() // might take long! (for buffering, etc)
-                            start()
-                        }
+
+
                     }
 
                 }
