@@ -3,7 +3,7 @@ package com.motion.muslimcollection.ui.vacancy
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.motion.muslimcollection.core.base.BaseViewModel
-import com.motion.muslimcollection.model.vacancies.VacancyItem
+import com.motion.muslimcollection.model.vacancy_model.VacancyItem
 import com.motion.muslimcollection.network.result.Resource
 
 class VacancyViewModel(private val repository: VacancyRepository) : BaseViewModel() {

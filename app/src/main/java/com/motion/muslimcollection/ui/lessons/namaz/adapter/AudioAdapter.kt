@@ -1,23 +1,15 @@
 package com.motion.muslimcollection.ui.lessons.namaz.adapter
 
-import android.media.AudioAttributes
-import android.media.AudioManager
-import android.media.MediaPlayer
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.ListAdapter
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.ItemClickListener
-import com.motion.muslimcollection.model.lesson.LessonsItem
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
-import com.motion.muslimcollection.ui.lessons.LessonItemDiffUtil
-import com.motion.muslimcollection.ui.lessons.LessonViewHolder
-import java.io.IOException
+import com.motion.muslimcollection.model.lesson_model.LessonItem
 
-class AudioAdapter: ListAdapter<LessonsItem, AudioViewHolder>(AudioItemDiffUtil()) {
-    private var list: List<LessonsItem> = emptyList()
-    fun getList(): List<LessonsItem> {
+class AudioAdapter: ListAdapter<LessonItem, AudioViewHolder>(AudioItemDiffUtil()) {
+    private var list: List<LessonItem> = emptyList()
+    fun getList(): List<LessonItem> {
         return list
     }
     private lateinit var click: ItemClickListener

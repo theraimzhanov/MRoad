@@ -450,7 +450,7 @@
     <style name="con_style">
         <item name="android:layout_width">119dp</item>
         <item name="android:layout_height">104dp</item>
-        <item name="android:background">@drawable/bnt_icon_shape</item>
+        <item name="android:background">@color/white</item>
     </style>
     <style name="tex_style">
         <item name="android:layout_width">wrap_content</item>

@@ -1,15 +1,14 @@
 package com.motion.muslimcollection.ui.lessons.namaz.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.motion.muslimcollection.model.lesson.LessonsItem
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
+import com.motion.muslimcollection.model.lesson_model.LessonItem
 
-class AudioItemDiffUtil: DiffUtil.ItemCallback<LessonsItem>() {
-    override fun areItemsTheSame(oldItem: LessonsItem, newItem: LessonsItem): Boolean {
+class AudioItemDiffUtil: DiffUtil.ItemCallback<LessonItem>() {
+    override fun areItemsTheSame(oldItem: LessonItem, newItem: LessonItem): Boolean {
         return  return oldItem.id == newItem.id
     }
 
-    override fun areContentsTheSame(oldItem: LessonsItem, newItem: LessonsItem): Boolean {
+    override fun areContentsTheSame(oldItem: LessonItem, newItem: LessonItem): Boolean {
         return oldItem == newItem
     }
 }

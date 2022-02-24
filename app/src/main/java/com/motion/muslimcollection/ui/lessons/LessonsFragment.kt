@@ -9,7 +9,6 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.ItemClickListener
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter

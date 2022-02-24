@@ -1,7 +1,7 @@
 package com.motion.muslimcollection.ui.vacancy.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.motion.muslimcollection.model.vacancies.VacancyItem
+import com.motion.muslimcollection.model.vacancy_model.VacancyItem
 
 class VacancyItemDiffUtil: DiffUtil.ItemCallback<VacancyItem>() {
 

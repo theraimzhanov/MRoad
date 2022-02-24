@@ -2,8 +2,8 @@ package com.motion.muslimcollection.ui.lessons
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.motion.muslimcollection.core.base.BaseViewModel
-import com.motion.muslimcollection.model.lesson.LessonsItem
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
+import com.motion.muslimcollection.model.lesson_model.CategoryLesson
+import com.motion.muslimcollection.model.lesson_model.LessonItem
 import com.motion.muslimcollection.network.result.Resource
 
 class LessonViewModel(private val repository: LessonRepository):BaseViewModel() {
@@ -11,36 +11,36 @@ class LessonViewModel(private val repository: LessonRepository):BaseViewModel() 
 
 
     //бул категория обший келет
-    private var _kt_list = MutableLiveData<Resource<List<GetLessonCategoriesItem>>>()
+    private var _kt_list = MutableLiveData<Resource<List<CategoryLesson>>>()
     fun getLessonAll() {
-        _kt_list = repository.getAllLessonCategories() as MutableLiveData<Resource<List<GetLessonCategoriesItem>>>
+        _kt_list = repository.getAllLessonCategories() as MutableLiveData<Resource<List<CategoryLesson>>>
     }
-    val list: LiveData<Resource<List<GetLessonCategoriesItem>>>
+    val list: LiveData<Resource<List<CategoryLesson>>>
         get() = _kt_list
     //бул катгория айдиси менен келет
-    private var _kt_id = MutableLiveData<Resource<GetLessonCategoriesItem>>()
+    private var _kt_id = MutableLiveData<Resource<CategoryLesson>>()
     fun getCategoriaId(id: Int) {
-        _kt_id = repository.getCategoriesId(id) as MutableLiveData<Resource<GetLessonCategoriesItem>>
+        _kt_id = repository.getCategoriesId(id) as MutableLiveData<Resource<CategoryLesson>>
     }
-    val item: LiveData<Resource<GetLessonCategoriesItem>>
+    val item: LiveData<Resource<CategoryLesson>>
         get() = _kt_id
 
    //бул сабактар обший
-   private var _all = MutableLiveData<Resource<List<LessonsItem>>>()
+   private var _all = MutableLiveData<Resource<List<LessonItem>>>()
     fun getAll() {
-        _all = repository.getAllLesson() as MutableLiveData<Resource<List<LessonsItem>>>
+        _all = repository.getAllLesson() as MutableLiveData<Resource<List<LessonItem>>>
     }
-    val all: LiveData<Resource<List<LessonsItem>>>
+    val all: LiveData<Resource<List<LessonItem>>>
         get() = _all
 
 
 
 //бул сабактар айдиси менен
-    private var _audio = MutableLiveData<Resource<LessonsItem>>()
+    private var _audio = MutableLiveData<Resource<LessonItem>>()
     fun getAudioId(id: Int) {
-        _audio = repository.getLessonId(id) as MutableLiveData<Resource<LessonsItem>>
+        _audio = repository.getLessonId(id) as MutableLiveData<Resource<LessonItem>>
     }
-    val audioId: LiveData<Resource<LessonsItem>>
+    val audioId: LiveData<Resource<LessonItem>>
         get() = _audio
 
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.mechet.Islamiclibrary.libraryFragment">
+    tools:context=".ui.mosque.mosque_library.LibraryFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

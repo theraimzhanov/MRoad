@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="195dp"
     android:background="@color/muslim"
-    tools:context=".ui.mechet.menu.MenuFragment">
+    tools:context=".ui.mosque.menu.MenuFragment">
 
 
 

@@ -4,38 +4,38 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 
 import com.motion.muslimcollection.data.remote.RemoteDataSource
-import com.motion.muslimcollection.model.lesson.LessonsItem
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
+import com.motion.muslimcollection.model.lesson_model.CategoryLesson
+import com.motion.muslimcollection.model.lesson_model.LessonItem
 import com.motion.muslimcollection.network.result.Resource
 import kotlinx.coroutines.Dispatchers
 
 class LessonRepository(private val remoteDataSource: RemoteDataSource) {
 ///
-    fun getAllLessonCategories(): LiveData<Resource<List<GetLessonCategoriesItem>>> =
+    fun getAllLessonCategories(): LiveData<Resource<List<CategoryLesson>>> =
         liveData(Dispatchers.IO) {
             emit(Resource.loading(null))
-            emit(remoteDataSource.LessonAllCategories())
+            emit(remoteDataSource.getAllLessonCategory())
         }
 
-    fun getCategoriesId(id: Int): LiveData<Resource<GetLessonCategoriesItem>> =
+    fun getCategoriesId(id: Int): LiveData<Resource<CategoryLesson>> =
         liveData(Dispatchers.IO) {
             emit(Resource.loading(null))
-            val result = remoteDataSource.Lesson_Categories_ID(id)
+            val result = remoteDataSource.getLessonCategory(id)
             emit(result)
         }
 
     ////
 
 
-   fun getAllLesson(): LiveData<Resource<List<LessonsItem>>> =
+   fun getAllLesson(): LiveData<Resource<List<LessonItem>>> =
         liveData(Dispatchers.IO) {
             emit(Resource.loading(null))
-            emit(remoteDataSource.LessonAll())
+            emit(remoteDataSource.getAllLesson())
         }
 
 
 
-    fun getLessonId(id: Int): LiveData<Resource<LessonsItem>> =
+    fun getLessonId(id: Int): LiveData<Resource<LessonItem>> =
         liveData(Dispatchers.IO) {
             emit(Resource.loading(null))
             val result = remoteDataSource.getLessonId(id)

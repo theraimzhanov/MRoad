@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.ItemClickListener
-import com.motion.muslimcollection.model.lessoncategories.GetLessonCategoriesItem
+import com.motion.muslimcollection.model.lesson_model.CategoryLesson
 
-class LessonAdapter:ListAdapter<GetLessonCategoriesItem,LessonViewHolder>(LessonItemDiffUtil()) {
-    private var list: List<GetLessonCategoriesItem> = emptyList()
-    fun getList(): List<GetLessonCategoriesItem> {
+class LessonAdapter:ListAdapter<CategoryLesson,LessonViewHolder>(LessonItemDiffUtil()) {
+    private var list: List<CategoryLesson> = emptyList()
+    fun getList(): List<CategoryLesson> {
         return list
     }
     private lateinit var click: ItemClickListener

@@ -19,21 +19,6 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
         super.showBottomNavigation()
     }
     override fun setupUI() {
-        sharedPreferences =
-            requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val click = sharedPreferences.getBoolean("click", false)
-      /*  Helper.setLang(requireContext())
-        Helper.changeTheme(requireContext())*/
-        Handler().postDelayed({
-            when (click) {
-                true -> (activity as MainActivity).navController.navigate(R.id.action_splashFragment_to_homeFragment)
-                false -> (activity as MainActivity).navController.navigate(R.id.action_splashFragment_to_country_Language_Fragment)
-            }
-
-        }, 2000)
-
-        
-
 
     }
 
