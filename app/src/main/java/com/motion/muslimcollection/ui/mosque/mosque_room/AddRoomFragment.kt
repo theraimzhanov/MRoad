@@ -9,10 +9,6 @@ class AddRoomFragment : BaseFragment(R.layout.fragment_add__room) {
     override fun showConnectedState() {
     }
 
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
     override fun setupUI() {
         super.setupUI()
     }

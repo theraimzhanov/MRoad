@@ -19,9 +19,7 @@ class AppFragment : BaseFragment(R.layout.fragment_app) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
 
-    }
 
 
 }

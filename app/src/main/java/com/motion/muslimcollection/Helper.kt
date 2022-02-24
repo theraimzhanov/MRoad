@@ -7,9 +7,8 @@ import java.util.*
 class Helper(var context: Context) {
 
     companion object {
-        fun setLang(context: Context) {
-            val sharedPreferences =
-                context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        fun setLang(context: Context) { val sharedPreferences =
+            context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
             val value = sharedPreferences.getString("lang", "ru")
             val locale = Locale(value)
             Locale.setDefault(locale)

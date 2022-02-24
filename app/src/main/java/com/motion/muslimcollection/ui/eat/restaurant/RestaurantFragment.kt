@@ -12,9 +12,7 @@ class RestaurantFragment : BaseFragment(R.layout.fragment_restaurant) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
 
-    }
 
     override fun setupUI() {
         super.setupUI()

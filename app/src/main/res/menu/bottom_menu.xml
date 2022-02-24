@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:title="@string/home"
         android:icon="@drawable/icon_home"
         android:id="@+id/homeFragment"
@@ -10,7 +9,7 @@
         />
     <item android:title="@string/ss"
         android:icon="@drawable/icon_mosque"
-        android:id="@+id/mechetFragment"
+        android:id="@+id/mosqueFragment"
         android:iconTintMode="screen"
         android:iconTint="#06483A"
         />

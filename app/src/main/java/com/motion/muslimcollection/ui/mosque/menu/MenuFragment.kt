@@ -13,9 +13,8 @@ class MenuFragment : BaseFragment(R.layout.fragment_menu) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
 
-    }
+
 
     override fun setupUI() {
         super.setupUI()

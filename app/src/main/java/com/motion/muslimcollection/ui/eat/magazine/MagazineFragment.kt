@@ -13,10 +13,6 @@ class MagazineFragment : BaseFragment( R.layout.fragment_magazine) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
     override fun setupUI() {
         super.setupUI()
     }

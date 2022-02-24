@@ -2,4 +2,119 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/muslim_nav" />
+    android:id="@+id/muslim_nav"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
+        android:label="fragment_lessons"
+        tools:layout="@layout/fragment_lessons" >
+        <action
+            android:id="@+id/action_lessonsFragment_to_namazFragment"
+            app:destination="@id/namazFragment" />
+        <action
+            android:id="@+id/action_lessonsFragment_to_eatFragment2"
+            app:destination="@id/eatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/namazFragment"
+        android:name="com.motion.muslimcollection.ui.lessons.namaz.NamazFragment"
+        android:label="fragment_namaz"
+        tools:layout="@layout/fragment_namaz" >
+        <action
+            android:id="@+id/action_namazFragment_to_pliyerFragment"
+            app:destination="@id/pliyerFragment" />
+        <argument
+            android:name="lessons"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_namazFragment_to_lessonsFragment2"
+            app:destination="@id/lessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pliyerFragment"
+        android:name="com.motion.muslimcollection.ui.lessons.pliyer.PliyerFragment"
+        android:label="fragment_pliyer"
+        tools:layout="@layout/fragment_pliyer" >
+        <argument
+            android:name="audio"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_pliyerFragment_to_namazFragment"
+            app:destination="@id/namazFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mosquesFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosques.MosquesFragment"
+        android:label="fragment_mosques"
+        tools:layout="@layout/fragment_mosques" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.motion.muslimcollection.ui.homefragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_mosqueFragment"
+            app:destination="@id/mosqueFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment2"
+            app:destination="@id/settingsFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_appFragment"
+            app:destination="@id/appFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mosqueFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.MosqueFragment"
+        android:label="fragment_mosque"
+        tools:layout="@layout/fragment_mosque" >
+        <action
+            android:id="@+id/action_mosqueFragment_to_eatFragment2"
+            app:destination="@id/eatFragment" />
+        <action
+            android:id="@+id/action_mosqueFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/eatFragment"
+        android:name="com.motion.muslimcollection.ui.eat.EatFragment"
+        android:label="fragment_eat"
+        tools:layout="@layout/fragment_eat" >
+        <action
+            android:id="@+id/action_eatFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+        <action
+            android:id="@+id/action_eatFragment_to_mosqueFragment"
+            app:destination="@id/mosqueFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment2"
+        android:name="com.motion.muslimcollection.ui.menu.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appFragment"
+        android:name="com.motion.muslimcollection.ui.menu.AppFragment"
+        android:label="fragment_app"
+        tools:layout="@layout/fragment_app" >
+        <action
+            android:id="@+id/action_appFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.motion.muslimcollection.ui.menu.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" />
+
+</navigation>

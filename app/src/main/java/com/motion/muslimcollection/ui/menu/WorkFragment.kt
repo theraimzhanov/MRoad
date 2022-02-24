@@ -14,13 +14,7 @@ class WorkFragment : BaseFragment(R.layout.fragment_work) {
 
     override fun showConnectedState() {
         goToVacancyFragment.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_workFragment_to_addVacancyFragment)
+          //  (activity as MainActivity).navController.navigate(R.id.action_workFragment_to_addVacancyFragment)
         }
     }
-
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
-
 }

@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_splash.*
 
 class SplashFragment : BaseFragment(R.layout.fragment_splash) {
-    private lateinit var sharedPreferences: SharedPreferences
     override fun setupObservers() {
     }
     override fun showBottomNavigation() {
@@ -24,7 +23,6 @@ class SplashFragment : BaseFragment(R.layout.fragment_splash) {
 
     override fun showConnectedState() {
     }
-    override fun saveOnBoard(b: Boolean) {
-    }
+
 
 }

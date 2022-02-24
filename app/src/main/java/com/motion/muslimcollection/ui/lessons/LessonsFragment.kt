@@ -21,8 +21,7 @@ import org.koin.android.ext.android.inject
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     private val lessonViewModel: LessonViewModel by inject()
     private lateinit var lessonAdapter: LessonAdapter
-    override fun saveOnBoard(b: Boolean) {
-    }
+
     override fun showBottomNavigation() {
         super.showBottomNavigation()
     }

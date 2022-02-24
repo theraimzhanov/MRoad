@@ -13,10 +13,6 @@ class MosqueCollegeFragment : BaseFragment(R.layout.fragment_mosque_college) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
     override fun setupUI() {
         super.setupUI()
     }

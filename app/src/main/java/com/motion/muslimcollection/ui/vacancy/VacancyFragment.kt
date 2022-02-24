@@ -39,8 +39,7 @@ class VacancyFragment : BaseFragment(R.layout.fragment_vacancy) {
         }
     }
 
-    override fun saveOnBoard(b: Boolean) {
-    }
+
 
     private fun initData() {
         viewModel.laoding.observe(this) { progressOfVacancy.visible = it }

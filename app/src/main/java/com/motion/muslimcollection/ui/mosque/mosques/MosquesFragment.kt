@@ -14,11 +14,6 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     override fun showConnectedState() {
 
     }
-
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
     override fun setupUI() {
         super.setupUI()
         next()
@@ -26,7 +21,7 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
 
     fun next() {
         add_mechet_next.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_screenMechetFragment_to_addMechetFragment)
+          //  (activity as MainActivity).navController.navigate(R.id.action_screenMechetFragment_to_addMechetFragment)
         }
     }
 }

@@ -13,9 +13,6 @@ class AddUniversityFragment : BaseFragment(R.layout.fragment_add_university) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-        TODO("Not yet implemented")
-    }
 
     override fun setupUI() {
         super.setupUI()

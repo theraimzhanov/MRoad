@@ -31,18 +31,19 @@ abstract class BaseFragment(private val layout: Int) :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
+
         setupObservers()
         NetworkConnectivityChecker.observe(viewLifecycleOwner, liveDataObserver)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        set()
+        setHasOptionsMenu(true)
 
     }
 
 
-    open fun set() {}
+
 
     open fun showBottomNavigation() {
     }
@@ -54,7 +55,7 @@ abstract class BaseFragment(private val layout: Int) :
     abstract fun showConnectedState()
 
     open fun showDisconnectState() {}
-    abstract fun saveOnBoard(b: Boolean)
+
 }
 
 

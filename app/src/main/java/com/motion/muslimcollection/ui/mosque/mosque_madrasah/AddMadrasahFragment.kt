@@ -12,9 +12,6 @@ class AddMadrasahFragment : BaseFragment(R.layout.fragment_add_madrasah) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-
-    }
 
     override fun setupUI() {
         super.setupUI()
