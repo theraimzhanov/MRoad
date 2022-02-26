@@ -7,13 +7,13 @@
 
 
             <item
-                android:icon="@drawable/img_setting"
+                android:icon="@drawable/setting_icon"
                 android:title="@string/tv_settings"
                 android:id="@+id/menu_set"
                 app:showAsAction="withText" />
 
             <item
-                android:icon="@drawable/info"
+                android:icon="@drawable/info_icon"
                 android:title="@string/tv_app"
                 android:id="@+id/menu_app"
                 app:showAsAction="withText" />

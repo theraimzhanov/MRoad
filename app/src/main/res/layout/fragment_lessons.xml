@@ -29,7 +29,7 @@
         <TextView
             android:text="@string/lessons"
             android:id="@+id/toolbar_text"
-            style="@style/text_meshet_toolbar" />
+            style="@style/text_mosque_toolbar" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView

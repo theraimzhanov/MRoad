@@ -17,10 +17,9 @@ class EatFragment : BaseFragment(R.layout.fragment_eat) {
     override fun setupUI() {
         super.setupUI()
 
-        navigate()
     }
 
-    private fun navigate() {
+  /*  private fun navigate() {
         btn_cofe_next.setOnClickListener {
           //  (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_cafeFragment)
         }
@@ -29,7 +28,7 @@ class EatFragment : BaseFragment(R.layout.fragment_eat) {
       //  btn_fastfud_next.setOnClickListener { (activity as MainActivity)
      //       .navController.navigate(R.id.action_eatFragment_to_fast_foodFragment) }
      //   btn_e_dobavki_nextt.setOnClickListener{
-            context?.showMessage("Пока не можеть добавить катогория") }
+            context?.showMessage("Пока не можеть добавить катогория") }*/
     }
 
 

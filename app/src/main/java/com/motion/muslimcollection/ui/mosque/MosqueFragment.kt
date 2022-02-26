@@ -19,24 +19,6 @@ class MosqueFragment : BaseFragment(R.layout.fragment_mosque) {
     }
     fun next(){
 
-        btn_mosqoe_next.setOnClickListener{
-          //  (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_mechetMapsFragment)
-        }
-        btn_room_next.setOnClickListener{
-           // (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_prayer_RoomsFragment)
-        }
-        btn_coll_next.setOnClickListener{
-           // (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_islamicCollegesFragment)
-        }
-        btn_mad_next.setOnClickListener{
-           // (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_madrasahFragment)
-        }
-        btn_uni_nextt.setOnClickListener{
-           // (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_islamic_universitiesFragment)
-        }
-        btn_lib_next.setOnClickListener{
-           // (activity as MainActivity).navController.navigate(R.id.action_mechetFragment_to_libraryFragment)
-        }
 
 
     }

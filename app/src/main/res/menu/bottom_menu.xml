@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:title="@string/home"
-        android:icon="@drawable/icon_home"
+        android:icon="@drawable/home_img"
         android:id="@+id/homeFragment"
         android:iconTintMode="screen"
         android:iconTint="#06483A"
 
         />
     <item android:title="@string/ss"
-        android:icon="@drawable/icon_mosque"
+        android:icon="@drawable/mosque_icon"
         android:id="@+id/mosqueFragment"
         android:iconTintMode="screen"
         android:iconTint="#06483A"
         />
-    <item android:title="@string/eat"
-        android:icon="@drawable/icon_coffee"
-        android:id="@+id/eatFragment"
-        android:iconTintMode="screen"
-        android:iconTint="#06483A"
-
-        />
     <item android:title="@string/lessons"
-        android:icon="@drawable/earpiece"
+        android:icon="@drawable/lesson_icon"
         android:id="@+id/lessonsFragment"
         android:iconTintMode="screen"
         android:iconTint="#06483A"
 
         />
+    <item android:title="@string/eat"
+        android:icon="@drawable/eat_icon"
+        android:id="@+id/eatFragment"
+        android:iconTintMode="screen"
+        android:iconTint="#06483A"
+
+        />
+
 </menu>

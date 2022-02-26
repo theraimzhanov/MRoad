@@ -46,13 +46,10 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
         super.setupUI()
         closeScreen()
         (requireActivity() as? MainActivity)?.setSupportActionBar(home_toolbar)
-
-
     }
-
-
     override fun showBottomNavigation() {
         super.showBottomNavigation()
+        requireActivity().nav_view.visibility = View.VISIBLE
 
     }
 
