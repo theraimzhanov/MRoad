@@ -101,6 +101,9 @@
         <action
             android:id="@+id/action_mosqueFragment_to_universityFragment"
             app:destination="@id/universityFragment" />
+        <action
+            android:id="@+id/action_mosqueFragment_to_madrasahFragment"
+            app:destination="@id/madrasahFragment" />
 
     </fragment>
     <fragment
@@ -210,5 +213,10 @@
         android:name="com.motion.muslimcollection.ui.eat.magazine.MagazineFragment"
         android:label="fragment_magazine"
         tools:layout="@layout/fragment_magazine" />
+    <fragment
+        android:id="@+id/madrasahFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
+        android:label="fragment_madrasah"
+        tools:layout="@layout/fragment_madrasah" />
 
 </navigation>
