@@ -11,10 +11,6 @@ class RoomFragment : BaseFragment(R.layout.fragment_room) {
 
         }
 
-    override fun saveOnBoard(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     override fun setupUI() {
                 super.setupUI()
         }

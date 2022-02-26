@@ -1,4 +1,5 @@
 plugins {
+
     id 'com.android.application'
     id 'kotlin-android'
     id("androidx.navigation.safeargs.kotlin")
@@ -34,6 +35,8 @@ android {
 
 dependencies {
 //navigation
+    implementation 'com.google.android.material:material:<version>'
+
     implementation "androidx.navigation:navigation-fragment-ktx:2.3.5" // For Kotlin use navigation-fragment-ktx
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5" // For Kotlin use navigation-ui-ktx
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.0'

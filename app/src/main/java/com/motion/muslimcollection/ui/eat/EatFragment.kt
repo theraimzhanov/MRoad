@@ -14,47 +14,22 @@ class EatFragment : BaseFragment(R.layout.fragment_eat) {
 
     override fun showConnectedState() {
     }
-
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
-    private fun closeScreen() {
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_homeFragment)
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
-//closeScreen()//setupUI()
-    }
-
     override fun setupUI() {
         super.setupUI()
-        closeScreen()
-        navigate()
+
     }
 
-    private fun navigate() {
+  /*  private fun navigate() {
         btn_cofe_next.setOnClickListener {
-            (activity as MainActivity)
-                .navController.navigate(R.id.action_eatFragment_to_cafeFragment)
+          //  (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_cafeFragment)
         }
-        btn_restoran_next.setOnClickListener { (activity as MainActivity)
-            .navController.navigate(R.id.action_eatFragment_to_restaurantFragment) }
-        btn_shop_next.setOnClickListener { (activity as MainActivity)
-            .navController.navigate(R.id.action_eatFragment_to_shopsFragment) }
-        btn_fastfud_next.setOnClickListener { (activity as MainActivity)
-            .navController.navigate(R.id.action_eatFragment_to_fast_foodFragment) }
-        btn_e_dobavki_nextt.setOnClickListener{
-            context?.showMessage("Пока не можеть добавить катогория") }
-    }
-
-    override fun showBottomNavigation() {
-        super.showBottomNavigation()
-
-
+      //  btn_restoran_next.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_restaurantFragment) }
+      //  btn_shop_next.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_shopsFragment) }
+      //  btn_fastfud_next.setOnClickListener { (activity as MainActivity)
+     //       .navController.navigate(R.id.action_eatFragment_to_fast_foodFragment) }
+     //   btn_e_dobavki_nextt.setOnClickListener{
+            context?.showMessage("Пока не можеть добавить катогория") }*/
     }
 
 
-}
+

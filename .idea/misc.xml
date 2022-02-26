@@ -52,7 +52,6 @@
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/layout/menu_tem_.xml" value="0.20521590423257802" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
         <entry key="..\:/Android учун тийишпе/Muslim Collection/MuslimCollection/app/src/main/res/menu/menu_item.xml" value="0.20521590423257802" />
-
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable-v24/et_vacancy.xml" value="0.2555" />
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable-v24/shape_abdu_country_lang.xml" value="0.2555" />
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/drawable/bnt_icon_shape.xml" value="0.2555" />
@@ -72,8 +71,62 @@
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/fragment_work.xml" value="0.2359375" />
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/layout/vacancy_item.xml" value="0.4" />
         <entry key="..\:/Users/79637/AndroidStudioProjects/MuslimRoadMWL/app/src/main/res/menu/menu_item.xml" value="0.25" />
-
-
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable-v24/et_vacancy.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable-v24/shape_abdu_country_lang.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/bnt_icon_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/btn_dobav_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/btn_nav_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/et_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/lessons_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/shape_btn_all.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/shape_cafe.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/shape_icon_mc.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/stroke.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/drawable/tv_shape.xml" value="0.165" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/font/font.xml" value="0.28020833333333334" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/audiolist.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add__room.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_cafe.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_fast_food.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_library.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_madrasah.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_magazine.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_mechet.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_mosque__college.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_restaurant.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_university.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_add_vacancy.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_app.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_cafe.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_country.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_country__language_.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_eat.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_fast_food.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_hadith.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_home.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_language.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_lessons.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_library.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_madrasah.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_magazine.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_menu.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_mosque.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_mosque_college.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_mosque_university.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_mosques.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_namaz.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_other_resource.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_quran.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_restaurant.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_room.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_settings.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_splash.xml" value="0.136" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/fragment_vacancy.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/menu_tem_.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/layout/vacancy_item.xml" value="0.264" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/Users/atabe/AndroidStudioProjects/MuslimCollection/app/src/main/res/menu/menu_item.xml" value="0.25" />
       </map>
     </option>
   </component>

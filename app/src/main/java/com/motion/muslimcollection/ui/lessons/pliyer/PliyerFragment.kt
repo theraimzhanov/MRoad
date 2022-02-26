@@ -28,10 +28,9 @@ class PliyerFragment : BaseFragment(R.layout.fragment_pliyer) {
     }
 
     override fun showConnectedState() {
-        initData(args.modul)
+        initData(args.audio)
     }
-    override fun saveOnBoard(b: Boolean) {
-    }
+
     private fun initData(id: Int) {
         lessonViewModel.laodi.observe(this) { loading_audio.visible = it }
         lessonViewModel.getAudioId(id)

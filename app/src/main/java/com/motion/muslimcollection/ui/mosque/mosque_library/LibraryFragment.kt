@@ -10,10 +10,6 @@ class LibraryFragment : BaseFragment(R.layout.fragment_library) {
     override fun showConnectedState() {
     }
 
-    override fun saveOnBoard(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     override fun setupUI() {
         super.setupUI()
     }

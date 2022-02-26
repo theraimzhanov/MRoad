@@ -13,9 +13,7 @@ class AddFastfoodFragment : BaseFragment(R.layout.fragment_add_fast_food) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-        TODO("Not yet implemented")
-    }
+
 
     override fun setupUI() {
         super.setupUI()

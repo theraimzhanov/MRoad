@@ -4,30 +4,16 @@
 
 
 
-    <item
-        android:id="@+id/mainMenu"
-        android:icon="@drawable/img_menu"
-        app:showAsAction="always"
-        android:title="">
-        <menu>
+
+
             <item
-                android:actionLayout="@layout/menu_tem_"
-                android:icon="@drawable/img_earth"
-                android:title="@string/tv_res"
-                android:id="@+id/menu_res"
-                app:showAsAction="withText" />
-            <item
-                android:icon="@drawable/img_setting"
+                android:icon="@drawable/setting_icon"
                 android:title="@string/tv_settings"
                 android:id="@+id/menu_set"
                 app:showAsAction="withText" />
+
             <item
-                android:icon="@drawable/img_share"
-                android:title="@string/tv_share"
-                android:id="@+id/menu_share"
-                app:showAsAction="withText" />
-            <item
-                android:icon="@drawable/info"
+                android:icon="@drawable/info_icon"
                 android:title="@string/tv_app"
                 android:id="@+id/menu_app"
                 app:showAsAction="withText" />
@@ -37,8 +23,6 @@
                 android:id="@+id/menu_work"
                 app:showAsAction="withText" />
 
-        </menu>
 
-    </item>
 
 </menu>

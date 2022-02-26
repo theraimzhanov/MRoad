@@ -18,8 +18,7 @@ class AddVacancyFragment : BaseFragment(R.layout.fragment_add_vacancy) {
     override fun setupObservers() {
     }
 
-    override fun saveOnBoard(b: Boolean) {
-    }
+
 
 
     override fun showConnectedState() {

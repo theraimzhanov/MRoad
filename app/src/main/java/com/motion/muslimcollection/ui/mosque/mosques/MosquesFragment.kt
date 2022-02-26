@@ -10,23 +10,12 @@ import kotlinx.android.synthetic.main.fragment_mosques.*
 class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     override fun setupObservers() {
     }
-
     override fun showConnectedState() {
-
     }
-
-    override fun saveOnBoard(b: Boolean) {
-
-    }
-
     override fun setupUI() {
         super.setupUI()
         next()
     }
-
     fun next() {
-        add_mechet_next.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_screenMechetFragment_to_addMechetFragment)
-        }
     }
 }

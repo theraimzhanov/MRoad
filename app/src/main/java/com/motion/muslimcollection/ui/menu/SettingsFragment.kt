@@ -10,7 +10,6 @@ import com.motion.muslimcollection.core.base.BaseFragment
 
 
 class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
-
     override fun setupObservers() {
 
     }
@@ -19,8 +18,5 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
-
-    }
 
 }

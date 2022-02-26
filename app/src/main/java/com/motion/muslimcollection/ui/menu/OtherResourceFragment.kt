@@ -19,9 +19,8 @@ class OtherResourceFragment : BaseFragment(R.layout.fragment_other_resource) {
 
     }
 
-    override fun saveOnBoard(b: Boolean) {
 
-    }
+
 
 
 }
