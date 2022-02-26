@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.fragment_vacancy.*
 import kotlinx.android.synthetic.main.listlessoncategories.*
 import org.koin.android.ext.android.inject
 
-
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     private val lessonViewModel: LessonViewModel by inject()
     private lateinit var lessonAdapter: LessonAdapter
@@ -53,7 +52,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     }
     private fun initData() {
         lessonViewModel.laodi.observe(this) { loading_codes.visible = it }
-        lessonViewModel.getLessonAll()
+        //lessonViewModel.getLessonAll()
         lessonViewModel.list.observe(this){ it ->
             when(it.status){
                 Status.LOADING -> {

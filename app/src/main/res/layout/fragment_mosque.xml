@@ -23,5 +23,4 @@
             style="@style/text_mosque_toolbar" />
     </androidx.appcompat.widget.Toolbar>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
