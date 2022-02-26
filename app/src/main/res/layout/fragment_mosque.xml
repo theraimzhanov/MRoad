@@ -80,7 +80,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btn_mosques"
+            android:id="@+id/btn_mosques_"
             style="@style/_card_view"
             android:layout_marginBottom="15dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_college"
@@ -102,8 +102,8 @@
             android:id="@+id/btn_madrasah"
             style="@style/_card_view"
             android:layout_marginStart="13dp"
-            app:layout_constraintStart_toEndOf="@+id/btn_mosques"
-            app:layout_constraintTop_toTopOf="@+id/btn_mosques">
+            app:layout_constraintStart_toEndOf="@+id/btn_mosques_"
+            app:layout_constraintTop_toTopOf="@+id/btn_mosques_">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
