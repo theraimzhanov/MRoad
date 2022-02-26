@@ -20,4 +20,9 @@
     <string name="room">Молельное\n комната</string>
     <string name="library">Библиотеки</string>
     <string name="west">Кибла</string>
+    <string name="cafe">Кафе</string>
+    <string name="restorany">Рестораны</string>
+    <string name="fast_food">Фаст-фуды</string>
+    <string name="shop">Магазины</string>
+    <string name="e_code">Е-Кодды</string>
 </resources>

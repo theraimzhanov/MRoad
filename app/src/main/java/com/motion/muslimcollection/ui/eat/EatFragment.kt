@@ -14,22 +14,19 @@ class EatFragment : BaseFragment(R.layout.fragment_eat) {
 
     override fun showConnectedState() {
     }
+
     override fun setupUI() {
         super.setupUI()
-
+        navigate()
     }
-
-  /*  private fun navigate() {
-        btn_cofe_next.setOnClickListener {
-          //  (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_cafeFragment)
-        }
-      //  btn_restoran_next.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_restaurantFragment) }
-      //  btn_shop_next.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_shopsFragment) }
-      //  btn_fastfud_next.setOnClickListener { (activity as MainActivity)
-     //       .navController.navigate(R.id.action_eatFragment_to_fast_foodFragment) }
-     //   btn_e_dobavki_nextt.setOnClickListener{
-            context?.showMessage("Пока не можеть добавить катогория") }*/
+    private fun navigate() {
+        btn_cafe.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_cafeFragment) }
+        btn_restaurant.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_restaurantFragment) }
+        btn_fast_food.setOnClickListener { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_fastFoodFragment) }
+        btn_shop.setOnClickListener  { (activity as MainActivity).navController.navigate(R.id.action_eatFragment_to_magazineFragment) }
+        btn_e_code.setOnClickListener { context?.showMessage("Пока не можеть добавить катогория") }
     }
+}
 
 
 

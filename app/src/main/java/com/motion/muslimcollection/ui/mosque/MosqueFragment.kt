@@ -18,8 +18,24 @@ class MosqueFragment : BaseFragment(R.layout.fragment_mosque) {
         next()
     }
     fun next(){
-
-
+        btn_madrasah.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_madrasahFragment)
+        }
+        btn_mosques_.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_mosquesFragment)
+        }
+        btn_room.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_roomFragment)
+        }
+        btn_college.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_mosqueCollegeFragment)
+        }
+        btn_library.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_libraryFragment)
+        }
+        btn_university.setOnClickListener{
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_universityFragment)
+        }
 
     }
 
