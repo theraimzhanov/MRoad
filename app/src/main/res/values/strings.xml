@@ -13,6 +13,7 @@
     <string name="drugie_resource">Другие ресурсы</string>
     <string name="error"> запольните поля</string>
     <string name="muslim_road">Muslim Road</string>
+    <string name="add_mosque">Мечети</string>
     <string name="mosques">Мечети</string>
     <string name="madrasah">Медресе</string>
     <string name="university">Исламcкий\n университеты</string>
@@ -25,4 +26,5 @@
     <string name="fast_food">Фаст-фуды</string>
     <string name="shop">Магазины</string>
     <string name="e_code">Е-Кодды</string>
+
 </resources>

@@ -80,6 +80,10 @@
             android:id="@+id/action_mosqueFragment_to_homeFragment2"
             app:destination="@id/homeFragment" />
         <action
+
+            android:id="@+id/action_mosqueFragment_to_addMosqueFragment2"
+            app:destination="@id/addMosqueFragment2" />
+
             android:id="@+id/action_mosqueFragment_to_madrasahFragment"
             app:destination="@id/madrasahFragment" />
         <action
@@ -156,6 +160,12 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
+
+        android:id="@+id/addMosqueFragment2"
+        android:name="com.motion.muslimcollection.ui.mosque.mosques.AddMosqueFragment"
+        android:label="fragment_add_mechet"
+        tools:layout="@layout/fragment_add_mechet" />
+
         android:id="@+id/madrasahFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
         android:label="fragment_madrasah"

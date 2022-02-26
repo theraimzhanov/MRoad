@@ -7,10 +7,7 @@ import com.motion.muslimcollection.model.address_model.MosqueItem
 import com.motion.muslimcollection.network.result.Resource
 
 class MosqueViewModel(private val repository: MosqueRepository):BaseViewModel() {
-
-
     var laoding = MutableLiveData<Boolean>()
-
 
     private var _list = MutableLiveData<Resource<List<MosqueItem>>>()
     private var _item = MutableLiveData<Resource<MosqueItem>>()

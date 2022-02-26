@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.fragment_splash.*
 class SplashFragment : BaseFragment(R.layout.fragment_splash) {
     override fun setupObservers() {
     }
-
     override fun showBottomNavigation() {
         super.showBottomNavigation()
         Handler(Looper.myLooper()!!).postDelayed({
