@@ -27,9 +27,6 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     override fun setupObservers() {
     }
     override fun showConnectedState() {
-
-
-
         initRecyclerView()
         initData()
         lessonAdapter.setItemClickListener(object :ItemClickListener{
@@ -39,9 +36,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
                 (activity as MainActivity).navController.navigate(action)
                 Log.d("TAG", "onItemClick:$id ")
             }
-
         })
-
     }
     private fun initRecyclerView() {
         with(recycler_codes){
@@ -52,7 +47,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
     }
     private fun initData() {
         lessonViewModel.laodi.observe(this) { loading_codes.visible = it }
-        //lessonViewModel.getLessonAll()
+        lessonViewModel.getLessonAll()
         lessonViewModel.list.observe(this){ it ->
             when(it.status){
                 Status.LOADING -> {

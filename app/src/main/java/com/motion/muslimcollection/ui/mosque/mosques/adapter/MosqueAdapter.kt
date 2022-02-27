@@ -8,23 +8,14 @@ import com.motion.muslimcollection.ext.ItemClickListener
 import com.motion.muslimcollection.model.address_model.MosqueItem
 
 class MosqueAdapter:ListAdapter<MosqueItem,MosqueViewHolder>(MosqueItemDiffUtil()) {
-    private var list: List<MosqueItem> = emptyList()
-    fun getList(): List<MosqueItem>{
-        return list
-    }
-    private lateinit var click: ItemClickListener
-
-    fun setItemClickListener(clickListener: ItemClickListener){
-        click = clickListener
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MosqueViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_mosque,parent,false)
-        return MosqueViewHolder(view,click)
+        return MosqueViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MosqueViewHolder, position: Int) {
         val mosqueItem = getItem(position)
-        holder.mosquename.text = mosqueItem.name
+        holder.mosquename.text = mosqueItem.address
     }
 }
