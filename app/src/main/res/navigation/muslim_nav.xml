@@ -65,8 +65,8 @@
             android:id="@+id/action_homeFragment_to_appFragment"
             app:destination="@id/appFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_workFragment"
-            app:destination="@id/workFragment" />
+            android:id="@+id/action_homeFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
     </fragment>
     <fragment
         android:id="@+id/mosqueFragment"
@@ -149,11 +149,6 @@
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/workFragment"
-        android:name="com.motion.muslimcollection.ui.menu.WorkFragment"
-        android:label="fragment_work"
-        tools:layout="@layout/fragment_work" />
-    <fragment
         android:id="@+id/splashFragment"
         android:name="com.motion.muslimcollection.splash.SplashFragment"
         android:label="fragment_splash"
@@ -218,5 +213,37 @@
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
         android:label="fragment_madrasah"
         tools:layout="@layout/fragment_madrasah" />
+    <fragment
+        android:id="@+id/vacancyFragment"
+        android:name="com.motion.muslimcollection.ui.vacancy.VacancyFragment"
+        android:label="fragment_vacancy"
+        tools:layout="@layout/fragment_vacancy" >
+        <action
+            android:id="@+id/action_vacancyFragment_to_workFragment"
+            app:destination="@id/workFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workFragment"
+        android:name="com.motion.muslimcollection.ui.menu.WorkFragment"
+        android:label="fragment_work"
+        tools:layout="@layout/fragment_work" >
+        <argument
+            android:name="vacancyId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_workFragment_to_addVacancyFragment"
+            app:destination="@id/addVacancyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addVacancyFragment"
+        android:name="com.motion.muslimcollection.ui.vacancy.AddVacancyFragment"
+        android:label="fragment_add_vacancy"
+        tools:layout="@layout/fragment_add_vacancy" >
+        <argument
+            android:name="vacancy"
+            app:argType="string"
+            android:defaultValue="default" />
+    </fragment>
 
 </navigation>

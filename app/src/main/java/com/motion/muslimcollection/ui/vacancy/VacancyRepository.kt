@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.vacancy
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.motion.muslimcollection.data.remote.RemoteDataSource
@@ -8,6 +9,7 @@ import com.motion.muslimcollection.network.result.Resource
 import kotlinx.coroutines.Dispatchers
 
 class VacancyRepository(private val remoteDataSource: RemoteDataSource) {
+
 
            fun getVacancyList():LiveData<Resource<List<VacancyItem>>> = liveData(Dispatchers.IO) {
                emit(Resource.loading(null))
