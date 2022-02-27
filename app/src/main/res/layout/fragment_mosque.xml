@@ -44,7 +44,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
                 <ImageView

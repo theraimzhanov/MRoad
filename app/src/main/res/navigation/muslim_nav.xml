@@ -168,7 +168,7 @@
         android:name="com.motion.muslimcollection.ui.mosque.mosques.AddMosqueFragment"
         android:label="fragment_add_mechet"
         tools:layout="@layout/fragment_add_mechet" />
-
+    <fragment
         android:id="@+id/madrasahFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
         android:label="fragment_madrasah"
