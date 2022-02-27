@@ -26,7 +26,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
             R.id.menu_app -> (activity as MainActivity).navController.navigate(R.id.action_homeFragment_to_appFragment)
 
-            R.id.menu_work -> (activity as MainActivity).navController.navigate(R.id.action_homeFragment_to_workFragment)
+            R.id.menu_work -> (activity as MainActivity).navController.navigate(R.id.action_homeFragment_to_vacancyFragment)
         }
         return super.onOptionsItemSelected(item)
 

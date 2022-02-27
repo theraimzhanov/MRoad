@@ -27,5 +27,26 @@
     <string name="shop">Магазины</string>
     <string name="e_code">Е-Кодды</string>
     <string name="vacancy">Вакансия</string>
+    <string name="vacancy_text">Вакансия</string>
+    <string name="labelSalary">30 000 - 60 000</string>
+    <string name="labelSalary1">ЗП:</string>
+    <string name="LabelVal">сом</string>
+    <string name="labelVacancy">Менеджер по продажам</string>
+    <string name="labelNameCompany">WEBILIM24</string>
+    <string name="to">от</string>
+    <string name="labelLocation">Бишкек</string>
+    <string name="vacancyTime">Полный день</string>
+    <string name="proVacancy">Опыт работы от 1 года</string>
+    <string name="labelEducation">Высшее образование</string>
+    <string name="requirements">Требования:</string>
+    <string name="labelRequirement">Умение работать в режиме многозадачности и с большим объемом документов</string>
+    <string name="labelOblation">Обязанности:</string>
+    <string name="labelCondition">Условия работы:</string>
+    <string name="condition">Менеджер по продажам выполняет следующие функции</string>
+    <string name="txtVacancy">Отставить заявку</string>
+    <string name="backVacancy">Отклик на вакансию</string>
+    <string name="name">Менеджер по продажам</string>
+    <string name="data">Данные для связы</string>
+    <string name="close">Закрыть</string>
 
 </resources>

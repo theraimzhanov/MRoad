@@ -2,6 +2,7 @@ package com.motion.muslimcollection.ui.vacancy
 
 import android.text.Editable
 import android.text.TextWatcher
+import androidx.navigation.fragment.navArgs
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
@@ -14,53 +15,38 @@ import org.koin.android.ext.android.inject
 class AddVacancyFragment : BaseFragment(R.layout.fragment_add_vacancy) {
 
     private val viewModel: VacancyViewModel by inject()
+    val args :AddVacancyFragmentArgs by navArgs()
 
     override fun setupObservers() {
     }
 
-
-
-
     override fun showConnectedState() {
+        nameVacancy.text = args.vacancy
         observeViewModel()
-        addVacancy()
+        shareRezItem()
         addTextChangeListeners()
     }
 
     private fun addTextChangeListeners() {
-        nameWorker.addTextChangedListener(object : TextWatcher {
+        phoneNumber.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-viewModel.resetErrorInputName()
+viewModel.resetErrorInputPhoneNumber()
             }
 
             override fun afterTextChanged(p0: Editable?) {
             }
 
         })
-        nameCompany.addTextChangedListener(object : TextWatcher {
+        email.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                viewModel.resetErrorInputCompany()
-            }
-
-            override fun afterTextChanged(p0: Editable?) {
-
-            }
-
-        })
-        requirements.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
-            }
-
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                viewModel.resetErrorInputRequirements()
+                viewModel.resetErrorInputEmail()
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -68,39 +54,66 @@ viewModel.resetErrorInputName()
             }
 
         })
-        salary.addTextChangedListener(object : TextWatcher {
+        fio.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                viewModel.resetErrorInputSalary()
+                viewModel.resetErrorInputName()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
+        birthDay.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputBirthDay()
             }
 
             override fun afterTextChanged(p0: Editable?) {
 
             }
         })
-        obligation.addTextChangedListener(object : TextWatcher {
+        town.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                viewModel.resetErrorInputObligation()
+                viewModel.resetErrorInputTown()
             }
 
             override fun afterTextChanged(p0: Editable?) {
 
             }
         })
-        religion.addTextChangedListener(object : TextWatcher {
+        level.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                viewModel.resetErrorInputReligion()
+                viewModel.resetErrorInputLevel()
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
+        proWork.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                viewModel.resetErrorInputProWork()
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -117,52 +130,60 @@ viewModel.resetErrorInputName()
             }else{
                 null
             }
-            til_nameWorker.error = massage
+            til_fio.error = massage
 
         }
-        viewModel.errorInputCompany.observe(viewLifecycleOwner) {
+        viewModel.errorInputBirthDay.observe(viewLifecycleOwner) {
                 val massage = if (it){
                     getString(R.string.error)
                 }else{
                     null
                 }
-                til_nameCompany.error = massage
+                til_birthDay.error = massage
 
         }
-        viewModel.errorInputRequirements.observe(viewLifecycleOwner) {
+        viewModel.errorInputTown.observe(viewLifecycleOwner) {
             val massage = if (it){
                 getString(R.string.error)
             }else{
                 null
             }
-            til_requirements.error = massage
+            til_Town.error = massage
 
         }
-        viewModel.errorInputSalary.observe(viewLifecycleOwner) {
+        viewModel.errorInputPhoneNumber.observe(viewLifecycleOwner) {
             val massage = if (it){
                 getString(R.string.error)
             }else{
                 null
             }
-            til_salary.error = massage
+            til_phoneNumber.error = massage
 
         }
-        viewModel.errorInputObligation.observe(viewLifecycleOwner) {
+        viewModel.errorInputEmail.observe(viewLifecycleOwner) {
             val massage = if (it){
                 getString(R.string.error)
             }else{
                 null
             }
-            til_obligation.error = massage
+            til_email.error = massage
 
         }
-        viewModel.errorInputReligion.observe(viewLifecycleOwner) {
+        viewModel.errorInputProWork.observe(viewLifecycleOwner) {
             val massage = if (it){
                 getString(R.string.error)
             }else{
                 null
             }
-            til_religion.error = massage
+            til_pro.error = massage
+        }
+        viewModel.errorInputLevelEducation.observe(viewLifecycleOwner) {
+            val massage = if (it){
+                getString(R.string.error)
+            }else{
+                null
+            }
+            til_level.error = massage
 
         }
         viewModel.shouldCloseScreen.observe(viewLifecycleOwner) {
@@ -170,46 +191,33 @@ viewModel.resetErrorInputName()
         }
     }
 
-    private fun addVacancy() {
-        btnAddVacancy.setOnClickListener {
+    private fun shareRezItem() {
+        btnOkVacancy.setOnClickListener {
             addData(
-                nameWorker?.text.toString().trim(),
-                nameCompany?.text.toString().trim(),
-                requirements?.text.toString().trim(),
-                salary?.text.toString().trim(),
-                obligation?.text.toString().trim(),
-                religion?.text.toString().trim()
+                phoneNumber?.text.toString().trim(),
+                email?.text.toString().trim(),
+                fio?.text.toString().trim(),
+                birthDay?.text.toString().trim(),
+                town?.text.toString().trim(),
+                proWork?.text.toString().trim(),
+                level.text.toString().trim()
             )
+        }
+        closeScreen.setOnClickListener {
+            activity?.onBackPressed()
+        }
+        exitAddVacancy.setOnClickListener {
+            activity?.onBackPressed()
         }
     }
 
     private fun addData(
-        name: String?,
-        company: String?,
-        requirements: String,
-        salary: String?,
-        obligation: String?,
-        religion: String?
+        phone:String?, email:String?
+        , name:String, birthDay:String?
+        , town:String?, proWork:String?, level:String?
     ) {
-        viewModel.laoding.observe(this) { loadingVacancy.visible = it }
-        viewModel.addVacancyItem(name, company, requirements, salary, obligation, religion)
-        viewModel.add.observe(this) { it ->
-            when (it.status) {
-                Status.LOADING -> {
-                    viewModel.laoding.postValue(true)
-                }
-                Status.SUCCESS -> {
-                    viewModel.laoding.postValue(false)
-
-                    context?.showMessage(it.message)
-
-                }
-                Status.ERROR -> {
-                    viewModel.laoding.postValue(false)
-                    context?.showMessage(it.message)
-                }
-            }
-        }
+        viewModel.parseRezItem(phone, email, name, birthDay, town, proWork, level)
+        // do something
     }
 
 }

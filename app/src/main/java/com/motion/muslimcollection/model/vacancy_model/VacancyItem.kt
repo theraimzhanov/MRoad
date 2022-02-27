@@ -1,5 +1,8 @@
 package com.motion.muslimcollection.model.vacancy_model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 data class VacancyItem(
     val name: String,
     val company: String,

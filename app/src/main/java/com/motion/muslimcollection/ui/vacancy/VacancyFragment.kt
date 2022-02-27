@@ -12,6 +12,7 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_vacancy.*
 import org.koin.android.ext.android.inject
@@ -29,6 +30,21 @@ class VacancyFragment : BaseFragment(R.layout.fragment_vacancy) {
     override fun showConnectedState() {
         initRecyclerView()
         initData()
+        shareIdVacancy()
+        back()
+    }
+
+    private fun back() {
+        exitVacancy.setOnClickListener {
+            activity?.onBackPressed()
+        }
+    }
+
+    private fun shareIdVacancy() {
+        vacancyAdapter.onVacancyItemClickListener = {
+          val action = VacancyFragmentDirections.actionVacancyFragmentToWorkFragment(it.id)
+            (activity as MainActivity).navController.navigate(action)
+        }
     }
 
     private fun initRecyclerView() {

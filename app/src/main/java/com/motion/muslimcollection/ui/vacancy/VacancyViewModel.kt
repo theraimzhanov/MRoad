@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.motion.muslimcollection.core.base.BaseViewModel
 import com.motion.muslimcollection.model.vacancy_model.VacancyItem
 import com.motion.muslimcollection.network.result.Resource
+import com.motion.muslimcollection.ui.vacancy.model.RezItem
 
 class VacancyViewModel(private val repository: VacancyRepository) : BaseViewModel() {
 
@@ -28,21 +29,21 @@ class VacancyViewModel(private val repository: VacancyRepository) : BaseViewMode
 
     // add Vacancy Item
     private var _add = MutableLiveData<Resource<VacancyItem>>()
-    fun addVacancyItem(name:String?,company:String?
-                       ,requirements:String,salary:String?
-                       ,obligation:String?,religion:String?) {
-         val nameOfVacancy = parseInputField(name)
-         val companyOfVacancy = parseInputField(company)
-         val requirementsOfVacancy = parseInputField(requirements)
-         val salaryOfVacancy = parseSalary(salary)
-         val obligationOfVacancy = parseInputField(obligation)
-         val religionOfVacancy = parseInputField(religion)
-        val fieldsValid = validateInputName(nameOfVacancy,companyOfVacancy
-            ,requirementsOfVacancy,salaryOfVacancy,obligationOfVacancy,religionOfVacancy)
+    fun parseRezItem(phone:String?, email:String?
+                     , name:String?, birthDay:String?
+                     , town:String?, proWork:String?, level:String?) {
+         val nameV = parseInputField(name)
+         val phoneV = parseNumber(phone)
+         val emailV = parseInputField(email)
+         val day = parseInputField(birthDay)
+         val townV = parseInputField(town)
+         val proV = parseInputField(proWork)
+         val levelV = parseInputField(level)
+        val fieldsValid = validateInputName(phoneV,emailV
+            ,nameV,day,townV,proV,levelV)
         if (fieldsValid){
-val vacancy = VacancyItem(nameOfVacancy,companyOfVacancy,requirementsOfVacancy,religionOfVacancy
-    ,obligationOfVacancy, salary = salaryOfVacancy)
-            _add = repository.addVacancyItem(vacancy) as MutableLiveData<Resource<VacancyItem>>
+val item = RezItem(phoneV,emailV,nameV,day,townV,proV,levelV)
+            // request send
             finishWork()
         }
     }
@@ -53,25 +54,29 @@ val vacancy = VacancyItem(nameOfVacancy,companyOfVacancy,requirementsOfVacancy,r
     val errorInputName: LiveData<Boolean>
         get() = _errorInputName
 
-    private val _errorInputCompany = MutableLiveData<Boolean>()
-    val errorInputCompany: LiveData<Boolean>
-        get() = _errorInputCompany
+    private val _errorInputBirthDay = MutableLiveData<Boolean>()
+    val errorInputBirthDay: LiveData<Boolean>
+        get() = _errorInputBirthDay
 
-    private val _errorInputRequirements = MutableLiveData<Boolean>()
-    val errorInputRequirements: LiveData<Boolean>
-        get() = _errorInputRequirements
+    private val _errorInputTown = MutableLiveData<Boolean>()
+    val errorInputTown: LiveData<Boolean>
+        get() = _errorInputTown
 
-    private val _errorInputSalary = MutableLiveData<Boolean>()
-    val errorInputSalary: LiveData<Boolean>
-        get() = _errorInputSalary
+    private val _errorInputPhoneNumber = MutableLiveData<Boolean>()
+    val errorInputPhoneNumber: LiveData<Boolean>
+        get() = _errorInputPhoneNumber
 
-    private val _errorInputObligation = MutableLiveData<Boolean>()
-    val errorInputObligation: LiveData<Boolean>
-        get() = _errorInputObligation
+    private val _errorInputEmail = MutableLiveData<Boolean>()
+    val errorInputEmail: LiveData<Boolean>
+        get() = _errorInputEmail
 
-    private val _errorInputReligion = MutableLiveData<Boolean>()
-    val errorInputReligion: LiveData<Boolean>
-        get() = _errorInputReligion
+    private val _errorInputLevelEducation = MutableLiveData<Boolean>()
+    val errorInputLevelEducation: LiveData<Boolean>
+        get() = _errorInputEmail
+
+    private val _errorInputProWork = MutableLiveData<Boolean>()
+    val errorInputProWork: LiveData<Boolean>
+        get() = _errorInputProWork
 
     private val _shouldCloseScreen = MutableLiveData<Unit>()
     val shouldCloseScreen: LiveData<Unit>
@@ -80,40 +85,44 @@ val vacancy = VacancyItem(nameOfVacancy,companyOfVacancy,requirementsOfVacancy,r
     private fun parseInputField(fields: String?): String {
         return fields?.trim() ?: ""}
 
-    private fun parseSalary(salary: String?): Int {
+    private fun parseNumber(number: String?): Int {
         return try {
-            salary?.trim()?.toInt() ?: 0
+            number?.trim()?.toInt() ?: 0
         } catch (e: Exception) {
             0
         }
     }
 
-    private fun validateInputName(name:String,company:String
-                                  ,requirements:String,salary:Int
-                                  ,obligation:String,religion:String):Boolean{
+    private fun validateInputName(phone:Int,email:String
+                                  ,name:String,birthDay:String
+                                  ,town:String,proWork:String,level: String):Boolean{
         var result = true
         if (name.isBlank()) {
             _errorInputName.value = true
             result = false
         }
-        if (company.isBlank()){
-            _errorInputCompany.value = true
+        if (town.isBlank()){
+            _errorInputTown.value = true
             result = false
         }
-        if (requirements.isBlank()){
-            _errorInputRequirements.value = true
+        if (proWork.isBlank()){
+            _errorInputProWork.value = true
             result = false
         }
-        if (salary <= 0) {
-            _errorInputSalary.value = true
+        if (birthDay.isBlank()) {
+            _errorInputBirthDay.value = true
             result = false
         }
-        if (obligation.isBlank()){
-            _errorInputObligation.value = true
+        if (phone <= 0) {
+            _errorInputPhoneNumber.value = true
             result = false
         }
-        if (religion.isBlank()){
-            _errorInputReligion.value = true
+        if (email.isBlank()){
+            _errorInputEmail.value = true
+            result = false
+        }
+        if (level.isBlank()){
+            _errorInputLevelEducation.value = true
             result = false
         }
         return result
@@ -122,20 +131,23 @@ val vacancy = VacancyItem(nameOfVacancy,companyOfVacancy,requirementsOfVacancy,r
     fun resetErrorInputName() {
         _errorInputName.value = false
     }
-    fun resetErrorInputCompany() {
-        _errorInputCompany.value = false
+    fun resetErrorInputLevel() {
+        _errorInputLevelEducation.value = false
     }
-    fun resetErrorInputRequirements() {
-        _errorInputRequirements.value = false
+    fun resetErrorInputBirthDay() {
+        _errorInputBirthDay.value = false
     }
-    fun resetErrorInputSalary() {
-        _errorInputSalary.value = false
+    fun resetErrorInputTown() {
+        _errorInputTown.value = false
     }
-    fun resetErrorInputObligation() {
-        _errorInputObligation.value = false
+    fun resetErrorInputPhoneNumber() {
+        _errorInputPhoneNumber.value = false
     }
-    fun resetErrorInputReligion() {
-        _errorInputReligion.value = false
+    fun resetErrorInputEmail() {
+        _errorInputEmail.value = false
+    }
+    fun resetErrorInputProWork() {
+        _errorInputProWork.value = false
     }
     private fun finishWork() {
         _shouldCloseScreen.value = Unit

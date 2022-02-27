@@ -3,141 +3,249 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+ android:background="@color/colorPrimaryDark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.vacancy.AddVacancyFragment">
 
-<LinearLayout
-    android:id="@+id/layout_vacancy"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    android:layout_marginHorizontal="20dp"
-    android:layout_marginVertical="20dp"
-    android:orientation="vertical"
-    >
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_nameWorker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameWorker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ФИО"
-            android:textSize="15dp"
-            android:inputType="textCapWords"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_nameCompany"
-        android:layout_marginTop="15sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameCompany"
-            android:hint="Компания"
-            android:textColorHint="#8E8B8B"
-            android:textSize="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_requirements"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/requirements"
-            android:hint="Требования"
-            android:textColorHint="#8E8B8B"
-            android:textSize="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_salary"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/salary"
-            android:hint="ЗП"
-            android:textColorHint="#8E8B8B"
-            android:textSize="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_obligation"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/obligation"
-            android:hint="Обьязанность"
-            android:textColorHint="#8E8B8B"
-            android:textSize="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_religion"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/religion"
-            android:hint="Условия для религиозных"
-            android:textColorHint="#8E8B8B"
-            android:textSize="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addVacancy_toolbar"
+        style="@style/toolbar"
+        android:background="@color/colorPrimaryTool"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/exitAddVacancy"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@string/backVacancy"
+            android:id="@+id/toolbar_add_vacancy_text"
+            style="@style/text_mosque_toolbar" />
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/btnAddVacancy"
-        android:paddingVertical="12dp"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
+        android:id="@+id/nameVacancy"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:text="Добавить" />
-</LinearLayout>
+        android:text="@string/name"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/addVacancy_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NotSibling" />
+    <TextView
+        android:id="@+id/labelData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/data"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/nameVacancy"
+        app:layout_constraintStart_toStartOf="@id/nameVacancy"
+        tools:ignore="NotSibling" />
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/labelData"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:id="@+id/layout_vacancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/labelData"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneNumber"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Телефон"
+                    android:textSize="15dp"
+                    android:inputType="phone"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_marginTop="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:hint="Email"
+                    android:background="@drawable/ettext"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Личные данные"
+                android:textColor="@color/colorPrimaryLight" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_fio"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fio"
+                    android:hint="ФИО"
+                    android:background="@drawable/ettext"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_birthDay"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birthDay"
+                    android:hint="Дата рождение"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_Town"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/town"
+                    android:hint="Город"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pro"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/proWork"
+                    android:hint="Стаж работы"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_level"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/level"
+                    android:hint="Уровень образования"
+                    android:textColorHint="#8E8B8B"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/closeScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:background="@drawable/close"
+                android:textColor="#FFB800"
+                android:paddingVertical="12dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toTopOf="@id/btnOkVacancy"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+            <TextView
+                android:id="@+id/btnOkVacancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Отставить заявку"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/corner8"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingVertical="12dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <ProgressBar
         android:id="@+id/loadingVacancy"
