@@ -26,5 +26,6 @@
     <string name="fast_food">Фаст-фуды</string>
     <string name="shop">Магазины</string>
     <string name="e_code">Е-Кодды</string>
+    <string name="vacancy">Вакансия</string>
 
 </resources>

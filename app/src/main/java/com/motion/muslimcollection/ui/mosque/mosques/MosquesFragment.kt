@@ -13,13 +13,11 @@ import org.koin.android.ext.android.inject
 class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     private val mosquesViewModel: MosqueViewModel by inject()
     private lateinit var mosqueAdapter: MosqueAdapter
-
     override fun setupObservers() {
     }
     override fun showConnectedState() {
         RecyclerView()
         initData()
-
     }
     private fun RecyclerView() {
         with(recycler_mosque){
