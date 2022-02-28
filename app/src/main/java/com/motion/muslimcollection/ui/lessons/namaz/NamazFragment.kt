@@ -31,7 +31,7 @@ class NamazFragment : BaseFragment(R.layout.fragment_namaz) {
         initData(args.lessons)
         _adapter.setItemClickListener(object : ItemClickListener {
             override fun onItemClick(position: Int) {
-                val id = _adapter.currentList[position].id             /*  adapter.getList()[position].id*/
+                val id = _adapter.currentList[position].id
                 val action = NamazFragmentDirections.actionNamazFragmentToPliyerFragment(id)
                 (activity as MainActivity).navController.navigate(action)
                 Log.d("TAG", "onItemClick:$id ")
@@ -44,7 +44,7 @@ class NamazFragment : BaseFragment(R.layout.fragment_namaz) {
     }
 
     private fun initRecyclerView() {
-        with(recaudio){
+        with(rec_audio){
             _adapter = AudioAdapter()
             adapter = _adapter
             layoutManager = LinearLayoutManager(requireContext())

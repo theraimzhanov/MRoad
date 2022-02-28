@@ -15,7 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/Theme.Menu"
+
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -44,6 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
                 <ImageView
@@ -62,8 +63,6 @@
             android:id="@+id/btn_college"
             style="@style/_card_view"
             android:layout_marginEnd="13dp"
-            android:clickable="true"
-            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="@+id/btn_room"
             app:layout_constraintEnd_toStartOf="@+id/btn_room">
 
@@ -83,6 +82,7 @@
             android:id="@+id/btn_mosques_"
             style="@style/_card_view"
             android:layout_marginBottom="15dp"
+            app:cardElevation="55dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_college"
             app:layout_constraintStart_toStartOf="@+id/btn_college">
 

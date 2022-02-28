@@ -17,14 +17,15 @@ class AudioAdapter: ListAdapter<LessonItem, AudioViewHolder>(AudioItemDiffUtil()
         click = clickListener
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AudioViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.audiolist,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.audio_list,parent,false)
         return AudioViewHolder(view,click)
 
     }
 
     override fun onBindViewHolder(holder: AudioViewHolder, position: Int) {
         val lessonItem = getItem(position)
-        holder.audioname.text = lessonItem.name
+        holder.name.text = lessonItem.name
+        holder.name_author.text = lessonItem.author
 
     }
 }

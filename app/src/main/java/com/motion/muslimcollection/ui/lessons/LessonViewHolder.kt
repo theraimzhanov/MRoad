@@ -7,7 +7,7 @@ import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.ItemClickListener
 
 class LessonViewHolder(val view: View,clickListener: ItemClickListener):RecyclerView.ViewHolder(view) {
-    val lessonname: TextView =view.findViewById(R.id.tv_less_namaz)
+    val lessonname: TextView =view.findViewById(R.id.tv_lesson_)
     init {
         itemView.setOnClickListener {
             clickListener.onItemClick(adapterPosition,)
