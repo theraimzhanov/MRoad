@@ -1,20 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+<androidx.cardview.widget.CardView
+    android:layout_width="312dp"
+    android:layout_height="117dp"
+    android:layout_marginTop="15dp"
+    app:cardCornerRadius="5dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:cardBackgroundColor="@color/colorPrimaryTool"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
     <TextView
-        android:id="@+id/mosque_text_list"
+        android:id="@+id/ms_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/text"
+        android:layout_marginStart="12dp"
+        android:text="Центральная мечеть им. Имам Сарахси"/>
+
+    <TextView
+        android:id="@+id/ms_address"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:textSize="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/text_letter"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/ms_phone"
+        android:layout_marginTop="90dp"
+        android:textSize="10dp"
+        android:textColor="@color/text"
+        android:layout_marginStart="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="38dp"
-        android:textSize="56dp"
-        android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/img_mosques"
+        android:layout_width="142dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="173dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+</androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

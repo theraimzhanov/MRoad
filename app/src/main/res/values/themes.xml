@@ -10,4 +10,6 @@
     <color name="colorPrimaryLight">#FFFFFF</color>
     <color name="colorGrey">#424242</color>
     <color name="colorPrimaryTool">#2E2E2E</color>
+    <color name="text">#00FDC2</color>
+    <color name="text_letter">#C0C0C0</color>
 </resources>

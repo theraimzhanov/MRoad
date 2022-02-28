@@ -128,7 +128,7 @@
 
                 <ImageView
                     style="@style/_card_view_img"
-                    android:src="@drawable/ic_iuniversity" />
+                    android:src="@drawable/ic_university" />
             </androidx.cardview.widget.CardView>
 
             <TextView
