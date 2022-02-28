@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".ui.lessons.LessonsFragment">
     <ProgressBar
         android:id="@+id/loading_codes"
@@ -16,31 +17,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/lesson_toolbar"
         style="@style/toolbar"
-        android:background="#06483A"
-        android:theme="?attr/hintAnimationEnabled"
+        android:elevation="2dp"
+        android:background="@color/colorPrimaryTool"
         android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/Theme.Menu"
         tools:ignore="MissingConstraints">
         <TextView
             android:text="@string/lessons"
+            android:elevation="2dp"
             android:id="@+id/toolbar_text"
             style="@style/text_mosque_toolbar" />
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:id="@+id/recycler_codes"
-        android:layout_height="0dp"
-        tools:listitem="@layout/listlessoncategories"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_codes"
+            android:layout_width="match_parent"
+            android:background="#8c212226"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lesson_toolbar"
+            tools:listitem="@layout/list_lesson_categories" />
+
+
+
+
 
 
 

@@ -3,6 +3,7 @@ package com.motion.muslimcollection.ui.lessons
 
 import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
@@ -14,7 +15,6 @@ import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_lessons.*
 import kotlinx.android.synthetic.main.fragment_vacancy.*
-import kotlinx.android.synthetic.main.listlessoncategories.*
 import org.koin.android.ext.android.inject
 
 class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
@@ -42,7 +42,7 @@ class LessonsFragment : BaseFragment(R.layout.fragment_lessons) {
         with(recycler_codes){
             lessonAdapter = LessonAdapter()
             adapter = lessonAdapter
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = GridLayoutManager(requireContext(),3)
         }
     }
     private fun initData() {

@@ -18,7 +18,7 @@ class LessonAdapter:ListAdapter<CategoryLesson,LessonViewHolder>(LessonItemDiffU
         click = clickListener
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.listlessoncategories,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_lesson_categories,parent,false)
         return LessonViewHolder(view,click)
     }
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
