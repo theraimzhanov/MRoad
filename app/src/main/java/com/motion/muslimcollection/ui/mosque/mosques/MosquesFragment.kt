@@ -3,6 +3,7 @@ package com.motion.muslimcollection.ui.mosque.mosques
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
+import com.motion.muslimcollection.databinding.FragmentMosquesBinding
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
 
 class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
+    private lateinit var binding: FragmentMosquesBinding
     private val mosquesViewModel: MosqueViewModel by inject()
     private lateinit var mosqueAdapter: MosqueAdapter
     override fun setupObservers() {
@@ -18,10 +20,11 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     override fun showConnectedState() {
         RecyclerView()
         initData()
+
     }
     private fun RecyclerView() {
         with(recycler_mosque){
-            mosqueAdapter = MosqueAdapter()
+            mosqueAdapter = MosqueAdapter(requireContext())
             adapter = mosqueAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
@@ -49,6 +52,8 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     }
     override fun setupUI() {
         super.setupUI()
+        binding = FragmentMosquesBinding.inflate(layoutInflater)
+        val view = binding.root
     }
     fun next() {
 
