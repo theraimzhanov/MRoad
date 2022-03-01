@@ -6,6 +6,7 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
 import com.motion.muslimcollection.ui.mosque.mosque_room.adapter.RoomAdapter
@@ -16,43 +17,50 @@ import org.koin.android.ext.android.inject
 class RoomFragment : BaseFragment(R.layout.fragment_room) {
     private val roomViewModel: RoomViewModel by inject()
     private lateinit var roomAdapter: RoomAdapter
-        override fun setupObservers() {
+    override fun setupObservers() {
 
-        }
-        override fun showConnectedState() {
-            RecyclerView()
-            initData()
-        }
+    }
+
+    override fun showConnectedState() {
+        RecyclerView()
+        initData()
+    }
 
     override fun setupUI() {
-                super.setupUI()
+        super.setupUI()
+        btn_add_rm.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_roomFragment_to_addRoomFragment)
         }
+    }
+
     override fun showBottomNavigation() {
         super.showBottomNavigation()
 
     }
+
     private fun RecyclerView() {
-        with(recycler_room){
+        with(recycler_room) {
             roomAdapter = RoomAdapter()
             adapter = roomAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
+
     private fun initData() {
-        roomViewModel.laoding.observe(this){loading_room.visible = it}
+        roomViewModel.laoding.observe(this) { loading_room.visible = it }
         roomViewModel.getRoomList()
-        roomViewModel.list.observe(this){ it ->
-            when(it.status){
-                Status.LOADING ->{
+        roomViewModel.list.observe(this) { it ->
+            when (it.status) {
+                Status.LOADING -> {
                     roomViewModel.laoding.postValue(true)
                 }
-                Status.SUCCESS ->{
+                Status.SUCCESS -> {
                     roomViewModel.laoding.postValue(false)
                     it.data.let {
                         roomAdapter.submitList(it)
                     }
                 }
-                Status.ERROR ->{
+                Status.ERROR -> {
                     roomViewModel.laoding.postValue(false)
                     context?.showMessage(it.message)
                 }

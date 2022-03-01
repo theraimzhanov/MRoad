@@ -55,4 +55,18 @@
     <string name="room_tv">Молельное\nкомнаты</string>
     <string name="add">Добавить</string>
     <string name="prayer">Намазкана</string>
+    <string name="tv_add_ms">Добавить\nМечети</string>
+    <string name="hint_add_ms_name">Название мечеть</string>
+    <string name="add_ms_phone">Телефон</string>
+    <string name="add_ms_address">Адрес</string>
+    <string name="photo">Приложить фото</string>
+    <string name="add_tv_cl">Добавит\nколледжи</string>
+    <string name="tv_name_college">Название колледжи</string>
+    <string name="tv_add_md">Добавит\nМедресе</string>
+    <string name="tv_name_md">Название медресе</string>
+    <string name="tv_name_un">Название университета</string>
+    <string name="add_tv_room">Добавит\nкомнаты</string>
+    <string name="tv_name_rm">Название молельное комнаты</string>
+    <string name="add_tv_lb">Добавит\nбиблиотеки</string>
+    <string name="tv_name_lb">Название библиотеки</string>
 </resources>

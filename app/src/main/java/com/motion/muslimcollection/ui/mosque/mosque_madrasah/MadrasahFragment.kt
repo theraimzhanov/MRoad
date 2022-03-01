@@ -6,9 +6,11 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
+import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_madrasah.*
 import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
@@ -27,6 +29,9 @@ class MadrasahFragment : BaseFragment(R.layout.fragment_madrasah) {
 
     override fun setupUI() {
         super.setupUI()
+        btn_add_md.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_madrasahFragment_to_addMadrasahFragment)
+        }
     }
     private fun RecyclerView() {
         with(recycler_madrasah){

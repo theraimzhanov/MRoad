@@ -16,6 +16,7 @@ class AddUniversityFragment : BaseFragment(R.layout.fragment_add_university) {
 
     override fun setupUI() {
         super.setupUI()
+
     }
 
 }
