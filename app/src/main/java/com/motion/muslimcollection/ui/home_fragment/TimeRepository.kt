@@ -1,9 +1,8 @@
-package com.motion.muslimcollection.ui.homefragment
+package com.motion.muslimcollection.ui.home_fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.motion.muslimcollection.data.remote.RemoteDataSource
-import com.motion.muslimcollection.model.cafe_model.CafeItem
 import com.motion.muslimcollection.model.time_model.TimeItem
 import com.motion.muslimcollection.network.result.Resource
 import kotlinx.coroutines.Dispatchers

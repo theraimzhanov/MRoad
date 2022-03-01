@@ -15,7 +15,6 @@
     <string name="muslim_road">Muslim Road</string>
     <string name="add_mosque">Мечети</string>
     <string name="mosques">Мечети</string>
-    <string name="madrasah">Медресе</string>
     <string name="university">Исламcкий\n университеты</string>
     <string name="college">Коледжи</string>
     <string name="room">Молельное\n комната</string>
@@ -48,5 +47,11 @@
     <string name="name">Менеджер по продажам</string>
     <string name="data">Данные для связы</string>
     <string name="close">Закрыть</string>
-
+    <string name="ms_text">Мечети</string>
+    <string name="madrasah">Медресе</string>
+    <string name="university_tv">Исламский\nуниверситет</string>
+    <string name="college_tv">Исламский\nколледжи</string>
+    <string name="library_tv">Исламский\nбиблиотеки</string>
+    <string name="room_tv">Молельное\nкомнаты</string>
+    <string name="add">Добавить</string>
 </resources>

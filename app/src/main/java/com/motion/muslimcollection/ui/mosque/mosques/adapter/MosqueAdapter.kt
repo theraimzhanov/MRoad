@@ -26,8 +26,11 @@ class MosqueAdapter(val context: Context):ListAdapter<MosqueItem,MosqueViewHolde
         holder.ms_address.text = mosqueItem.address
         holder.ms_phone.text = mosqueItem.contacts
 
-       Glide.with(context).load(mosqueItem.images).into(holder.s)
-
+        Picasso.get()
+            .load(mosqueItem.images)
+            .placeholder(R.drawable.ic)
+            .error(R.drawable.ic_baseline_image_not)
+            .into(holder.s);
 
     }
 
