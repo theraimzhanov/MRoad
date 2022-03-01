@@ -1,19 +1,42 @@
 package com.motion.muslimcollection.ui.eat.cafe.adapter
 
+import android.annotation.SuppressLint
+import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.motion.muslimcollection.R
+import com.motion.muslimcollection.ext.loadImage
 import com.motion.muslimcollection.model.cafe_model.CafeItem
+import com.motion.muslimcollection.model.vacancy_model.VacancyItem
 
-class CafeAdapter: ListAdapter<CafeItem,CafeViewHolder>(CafeItemDiffUtil()) {
+class CafeAdapter(val context: Context): ListAdapter<CafeItem,CafeViewHolder>(CafeItemDiffUtil()) {
+
+    var onCafeItemClickListener:((CafeItem)->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CafeViewHolder {
-        TODO("Not yet implemented")
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.cafe_item,parent,false)
+        return CafeViewHolder(view)
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onBindViewHolder(holder: CafeViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val item = getItem(position)
+        holder.nameCafe.text = item.name
+        holder.locationCafe.text = item.address
+        holder.phoneCafe.text = item.contacts
+        if (item.mosqueRoom){
+            holder.prayerCafe.text = context.getString(R.string.prayer)
+        } else{
+            holder.prayerCafe.text = ""
+        }
+       holder.imageViewCafe.loadImage(item.images)
+        holder.view.setOnClickListener {
+            onCafeItemClickListener?.invoke(item)
+        }
     }
 
 }

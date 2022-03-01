@@ -76,6 +76,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_phoneNumber"
                 android:layout_width="match_parent"
+                android:textColorHint="#FC858181"
                 android:layout_height="wrap_content"
                 >
 
@@ -92,6 +93,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_email"
+                android:textColorHint="#FC858181"
                 android:layout_marginTop="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +103,6 @@
                     android:id="@+id/email"
                     android:hint="Email"
                     android:background="@drawable/ettext"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -119,6 +120,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_fio"
+                android:textColorHint="#FC858181"
                 android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -127,7 +129,6 @@
                     android:id="@+id/fio"
                     android:hint="ФИО"
                     android:background="@drawable/ettext"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -139,13 +140,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_birthDay"
                 android:layout_marginTop="15dp"
+                android:textColorHint="#FC858181"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/birthDay"
                     android:hint="Дата рождение"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:background="@drawable/ettext"
                     android:layout_width="match_parent"
@@ -158,13 +159,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_Town"
                 android:layout_marginTop="15dp"
+                android:textColorHint="#FC858181"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/town"
                     android:hint="Город"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:background="@drawable/ettext"
                     android:layout_width="match_parent"
@@ -175,6 +176,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_pro"
+                android:textColorHint="#FC858181"
                 android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -182,7 +184,6 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/proWork"
                     android:hint="Стаж работы"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:background="@drawable/ettext"
                     android:layout_width="match_parent"
@@ -194,13 +195,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_level"
                 android:layout_marginTop="15dp"
+                android:textColorHint="#FC858181"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/level"
                     android:hint="Уровень образования"
-                    android:textColorHint="#8E8B8B"
                     android:textSize="15dp"
                     android:background="@drawable/ettext"
                     android:layout_width="match_parent"
