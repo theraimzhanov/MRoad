@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/toolbar_text"
             style="@style/text_mosque_toolbar"
-            android:text="@string/lessons" />
+            android:text="@string/eat" />
 
     </androidx.appcompat.widget.Toolbar>
     <androidx.constraintlayout.widget.ConstraintLayout

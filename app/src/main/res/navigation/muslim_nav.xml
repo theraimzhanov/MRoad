@@ -220,7 +220,11 @@
         android:id="@+id/cafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.CafeFragment"
         android:label="fragment_cafe"
-        tools:layout="@layout/fragment_cafe" />
+        tools:layout="@layout/fragment_cafe" >
+        <action
+            android:id="@+id/action_cafeFragment_to_addCafeFragment"
+            app:destination="@id/addCafeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/restaurantFragment"
         android:name="com.motion.muslimcollection.ui.eat.restaurant.RestaurantFragment"
@@ -313,5 +317,8 @@
             android:id="@+id/action_addUniversityFragment_to_universityFragment"
             app:destination="@id/universityFragment" />
     </fragment>
-
+        android:id="@+id/addCafeFragment"
+        android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
+        android:label="fragment_add_cafe"
+        tools:layout="@layout/fragment_add_cafe" />
 </navigation>

@@ -1,14 +1,17 @@
 package com.motion.muslimcollection.ui.eat.cafe
-import android.media.Image
 import android.util.Log
 import android.widget.ImageView
-import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.eat.cafe.adapter.CafeAdapter
+import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
+import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_cafe.*
 import kotlinx.android.synthetic.main.fragment_vacancy.*
 import org.koin.android.ext.android.inject
@@ -17,10 +20,19 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
 
 
     private val viewModel:CafeViewModel by inject()
+    private lateinit var cafeAdapter: CafeAdapter
     override fun setupObservers() {
+    }
+
+    override fun showConnectedState() {
+        initRecyclerView()
+        initData()
+        shareCafeItem()
+    }
+
+    private fun initData() {
         viewModel.getCafeList()
         viewModel.laoding.observe(this) { loadingCafe.visible = it }
-        viewModel.getCafeList()
         viewModel.list.observe(this){ it ->
             when(it.status){
                 Status.LOADING -> {
@@ -29,9 +41,7 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
                 Status.SUCCESS -> {
                     viewModel.laoding.postValue(false)
                     it.data?.let {
-                        Log.d("TAG", "setupObservers:$it ")
-                        val image : ImageView= requireView().findViewById(R.id.imageCafe)
-                        Glide.with(this).load(it[3].images).into(image)
+                        cafeAdapter.submitList(it)
                     }
                 }
                 Status.ERROR -> {
@@ -42,9 +52,29 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
         }
     }
 
-    override fun showConnectedState() {
-
+    override fun setupUI() {
+        super.setupUI()
+        navigate()
     }
+    private fun navigate() {
+        layout_add.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_cafeFragment_to_addCafeFragment)
+        }
+        exitCafe.setOnClickListener {
+           activity?.onBackPressed()
+        }
+    }
+    private fun initRecyclerView() {
+        with(recyclerCafe){
+            cafeAdapter = CafeAdapter(requireContext())
+            adapter = cafeAdapter
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+    }
+    private fun shareCafeItem() {
+        cafeAdapter.onCafeItemClickListener = {
 
+        }
+    }
 
 }
