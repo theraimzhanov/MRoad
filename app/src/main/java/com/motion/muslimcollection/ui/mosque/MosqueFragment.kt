@@ -9,17 +9,15 @@ import kotlinx.android.synthetic.main.fragment_mosque.*
 class MosqueFragment : BaseFragment(R.layout.fragment_mosque) {
     override fun setupObservers() {
     }
-
     override fun showConnectedState() {
     }
-
     override fun setupUI() {
         super.setupUI()
         next()
     }
     fun next(){
         btn_madrasah.setOnClickListener{
-         //   (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_madrasahFragment)
+          (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_madrasahFragment)
         }
         btn_mosques_.setOnClickListener{
             (activity as MainActivity).navController.navigate(R.id.action_mosqueFragment_to_mosquesFragment)

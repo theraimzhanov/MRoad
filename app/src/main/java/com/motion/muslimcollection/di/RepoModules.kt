@@ -6,7 +6,7 @@ import com.motion.muslimcollection.ui.eat.cafe.CafeRepository
 import com.motion.muslimcollection.ui.eat.fastfood.FastFoodRepository
 import com.motion.muslimcollection.ui.eat.magazine.MagazineRepository
 import com.motion.muslimcollection.ui.eat.restaurant.RestaurantRepository
-import com.motion.muslimcollection.ui.homefragment.TimeRepository
+import com.motion.muslimcollection.ui.home_fragment.TimeRepository
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueRepository
 import com.motion.muslimcollection.ui.mosque.mosque_college.MosqueCollegeRepository
 import com.motion.muslimcollection.ui.mosque.mosque_library.LibraryRepository

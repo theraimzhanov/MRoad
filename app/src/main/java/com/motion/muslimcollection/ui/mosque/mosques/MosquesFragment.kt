@@ -7,12 +7,12 @@ import com.motion.muslimcollection.databinding.FragmentMosquesBinding
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
 import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
 
 class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
-    private lateinit var binding: FragmentMosquesBinding
     private val mosquesViewModel: MosqueViewModel by inject()
     private lateinit var mosqueAdapter: MosqueAdapter
     override fun setupObservers() {
@@ -52,11 +52,12 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     }
     override fun setupUI() {
         super.setupUI()
-        binding = FragmentMosquesBinding.inflate(layoutInflater)
-        val view = binding.root
+        next()
     }
     fun next() {
-
+        btn_add_ms.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_mosquesFragment_to_addMosqueFragment2)
+        }
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()

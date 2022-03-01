@@ -5,7 +5,7 @@ import com.motion.muslimcollection.ui.eat.cafe.CafeViewModel
 import com.motion.muslimcollection.ui.eat.fastfood.FastFoodViewModel
 import com.motion.muslimcollection.ui.eat.magazine.MagazineViewModel
 import com.motion.muslimcollection.ui.eat.restaurant.RestaurantViewModel
-import com.motion.muslimcollection.ui.homefragment.TimeViewModel
+import com.motion.muslimcollection.ui.home_fragment.TimeViewModel
 import com.motion.muslimcollection.ui.lessons.LessonViewModel
 import com.motion.muslimcollection.ui.main.MainViewModel
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel

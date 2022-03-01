@@ -1,13 +1,7 @@
-package com.motion.muslimcollection.ui.homefragment
+package com.motion.muslimcollection.ui.home_fragment
 
-import android.annotation.SuppressLint
-import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.Toast
-import android.widget.Toolbar
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.view.menu.MenuBuilder
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ui.main.MainActivity

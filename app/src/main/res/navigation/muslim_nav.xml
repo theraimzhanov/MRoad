@@ -49,10 +49,14 @@
         android:id="@+id/mosquesFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosques.MosquesFragment"
         android:label="fragment_mosques"
-        tools:layout="@layout/fragment_mosques" />
+        tools:layout="@layout/fragment_mosques" >
+        <action
+            android:id="@+id/action_mosquesFragment_to_addMosqueFragment2"
+            app:destination="@id/addMosqueFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.motion.muslimcollection.ui.homefragment.HomeFragment"
+        android:name="com.motion.muslimcollection.ui.home_fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -162,32 +166,56 @@
         android:id="@+id/addMosqueFragment2"
         android:name="com.motion.muslimcollection.ui.mosque.mosques.AddMosqueFragment"
         android:label="fragment_add_mechet"
-        tools:layout="@layout/fragment_add_mechet" />
+        tools:layout="@layout/fragment_add_mechet" >
+        <action
+            android:id="@+id/action_addMosqueFragment2_to_mosquesFragment"
+            app:destination="@id/mosquesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/madrasahFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
         android:label="fragment_madrasah"
-        tools:layout="@layout/fragment_madrasah" />
+        tools:layout="@layout/fragment_madrasah" >
+        <action
+            android:id="@+id/action_madrasahFragment_to_addMadrasahFragment"
+            app:destination="@id/addMadrasahFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mosqueCollegeFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_college.MosqueCollegeFragment"
         android:label="fragment_mosque_college"
-        tools:layout="@layout/fragment_mosque_college" />
+        tools:layout="@layout/fragment_mosque_college" >
+        <action
+            android:id="@+id/action_mosqueCollegeFragment_to_addMosqueCollegeFragment"
+            app:destination="@id/addMosqueCollegeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/roomFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_room.RoomFragment"
         android:label="fragment_room"
-        tools:layout="@layout/fragment_room" />
+        tools:layout="@layout/fragment_room" >
+        <action
+            android:id="@+id/action_roomFragment_to_addRoomFragment"
+            app:destination="@id/addRoomFragment" />
+    </fragment>
     <fragment
         android:id="@+id/libraryFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_library.LibraryFragment"
         android:label="fragment_library"
-        tools:layout="@layout/fragment_library" />
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_addLibraryFragment"
+            app:destination="@id/addLibraryFragment" />
+    </fragment>
     <fragment
         android:id="@+id/universityFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_university.UniversityFragment"
         android:label="fragment_mosque_university"
-        tools:layout="@layout/fragment_mosque_university" />
+        tools:layout="@layout/fragment_mosque_university" >
+        <action
+            android:id="@+id/action_universityFragment_to_addUniversityFragment"
+            app:destination="@id/addUniversityFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.CafeFragment"
@@ -212,11 +240,6 @@
         android:name="com.motion.muslimcollection.ui.eat.magazine.MagazineFragment"
         android:label="fragment_magazine"
         tools:layout="@layout/fragment_magazine" />
-    <fragment
-        android:id="@+id/madrasahFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
-        android:label="fragment_madrasah"
-        tools:layout="@layout/fragment_madrasah" />
     <fragment
         android:id="@+id/vacancyFragment"
         android:name="com.motion.muslimcollection.ui.vacancy.VacancyFragment"
@@ -250,9 +273,52 @@
             android:defaultValue="default" />
     </fragment>
     <fragment
+        android:id="@+id/addMadrasahFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.AddMadrasahFragment"
+        android:label="fragment_add_madrasah"
+        tools:layout="@layout/fragment_add_madrasah" >
+        <action
+            android:id="@+id/action_addMadrasahFragment_to_madrasahFragment"
+            app:destination="@id/madrasahFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMosqueCollegeFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_college.AddMosqueCollegeFragment"
+        android:label="fragment_add_mosque__college"
+        tools:layout="@layout/fragment_add_mosque__college" >
+        <action
+            android:id="@+id/action_addMosqueCollegeFragment_to_mosqueCollegeFragment"
+            app:destination="@id/mosqueCollegeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRoomFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_room.AddRoomFragment"
+        android:label="fragment_add__room"
+        tools:layout="@layout/fragment_add__room" >
+        <action
+            android:id="@+id/action_addRoomFragment_to_roomFragment"
+            app:destination="@id/roomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLibraryFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_library.AddLibraryFragment"
+        android:label="fragment_add_library"
+        tools:layout="@layout/fragment_add_library" >
+        <action
+            android:id="@+id/action_addLibraryFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUniversityFragment"
+        android:name="com.motion.muslimcollection.ui.mosque.mosque_university.AddUniversityFragment"
+        android:label="fragment_add_university"
+        tools:layout="@layout/fragment_add_university" >
+        <action
+            android:id="@+id/action_addUniversityFragment_to_universityFragment"
+            app:destination="@id/universityFragment" />
+    </fragment>
         android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
         tools:layout="@layout/fragment_add_cafe" />
-
 </navigation>

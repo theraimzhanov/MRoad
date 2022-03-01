@@ -3,8 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mosque.mosques.MosquesFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mosques_toolbar"
+        style="@style/toolbar"
+        android:background="@color/colorPrimaryTool"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:id="@+id/btn_add_ms"
+            style="@style/add_btn">
+            <ImageView
+                style="@style/add_icon"/>
+            <TextView
+                style="@style/add_text"/>
+
+        </LinearLayout>
+    <TextView
+        android:text="@string/ms_text"
+        android:id="@+id/toolbar_text"
+        style="@style/text_mosque_toolbar" />
+    </androidx.appcompat.widget.Toolbar>
 
     <ProgressBar
         android:id="@+id/loading_mosque"
@@ -23,8 +48,9 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_mosque"
-        app:layout_constraintBaseline_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintTop_toBottomOf="@+id/mosques_toolbar"
+        tools:listitem="@layout/list_mosque" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
