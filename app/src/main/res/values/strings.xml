@@ -55,4 +55,11 @@
     <string name="room_tv">Молельное\nкомнаты</string>
     <string name="add">Добавить</string>
     <string name="prayer">Намазкана</string>
+    <string name="add_image">Приложить фото</string>
+    <string name="location">Адрес</string>
+    <string name="phone">Телефон</string>
+    <string name="prayer_home">Намазкана есть/нет</string>
+    <string name="certificate">Сертификат халал присуствует</string>
+    <string name="nameOfCafe">Название кафе</string>
+    <string name="yes">есть</string>
 </resources>
