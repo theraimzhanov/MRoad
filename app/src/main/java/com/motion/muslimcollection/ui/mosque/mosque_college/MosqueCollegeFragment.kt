@@ -6,6 +6,7 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_college.adapter.CollegeAdapter
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
@@ -28,6 +29,10 @@ class MosqueCollegeFragment : BaseFragment(R.layout.fragment_mosque_college) {
 
     override fun setupUI() {
         super.setupUI()
+        btn_add_cl.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_mosqueCollegeFragment_to_addMosqueCollegeFragment)
+
+        }
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()

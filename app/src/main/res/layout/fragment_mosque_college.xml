@@ -17,6 +17,7 @@
         app:popupTheme="@style/Theme.Menu"
         tools:ignore="MissingConstraints">
         <LinearLayout
+            android:id="@+id/btn_add_cl"
             style="@style/add_btn">
             <ImageView
                 style="@style/add_icon"/>

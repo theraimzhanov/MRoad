@@ -6,6 +6,7 @@ import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
+import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_library.adapter.LibraryAdapter
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
@@ -26,6 +27,9 @@ class LibraryFragment : BaseFragment(R.layout.fragment_library) {
 
     override fun setupUI() {
         super.setupUI()
+        btn_add_lb.setOnClickListener {
+            (activity as MainActivity).navController.navigate(R.id.action_libraryFragment_to_addLibraryFragment)
+        }
     }
     private fun RecyclerView() {
         with(recycler_library){

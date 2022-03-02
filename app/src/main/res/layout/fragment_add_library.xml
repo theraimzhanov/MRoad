@@ -1,12 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mosque.mosque_library.AddLibraryFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_lb_toolbar"
+        style="@style/toolbar"
+        android:background="@color/colorPrimaryTool"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/lb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/tv_md"
+            style="@style/text_mosque_toolbar"
+            android:text="@string/add_tv_lb" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_lb_toolbar">
+
+        <LinearLayout
+            android:id="@+id/layout_rm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelData">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_lb_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:boxStrokeColor="@color/text"
+                app:hintTextColor="@color/text"
+                android:textColorHint="#FC858181">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_lb_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ettext"
+                    android:hint="@string/tv_name_lb"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="15dp"
+                    app:boxStrokeColor="@color/text"
+                    app:hintTextColor="@color/text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_lb_birthDay"
+                app:hintTextColor="@color/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:boxStrokeColor="@color/text"
+                android:textColorHint="#FC858181">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_lb_contacts"
+                    app:boxStrokeColor="@color/text"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:layout_width="match_parent"
+                    app:hintTextColor="@color/text"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ettext"
+                    android:hint="@string/add_ms_phone"
+                    android:inputType="number"
+                    android:textSize="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_lb_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:boxStrokeColor="@color/text"
+                app:hintTextColor="@color/text"
+                android:textColorHint="#FC858181">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_lb_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ettext"
+                    android:hint="Режим работы  9:00до16:00"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="15dp"
+                    app:boxStrokeColor="@color/text"
+                    app:hintTextColor="@color/text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_lb_Town"
+                app:boxStrokeColor="@color/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:hintTextColor="@color/text"
+                android:textColorHint="#FC858181">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/add_lb_address"
+                    android:layout_width="match_parent"
+                    app:boxStrokeColor="@color/text"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textColorHint="@color/text"
+                    app:hintTextColor="@color/text"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ettext"
+                    android:hint="@string/add_ms_address"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_lb_photo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorPrimaryLight"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="5dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_camera"
+                    android:layout_marginEnd="80dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView style="@style/add_photo_btn"
+                    android:text="@string/photo"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/add_lb_btn_text"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/colorPrimaryLight"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="5dp">
+
+                <TextView style="@style/add_text_btn"
+                    android:text="@string/add"/>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 
-
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

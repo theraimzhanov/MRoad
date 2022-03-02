@@ -125,14 +125,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fio"
-                    android:hint="ФИО"
-                    android:background="@drawable/ettext"
-                    android:textSize="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:background="@drawable/ettext"
+                    android:hint="ФИО"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
