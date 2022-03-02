@@ -321,7 +321,12 @@
         android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
-        tools:layout="@layout/fragment_add_cafe" />
+        tools:layout="@layout/fragment_add_cafe" >
+        <argument
+            android:name="cafeId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
     android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
