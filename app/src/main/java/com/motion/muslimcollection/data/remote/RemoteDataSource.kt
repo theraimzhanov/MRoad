@@ -1,9 +1,6 @@
 package com.motion.muslimcollection.data.remote
 import com.motion.muslimcollection.model.address_model.*
-import com.motion.muslimcollection.model.cafe_model.CafeItem
-import com.motion.muslimcollection.model.cafe_model.FastFoodItem
-import com.motion.muslimcollection.model.cafe_model.MagazineItem
-import com.motion.muslimcollection.model.cafe_model.RestaurantItem
+import com.motion.muslimcollection.model.cafe_model.*
 import com.motion.muslimcollection.model.time_model.LocationItem
 import com.motion.muslimcollection.model.time_model.TimeItem
 import com.motion.muslimcollection.model.vacancy_model.VacancyItem
@@ -64,7 +61,7 @@ class RemoteDataSource(private val apiService: Service) : BaseDataSource() {
     suspend fun postVacancyList(vacancyItem: VacancyItem) = getResult {
         apiService.addVacancyItem(vacancyItem)
     }
-    suspend fun postCafeItem(cafeItem: CafeItem) = getResult {
+    suspend fun postCafeItem(cafeItem: CafeItemV) = getResult {
         apiService.postCafeItem(cafeItem)
     }
     suspend fun postFastFoodItem(fastFoodItem: FastFoodItem) = getResult {

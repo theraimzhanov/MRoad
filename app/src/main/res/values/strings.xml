@@ -69,4 +69,11 @@
     <string name="tv_name_rm">Название молельное комнаты</string>
     <string name="add_tv_lb">Добавит\nбиблиотеки</string>
     <string name="tv_name_lb">Название библиотеки</string>
+    <string name="add_image">Приложить фото</string>
+    <string name="location">Адрес</string>
+    <string name="phone">Телефон</string>
+    <string name="prayer_home">Намазкана есть/нет</string>
+    <string name="certificate">Сертификат халал присуствует</string>
+    <string name="nameOfCafe">Название кафе</string>
+    <string name="yes">есть</string>
 </resources>

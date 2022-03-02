@@ -1,15 +1,12 @@
 package com.motion.muslimcollection.data.remote
 
-import com.motion.muslimcollection.model.cafe_model.CafeItem
-import com.motion.muslimcollection.model.cafe_model.FastFoodItem
-import com.motion.muslimcollection.model.cafe_model.MagazineItem
-import com.motion.muslimcollection.model.cafe_model.RestaurantItem
 import com.motion.muslimcollection.model.lesson_model.LessonItem
 import com.motion.muslimcollection.model.address_model.MosqueLibraryItem
 import com.motion.muslimcollection.model.address_model.MadrasahItem
 import com.motion.muslimcollection.model.address_model.MosqueCollegeItem
 import com.motion.muslimcollection.model.address_model.MosqueItem
 import com.motion.muslimcollection.model.address_model.RoomItem
+import com.motion.muslimcollection.model.cafe_model.*
 import com.motion.muslimcollection.model.lesson_model.CategoryLesson
 import com.motion.muslimcollection.model.time_model.LocationItem
 import com.motion.muslimcollection.model.time_model.TimeItem
@@ -42,7 +39,7 @@ interface Service {
     suspend fun getAllCafes(): Response<List<CafeItem>>
 
     @POST("/cafe/v1/cafes/")
-    suspend fun postCafeItem(@Body cafeItem: CafeItem): Response<CafeItem>
+    suspend fun postCafeItem(@Body cafeItem: CafeItemV): Response<CafeItemV>
 
     @GET("/cafe/v1/cafes/{id}/")
     suspend fun getCafeItemByID(@Path("id") id: Int): Response<CafeItem>

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.motion.muslimcollection.data.remote.RemoteDataSource
 import com.motion.muslimcollection.model.cafe_model.CafeItem
+import com.motion.muslimcollection.model.cafe_model.CafeItemV
 import com.motion.muslimcollection.network.result.Resource
 import kotlinx.coroutines.Dispatchers
 
@@ -18,7 +19,7 @@ class CafeRepository(private val remoteDataSource: RemoteDataSource) {
         val result = remoteDataSource.getCafeItemById(id)
         emit(result)
     }
-    fun postCafeItem(cafeItem: CafeItem): LiveData<Resource<CafeItem>> = liveData(
+    fun postCafeItem(cafeItem: CafeItemV): LiveData<Resource<CafeItemV>> = liveData(
         Dispatchers.IO) {
         emit(Resource.loading(null))
         emit(remoteDataSource.postCafeItem(cafeItem))
