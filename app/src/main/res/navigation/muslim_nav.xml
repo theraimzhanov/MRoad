@@ -325,6 +325,15 @@
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
         tools:layout="@layout/fragment_add_cafe" />
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.motion.muslimcollection.ui.maps.MapsActivity"
+        android:label="MapsActivity" >
+        <argument
+            android:name="maps"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </activity>
     android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
