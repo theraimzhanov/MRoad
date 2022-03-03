@@ -12,6 +12,7 @@ import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.loadImage
 import com.motion.muslimcollection.model.cafe_model.CafeItem
 import com.motion.muslimcollection.model.vacancy_model.VacancyItem
+import com.squareup.picasso.Picasso
 
 class CafeAdapter(val context: Context): ListAdapter<CafeItem,CafeViewHolder>(CafeItemDiffUtil()) {
 
@@ -33,7 +34,7 @@ class CafeAdapter(val context: Context): ListAdapter<CafeItem,CafeViewHolder>(Ca
         } else{
             holder.prayerCafe.text = ""
         }
-       holder.imageViewCafe.loadImage(item.images)
+        Picasso.get().load(item.images).placeholder(R.drawable.image38).into(holder.imageViewCafe)
         holder.view.setOnClickListener {
             onCafeItemClickListener?.invoke(item)
         }

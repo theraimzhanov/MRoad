@@ -182,10 +182,6 @@
         <action
             android:id="@+id/action_madrasahFragment_to_addMadrasahFragment"
             app:destination="@id/addMadrasahFragment" />
-
-        <action
-            android:id="@+id/action_madrasahFragment_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/mosqueCollegeFragment"
@@ -195,9 +191,6 @@
         <action
             android:id="@+id/action_mosqueCollegeFragment_to_addMosqueCollegeFragment"
             app:destination="@id/addMosqueCollegeFragment" />
-        <action
-            android:id="@+id/action_mosqueCollegeFragment_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/roomFragment"
@@ -207,9 +200,6 @@
         <action
             android:id="@+id/action_roomFragment_to_addRoomFragment"
             app:destination="@id/addRoomFragment" />
-        <action
-            android:id="@+id/action_roomFragment_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/libraryFragment"
@@ -219,9 +209,6 @@
         <action
             android:id="@+id/action_libraryFragment_to_addLibraryFragment"
             app:destination="@id/addLibraryFragment" />
-        <action
-            android:id="@+id/action_libraryFragment_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/universityFragment"
@@ -231,9 +218,6 @@
         <action
             android:id="@+id/action_universityFragment_to_addUniversityFragment"
             app:destination="@id/addUniversityFragment" />
-        <action
-            android:id="@+id/action_universityFragment_to_mapsActivity"
-            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/cafeFragment"
@@ -341,16 +325,6 @@
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
         tools:layout="@layout/fragment_add_cafe" />
-
-    <activity
-        android:id="@+id/mapsActivity"
-        android:name="com.motion.muslimcollection.ui.maps.MapsActivity"
-        android:label="MapsActivity" >
-        <argument
-            android:name="maps"
-            app:argType="integer"
-            android:defaultValue="0" />
-    </activity>
     android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
