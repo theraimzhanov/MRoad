@@ -19,7 +19,7 @@ class AddMadrasahFragment : BaseFragment(R.layout.fragment_add_madrasah) {
     override fun setupUI() {
         super.setupUI()
         md_back.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_addMadrasahFragment_to_madrasahFragment)
+            activity?.onBackPressed()
         }
     }
 

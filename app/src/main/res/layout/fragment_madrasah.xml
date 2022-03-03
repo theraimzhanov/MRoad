@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mosque.mosque_madrasah.MadrasahFragment">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mosques_toolbar"
         style="@style/toolbar"
@@ -16,19 +17,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/Theme.Menu"
         tools:ignore="MissingConstraints">
+
         <LinearLayout
             android:id="@+id/btn_add_md"
             style="@style/add_btn">
-            <ImageView
-                style="@style/add_icon"/>
-            <TextView
-                style="@style/add_text"/>
+
+            <ImageView style="@style/add_icon" />
+
+            <TextView style="@style/add_text" />
 
         </LinearLayout>
+
         <TextView
-            android:text="@string/madrasah"
             android:id="@+id/toolbar_text"
-            style="@style/text_mosque_toolbar" />
+            style="@style/text_mosque_toolbar"
+            android:text="@string/madrasah" />
     </androidx.appcompat.widget.Toolbar>
 
     <ProgressBar
@@ -52,6 +55,7 @@
         android:layout_marginBottom="70dp"
         app:layout_constraintTop_toBottomOf="@+id/mosques_toolbar"
         tools:listitem="@layout/list_madrasah" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

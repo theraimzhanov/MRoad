@@ -17,7 +17,7 @@ class AddMosqueFragment:BaseFragment(R.layout.fragment_add_mechet) {
     override fun setupUI() {
         super.setupUI()
         ms_back.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_addMosqueFragment2_to_mosquesFragment)
+            activity?.onBackPressed()
         }
     }
 

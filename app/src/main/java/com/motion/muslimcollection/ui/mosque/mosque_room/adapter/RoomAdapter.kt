@@ -5,11 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.model.address_model.RoomItem
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahViewHolder
 import com.squareup.picasso.Picasso
 
 class RoomAdapter:ListAdapter<RoomItem,RoomViewHolder>(RoomItemDiffUtil()) {
-
+    var onRoomItemClickListener:((RoomItem)->Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_room,parent,false)
         return RoomViewHolder(view)
@@ -25,5 +24,9 @@ class RoomAdapter:ListAdapter<RoomItem,RoomViewHolder>(RoomItemDiffUtil()) {
             .placeholder(R.drawable.ic)
             .error(R.drawable.ic_baseline_image_not)
             .into(holder.rm_img);
+
+        holder.view.setOnClickListener {
+            onRoomItemClickListener?.invoke(madrasahItem)
+        }
     }
 }

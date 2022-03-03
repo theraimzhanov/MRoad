@@ -9,6 +9,7 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
+import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
 import kotlinx.android.synthetic.main.fragment_add_mechet.*
 import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
@@ -21,7 +22,13 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     override fun showConnectedState() {
         RecyclerView()
         initData()
-
+        shareIdMaps()
+    }
+    private fun shareIdMaps() {
+        mosqueAdapter.onMosquesItemClickListener = {
+            val action = MosquesFragmentDirections.actionMosquesFragmentToMapsActivity(it.id)
+            (activity as MainActivity).navController.navigate(action)
+        }
     }
     private fun RecyclerView() {
         with(recycler_mosque){

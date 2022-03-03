@@ -53,6 +53,9 @@
         <action
             android:id="@+id/action_mosquesFragment_to_addMosqueFragment2"
             app:destination="@id/addMosqueFragment2" />
+        <action
+            android:id="@+id/action_mosquesFragment_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -321,12 +324,7 @@
         android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
-        tools:layout="@layout/fragment_add_cafe" >
-        <argument
-            android:name="cafeId"
-            app:argType="integer"
-            android:defaultValue="-1" />
-    </fragment>
+        tools:layout="@layout/fragment_add_cafe" />
     android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"

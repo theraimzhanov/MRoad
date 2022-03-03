@@ -19,19 +19,18 @@ class MadrasahFragment : BaseFragment(R.layout.fragment_madrasah) {
     private val madrasahViewModel: MadrasahViewModel by inject()
     private lateinit var madrasahAdapter: MadrasahAdapter
     override fun setupObservers() {
-
     }
 
     override fun showConnectedState() {
         RecyclerView()
         initData()
     }
-
     override fun setupUI() {
         super.setupUI()
         btn_add_md.setOnClickListener {
             (activity as MainActivity).navController.navigate(R.id.action_madrasahFragment_to_addMadrasahFragment)
         }
+
     }
     private fun RecyclerView() {
         with(recycler_madrasah){

@@ -18,7 +18,7 @@ class AddMosqueCollegeFragment : BaseFragment(R.layout.fragment_add_mosque__coll
     override fun setupUI() {
         super.setupUI()
         cl_back.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_addMosqueCollegeFragment_to_mosqueCollegeFragment)
+            activity?.onBackPressed()
         }
     }
 
