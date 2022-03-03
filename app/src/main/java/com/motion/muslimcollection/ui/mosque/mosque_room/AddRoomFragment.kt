@@ -16,7 +16,7 @@ class AddRoomFragment : BaseFragment(R.layout.fragment_add__room) {
     override fun setupUI() {
         super.setupUI()
         rm_back.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_addRoomFragment_to_roomFragment)
+            activity?.onBackPressed()
         }
     }
 

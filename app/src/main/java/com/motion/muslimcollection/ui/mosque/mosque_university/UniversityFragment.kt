@@ -25,9 +25,7 @@ class UniversityFragment : BaseFragment(R.layout.fragment_mosque_university) {
         }
     }
     private fun back() {
-        exitVacancy.setOnClickListener {
-            activity?.onBackPressed()
-        }
+
     }
 
 }

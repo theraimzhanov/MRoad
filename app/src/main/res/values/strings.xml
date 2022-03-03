@@ -69,4 +69,9 @@
     <string name="tv_name_rm">Название молельное комнаты</string>
     <string name="add_tv_lb">Добавит\nбиблиотеки</string>
     <string name="tv_name_lb">Название библиотеки</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_map">Нормальная карта</string>
+    <string name="hybrid_map">Гибридная карта</string>
+    <string name="satellite_map">Спутниковая карта</string>
+    <string name="terrain_map">Карта местности</string>
 </resources>

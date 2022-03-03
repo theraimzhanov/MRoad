@@ -7,10 +7,7 @@ import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
 import com.motion.muslimcollection.ui.mosque.mosque_room.adapter.RoomAdapter
-import kotlinx.android.synthetic.main.fragment_madrasah.*
 import kotlinx.android.synthetic.main.fragment_room.*
 import org.koin.android.ext.android.inject
 
@@ -24,6 +21,7 @@ class RoomFragment : BaseFragment(R.layout.fragment_room) {
     override fun showConnectedState() {
         RecyclerView()
         initData()
+        shareIdMaps()
     }
 
     override fun setupUI() {
@@ -36,6 +34,12 @@ class RoomFragment : BaseFragment(R.layout.fragment_room) {
     override fun showBottomNavigation() {
         super.showBottomNavigation()
 
+    }
+    private fun shareIdMaps() {
+        roomAdapter.onRoomItemClickListener = {
+            val action = RoomFragmentDirections.actionRoomFragmentToMapsActivity(it.id)
+            (activity as MainActivity).navController.navigate(action)
+        }
     }
 
     private fun RecyclerView() {
