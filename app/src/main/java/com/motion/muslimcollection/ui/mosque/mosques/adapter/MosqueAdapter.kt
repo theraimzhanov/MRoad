@@ -37,5 +37,4 @@ class MosqueAdapter(val context: Context):ListAdapter<MosqueItem,MosqueViewHolde
         }
     }
 
-
 }
