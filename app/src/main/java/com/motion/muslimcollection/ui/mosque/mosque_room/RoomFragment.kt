@@ -22,6 +22,7 @@ class RoomFragment : BaseFragment(R.layout.fragment_room) {
         RecyclerView()
         initData()
         shareIdMaps()
+
     }
 
     override fun setupUI() {
@@ -37,7 +38,7 @@ class RoomFragment : BaseFragment(R.layout.fragment_room) {
     }
     private fun shareIdMaps() {
         roomAdapter.onRoomItemClickListener = {
-            val action = RoomFragmentDirections.actionRoomFragmentToMapsActivity(it.id)
+            val action = RoomFragmentDirections.actionRoomFragmentToRoomMapsFragment(it.id)
             (activity as MainActivity).navController.navigate(action)
         }
     }

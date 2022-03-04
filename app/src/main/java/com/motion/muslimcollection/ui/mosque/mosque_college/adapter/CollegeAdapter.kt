@@ -4,12 +4,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import com.motion.muslimcollection.R
+import com.motion.muslimcollection.model.address_model.MadrasahItem
 import com.motion.muslimcollection.model.address_model.MosqueCollegeItem
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahViewHolder
 import com.squareup.picasso.Picasso
 
 class CollegeAdapter:ListAdapter<MosqueCollegeItem,CollegeViewHolder>
     (CollegeItemDiffUtil()) {
+    var onCollegeItemClickListener:((MosqueCollegeItem)->Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CollegeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_college,parent,false)
         return CollegeViewHolder(view)
@@ -24,7 +27,11 @@ class CollegeAdapter:ListAdapter<MosqueCollegeItem,CollegeViewHolder>
             .load(collegeItem.images)
             .placeholder(R.drawable.ic)
             .error(R.drawable.ic_baseline_image_not)
-            .into(holder.cl_img);
+            .into(holder.cl_img)
+        holder.view.setOnClickListener {
+            onCollegeItemClickListener?.invoke(collegeItem)
+        }
+
 
 
     }

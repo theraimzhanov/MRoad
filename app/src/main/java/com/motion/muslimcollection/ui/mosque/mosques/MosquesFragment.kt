@@ -26,7 +26,7 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     }
     private fun shareIdMaps() {
         mosqueAdapter.onMosquesItemClickListener = {
-            val action = MosquesFragmentDirections.actionMosquesFragmentToMapsActivity(it.id)
+            val action = MosquesFragmentDirections.actionMosquesFragmentToMosquesMapsFragment(it.id)
             (activity as MainActivity).navController.navigate(action)
         }
     }

@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.ext.showMessage
+import com.motion.muslimcollection.model.address_model.MadrasahItem
 import com.motion.muslimcollection.model.address_model.MosqueLibraryItem
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueViewHolder
 import com.squareup.picasso.Picasso
 
 class LibraryAdapter:androidx.recyclerview.widget.ListAdapter<MosqueLibraryItem,LibraryViewHolder>(LibraryItemDiffUtil()) {
+    var onLibraryItemClickListener:((MosqueLibraryItem)->Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_library,parent,false)
         return LibraryViewHolder(view)
@@ -26,7 +28,9 @@ class LibraryAdapter:androidx.recyclerview.widget.ListAdapter<MosqueLibraryItem,
             .placeholder(R.drawable.ic)
             .error(R.drawable.ic_baseline_image_not)
             .into(holder.lb_img)
-
+        holder.view.setOnClickListener {
+            onLibraryItemClickListener?.invoke(libraryItem)
+        }
     }
 
 }
