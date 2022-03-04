@@ -8,6 +8,7 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_library.adapter.LibraryAdapter
+import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
 import kotlinx.android.synthetic.main.fragment_library.*
@@ -23,8 +24,14 @@ class LibraryFragment : BaseFragment(R.layout.fragment_library) {
     override fun showConnectedState() {
         RecyclerView()
         initData()
+        shareIdMadrasah()
     }
-
+    private fun shareIdMadrasah() {
+        libraryAdapter.onLibraryItemClickListener = {
+            val action = LibraryFragmentDirections.actionLibraryFragmentToLibraryMapsFragment(it.id)
+            (activity as MainActivity).navController.navigate(action)
+        }
+    }
     override fun setupUI() {
         super.setupUI()
         btn_add_lb.setOnClickListener {

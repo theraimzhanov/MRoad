@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import com.google.android.gms.maps.GoogleMap
 import com.motion.muslimcollection.utils.networkConnectivityChecker.NetworkConnectivityChecker
 
 abstract class BaseFragment(private val layout: Int) :
@@ -55,7 +56,6 @@ abstract class BaseFragment(private val layout: Int) :
     abstract fun showConnectedState()
 
     open fun showDisconnectState() {}
-
 }
 
 

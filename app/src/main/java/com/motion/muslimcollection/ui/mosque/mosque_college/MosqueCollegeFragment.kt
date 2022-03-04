@@ -8,6 +8,7 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.mosque_college.adapter.CollegeAdapter
+import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
 import kotlinx.android.synthetic.main.fragment_madrasah.*
@@ -25,6 +26,13 @@ class MosqueCollegeFragment : BaseFragment(R.layout.fragment_mosque_college) {
     override fun showConnectedState() {
         RecyclerView()
         initData()
+        shareIdMadrasah()
+    }
+    private fun shareIdMadrasah() {
+        collegeAdapter.onCollegeItemClickListener = {
+            val action = MosqueCollegeFragmentDirections.actionMosqueCollegeFragmentToCollegeMapsFragment(it.id)
+            (activity as MainActivity).navController.navigate(action)
+        }
     }
 
     override fun setupUI() {

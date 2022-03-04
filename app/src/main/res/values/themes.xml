@@ -4,7 +4,6 @@
         <item name="colorPrimaryVariant">#2E2E2E</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
-
     <color name="colorPrimary">#006953</color>
     <color name="colorPrimaryDark">#26242F</color>
     <color name="colorPrimaryLight">#FFFFFF</color>
