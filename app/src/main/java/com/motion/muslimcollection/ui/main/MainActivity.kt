@@ -14,9 +14,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_maps.*
-import kotlinx.android.synthetic.main.fragment_home.*
 
 class MainActivity : BaseActivity(R.layout.activity_main) {
 

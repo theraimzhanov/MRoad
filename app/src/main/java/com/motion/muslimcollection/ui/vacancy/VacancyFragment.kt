@@ -25,7 +25,7 @@ class VacancyFragment : BaseFragment(R.layout.fragment_vacancy) {
     private lateinit var vacancyAdapter:VacancyAdapter
 
     override fun setupObservers() {
-    }
+    }   
 
     override fun showConnectedState() {
         initRecyclerView()
