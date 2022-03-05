@@ -26,11 +26,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     }
 
-
-
     override fun setupObservers() {
-
-
     }
 
     override fun showConnectedState() {
@@ -43,7 +39,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-        requireActivity().nav_view.visibility = View.VISIBLE
 
     }
 

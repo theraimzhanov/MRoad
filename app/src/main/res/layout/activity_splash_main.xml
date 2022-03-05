@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".splash.SplashFragment">
-
+    tools:context=".splash.SplashMainActivity">
 
     <ImageView
         android:id="@+id/logo_rectangle"
@@ -42,4 +41,5 @@
         app:layout_constraintEnd_toEndOf="@+id/logo_rectangle"
         app:layout_constraintStart_toStartOf="@+id/logo_rectangle"
         app:layout_constraintTop_toBottomOf="@+id/logo_rectangle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
