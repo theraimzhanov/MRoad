@@ -244,17 +244,29 @@
         android:id="@+id/restaurantFragment"
         android:name="com.motion.muslimcollection.ui.eat.restaurant.RestaurantFragment"
         android:label="fragment_restaurant"
-        tools:layout="@layout/fragment_restaurant" />
+        tools:layout="@layout/fragment_restaurant" >
+        <action
+            android:id="@+id/action_restaurantFragment_to_addRestaurantFragment"
+            app:destination="@id/addRestaurantFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fastFoodFragment"
         android:name="com.motion.muslimcollection.ui.eat.fastfood.FastFoodFragment"
         android:label="fragment_fast_food"
-        tools:layout="@layout/fragment_fast_food" />
+        tools:layout="@layout/fragment_fast_food" >
+        <action
+            android:id="@+id/action_fastFoodFragment_to_addFastfoodFragment"
+            app:destination="@id/addFastfoodFragment" />
+    </fragment>
     <fragment
         android:id="@+id/magazineFragment"
         android:name="com.motion.muslimcollection.ui.eat.magazine.MagazineFragment"
         android:label="fragment_magazine"
-        tools:layout="@layout/fragment_magazine" />
+        tools:layout="@layout/fragment_magazine" >
+        <action
+            android:id="@+id/action_magazineFragment_to_addMagazineFragment"
+            app:destination="@id/addMagazineFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vacancyFragment"
         android:name="com.motion.muslimcollection.ui.vacancy.VacancyFragment"
@@ -385,6 +397,21 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+    <fragment
+        android:id="@+id/addMagazineFragment"
+        android:name="com.motion.muslimcollection.ui.eat.magazine.AddMagazineFragment"
+        android:label="fragment_add_magazine"
+        tools:layout="@layout/fragment_add_magazine" />
+    <fragment
+        android:id="@+id/addFastfoodFragment"
+        android:name="com.motion.muslimcollection.ui.eat.fastfood.AddFastfoodFragment"
+        android:label="fragment_add_fast_food"
+        tools:layout="@layout/fragment_add_fast_food" />
+    <fragment
+        android:id="@+id/addRestaurantFragment"
+        android:name="com.motion.muslimcollection.ui.eat.restaurant.AddRestaurantFragment"
+        android:label="fragment_add_restaurant"
+        tools:layout="@layout/fragment_add_restaurant" />
     android:id="@+id/addCafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"

@@ -23,10 +23,10 @@ class CafeAdapter(val context: Context): ListAdapter<CafeItem,CafeViewHolder>(Ca
         return CafeViewHolder(view)
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+    @SuppressLint("UseCompatLoadingForDrawables", "SetTextI18n")
     override fun onBindViewHolder(holder: CafeViewHolder, position: Int) {
         val item = getItem(position)
-        holder.nameCafe.text = item.name
+        holder.nameCafe.text ="Кафе :${item.name}"
         holder.locationCafe.text = item.address
         holder.phoneCafe.text = item.contacts
         if (item.mosqueRoom){
