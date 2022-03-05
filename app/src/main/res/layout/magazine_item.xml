@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="12dp"
-    android:layout_marginTop="20dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_marginTop="20dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:background="@color/colorGrey"
@@ -16,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.55" />
+            app:layout_constraintGuide_percent="0.65" />
 
         <ImageView
-            android:id="@+id/imageViewCafe"
+            android:id="@+id/imageViewMagazine"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,49 +27,49 @@
             app:layout_constraintStart_toEndOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/image38" />
+            app:srcCompat="@drawable/magazine" />
         <TextView
-            android:id="@+id/nameOfCafe"
-            android:layout_width="170dp"
+            android:id="@+id/nameOfMagazine"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Кафе “ФАИЗА”"
+            android:text="”Фрунзе”"
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="parent"
-           app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginStart="20dp"
             android:textColor="#00FDC2"
             android:textSize="16sp"
             />
         <TextView
-            android:id="@+id/prayerCafe"
+            android:id="@+id/timeOfMagazine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Намазкана"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/nameOfCafe"
-            app:layout_constraintStart_toStartOf="@id/nameOfCafe"
+            android:text="@string/timeOfMagazine"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nameOfMagazine"
+            app:layout_constraintStart_toStartOf="@id/nameOfMagazine"
             android:textColor="#C0C0C0"
-            android:textSize="12dp" />
+            android:textSize="12sp" />
         <TextView
-            android:id="@+id/phoneOfCafe"
+            android:id="@+id/phoneOfMagazine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0703 68 41 76"
-            android:layout_marginTop="10dp"
-       app:layout_constraintTop_toBottomOf="@id/prayerCafe"
-            app:layout_constraintStart_toStartOf="@id/prayerCafe"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/timeOfMagazine"
+            app:layout_constraintStart_toStartOf="@id/timeOfMagazine"
             android:textColor="#00FDC2"
             android:textSize="12sp"
             />
         <TextView
-            android:id="@+id/locationCafe"
+            android:id="@+id/locationMagazine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ул. Медерова 157 Бишкек"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/phoneOfCafe"
-            app:layout_constraintStart_toStartOf="@id/phoneOfCafe"
+            app:layout_constraintTop_toBottomOf="@id/phoneOfMagazine"
+            app:layout_constraintStart_toStartOf="@id/phoneOfMagazine"
             android:textColor="#C0C0C0"
+            android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="10dp"
             android:textSize="12dp" />

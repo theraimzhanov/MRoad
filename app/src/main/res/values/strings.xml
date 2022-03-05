@@ -76,4 +76,5 @@
     <string name="certificate">Сертификат халал присуствует</string>
     <string name="nameOfCafe">Название кафе</string>
     <string name="yes">есть</string>
+    <string name="timeOfMagazine">Круглосуточно</string>
 </resources>
