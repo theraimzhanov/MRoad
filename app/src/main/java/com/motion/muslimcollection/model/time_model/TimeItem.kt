@@ -1,5 +1,7 @@
 package com.motion.muslimcollection.model.time_model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 data class TimeItem(
     val fifth_time: String,
     val first_time: String,
