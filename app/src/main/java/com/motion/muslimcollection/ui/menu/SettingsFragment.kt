@@ -1,13 +1,16 @@
 package com.motion.muslimcollection.ui.menu
 
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
-import com.motion.muslimcollection.Helper
+import android.net.Uri
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_settings.*
+
 
 class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     private lateinit var sharedPreferences: SharedPreferences
@@ -69,5 +72,49 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
                 false-> (activity as MainActivity).navController.navigate(R.id.action_settingsFragment2_to_homeFragment)
             }
         }
+        btnSite.setOnClickListener {
+            val url = "https://www.motion-webllc.com/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+        btnInsta.setOnClickListener {
+            val uri = Uri.parse("http://instagram.com/_u/motion_web")
+            val likeIng = Intent(Intent.ACTION_VIEW, uri)
+            likeIng.setPackage("com.instagram.android")
+            try {
+                startActivity(likeIng)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("http://instagram.com/motion_web")
+                    )
+                )
+            }
+        }
+        btnFaceBook.setOnClickListener {
+            val url = "https://m.facebook.com/Web-Motion-1926623227573688/photos/?ref=page_internal"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+        btnVC.setOnClickListener {
+            val url = "https://vk.com/wall-17872403_364"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+        btnOneClass.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(
+                        "https://api.whatsapp.com/send?phone=+996707434390 Number&text=You are handsome"
+                    )
+                )
+            )
+        }
     }
+
 }
