@@ -16,6 +16,7 @@ import com.motion.muslimcollection.network.result.Status
 
 import com.motion.muslimcollection.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_add_vacancy.*
 import kotlinx.android.synthetic.main.fragment_home.*
 import org.koin.android.ext.android.inject
 import java.text.SimpleDateFormat
@@ -101,11 +102,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             passedSeconds++
             updateCurrentTime()
         }, ONE_SECOND)
-
-    override fun setupObservers() {
-
     }
-
 
     private fun fetchPassedSeconds(): Int {
         val calendar = Calendar.getInstance()
@@ -126,9 +123,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
-
-        requireActivity().nav_view.visibility = View.VISIBLE
-
     }
 
     private fun closeScreen() {
@@ -142,5 +136,6 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     companion object {
         private const val ONE_SECOND: Long = 1000L
     }
+
 }
 

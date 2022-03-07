@@ -421,5 +421,10 @@
         android:name="com.motion.muslimcollection.ui.eat.fastfood.AddFastfoodFragment"
         android:label="fragment_add_fast_food"
         tools:layout="@layout/fragment_add_fast_food" />
+    <fragment
+        android:id="@+id/addRestaurantFragment"
+        android:name="com.motion.muslimcollection.ui.eat.restaurant.AddRestaurantFragment"
+        android:label="fragment_add_restaurant"
+        tools:layout="@layout/fragment_add_restaurant" />
 
 </navigation>
