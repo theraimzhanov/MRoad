@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.home_fragment
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.motion.muslimcollection.data.remote.RemoteDataSource

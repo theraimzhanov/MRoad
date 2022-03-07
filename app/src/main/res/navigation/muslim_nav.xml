@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/muslim_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/lessonsFragment"
         android:name="com.motion.muslimcollection.ui.lessons.LessonsFragment"
         android:label="fragment_lessons"
-        tools:layout="@layout/fragment_lessons" >
+        tools:layout="@layout/fragment_lessons">
         <action
             android:id="@+id/action_lessonsFragment_to_namazFragment"
             app:destination="@id/namazFragment" />
@@ -20,14 +20,14 @@
         android:id="@+id/namazFragment"
         android:name="com.motion.muslimcollection.ui.lessons.namaz.NamazFragment"
         android:label="fragment_namaz"
-        tools:layout="@layout/fragment_namaz" >
+        tools:layout="@layout/fragment_namaz">
         <action
             android:id="@+id/action_namazFragment_to_pliyerFragment"
             app:destination="@id/pliyerFragment" />
         <argument
             android:name="lessons"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <action
             android:id="@+id/action_namazFragment_to_lessonsFragment2"
             app:destination="@id/lessonsFragment" />
@@ -36,11 +36,11 @@
         android:id="@+id/pliyerFragment"
         android:name="com.motion.muslimcollection.ui.lessons.pliyer.PliyerFragment"
         android:label="fragment_pliyer"
-        tools:layout="@layout/fragment_pliyer" >
+        tools:layout="@layout/fragment_pliyer">
         <argument
             android:name="audio"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
         <action
             android:id="@+id/action_pliyerFragment_to_namazFragment"
             app:destination="@id/namazFragment" />
@@ -49,7 +49,7 @@
         android:id="@+id/mosquesFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosques.MosquesFragment"
         android:label="fragment_mosques"
-        tools:layout="@layout/fragment_mosques" >
+        tools:layout="@layout/fragment_mosques">
         <action
             android:id="@+id/action_mosquesFragment_to_addMosqueFragment2"
             app:destination="@id/addMosqueFragment2" />
@@ -61,7 +61,7 @@
         android:id="@+id/homeFragment"
         android:name="com.motion.muslimcollection.ui.home_fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_mosqueFragment"
             app:destination="@id/mosqueFragment" />
@@ -79,7 +79,7 @@
         android:id="@+id/mosqueFragment"
         android:name="com.motion.muslimcollection.ui.mosque.MosqueFragment"
         android:label="fragment_mosque"
-        tools:layout="@layout/fragment_mosque" >
+        tools:layout="@layout/fragment_mosque">
         <action
             android:id="@+id/action_mosqueFragment_to_eatFragment2"
             app:destination="@id/eatFragment" />
@@ -91,8 +91,8 @@
             android:id="@+id/action_mosqueFragment_to_addMosqueFragment2"
             app:destination="@id/addMosqueFragment2" />
 
-            android:id="@+id/action_mosqueFragment_to_madrasahFragment"
-            app:destination="@id/madrasahFragment" />
+        android:id="@+id/action_mosqueFragment_to_madrasahFragment"
+        app:destination="@id/madrasahFragment" />
         <action
             android:id="@+id/action_mosqueFragment_to_mosquesFragment"
             app:destination="@id/mosquesFragment" />
@@ -117,7 +117,7 @@
         android:id="@+id/eatFragment"
         android:name="com.motion.muslimcollection.ui.eat.EatFragment"
         android:label="fragment_eat"
-        tools:layout="@layout/fragment_eat" >
+        tools:layout="@layout/fragment_eat">
         <action
             android:id="@+id/action_eatFragment_to_lessonsFragment"
             app:destination="@id/lessonsFragment" />
@@ -141,7 +141,7 @@
         android:id="@+id/settingsFragment2"
         android:name="com.motion.muslimcollection.ui.menu.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" >
+        tools:layout="@layout/fragment_settings">
         <action
             android:id="@+id/action_settingsFragment2_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -153,18 +153,9 @@
         android:id="@+id/appFragment"
         android:name="com.motion.muslimcollection.ui.menu.AppFragment"
         android:label="fragment_app"
-        tools:layout="@layout/fragment_app" >
+        tools:layout="@layout/fragment_app">
         <action
             android:id="@+id/action_appFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/splashFragment"
-        android:name="com.motion.muslimcollection.splash.SplashFragment"
-        android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
@@ -172,7 +163,7 @@
         android:id="@+id/addMosqueFragment2"
         android:name="com.motion.muslimcollection.ui.mosque.mosques.AddMosqueFragment"
         android:label="fragment_add_mechet"
-        tools:layout="@layout/fragment_add_mechet" >
+        tools:layout="@layout/fragment_add_mechet">
         <action
             android:id="@+id/action_addMosqueFragment2_to_mosquesFragment"
             app:destination="@id/mosquesFragment" />
@@ -181,7 +172,7 @@
         android:id="@+id/madrasahFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragment"
         android:label="fragment_madrasah"
-        tools:layout="@layout/fragment_madrasah" >
+        tools:layout="@layout/fragment_madrasah">
         <action
             android:id="@+id/action_madrasahFragment_to_addMadrasahFragment"
             app:destination="@id/addMadrasahFragment" />
@@ -193,7 +184,7 @@
         android:id="@+id/mosqueCollegeFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_college.MosqueCollegeFragment"
         android:label="fragment_mosque_college"
-        tools:layout="@layout/fragment_mosque_college" >
+        tools:layout="@layout/fragment_mosque_college">
         <action
             android:id="@+id/action_mosqueCollegeFragment_to_addMosqueCollegeFragment"
             app:destination="@id/addMosqueCollegeFragment" />
@@ -205,7 +196,7 @@
         android:id="@+id/roomFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_room.RoomFragment"
         android:label="fragment_room"
-        tools:layout="@layout/fragment_room" >
+        tools:layout="@layout/fragment_room">
         <action
             android:id="@+id/action_roomFragment_to_addRoomFragment"
             app:destination="@id/addRoomFragment" />
@@ -217,7 +208,7 @@
         android:id="@+id/libraryFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_library.LibraryFragment"
         android:label="fragment_library"
-        tools:layout="@layout/fragment_library" >
+        tools:layout="@layout/fragment_library">
         <action
             android:id="@+id/action_libraryFragment_to_addLibraryFragment"
             app:destination="@id/addLibraryFragment" />
@@ -229,7 +220,7 @@
         android:id="@+id/universityFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_university.UniversityFragment"
         android:label="fragment_mosque_university"
-        tools:layout="@layout/fragment_mosque_university" >
+        tools:layout="@layout/fragment_mosque_university">
         <action
             android:id="@+id/action_universityFragment_to_addUniversityFragment"
             app:destination="@id/addUniversityFragment" />
@@ -238,7 +229,7 @@
         android:id="@+id/cafeFragment"
         android:name="com.motion.muslimcollection.ui.eat.cafe.CafeFragment"
         android:label="fragment_cafe"
-        tools:layout="@layout/fragment_cafe" >
+        tools:layout="@layout/fragment_cafe">
         <action
             android:id="@+id/action_cafeFragment_to_addCafeFragment"
             app:destination="@id/addCafeFragment" />
@@ -247,22 +238,34 @@
         android:id="@+id/restaurantFragment"
         android:name="com.motion.muslimcollection.ui.eat.restaurant.RestaurantFragment"
         android:label="fragment_restaurant"
-        tools:layout="@layout/fragment_restaurant" />
+        tools:layout="@layout/fragment_restaurant">
+        <action
+            android:id="@+id/action_restaurantFragment_to_addRestaurantFragment"
+            app:destination="@id/addRestaurantFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fastFoodFragment"
         android:name="com.motion.muslimcollection.ui.eat.fastfood.FastFoodFragment"
         android:label="fragment_fast_food"
-        tools:layout="@layout/fragment_fast_food" />
+        tools:layout="@layout/fragment_fast_food">
+        <action
+            android:id="@+id/action_fastFoodFragment_to_addFastfoodFragment"
+            app:destination="@id/addFastfoodFragment" />
+    </fragment>
     <fragment
         android:id="@+id/magazineFragment"
         android:name="com.motion.muslimcollection.ui.eat.magazine.MagazineFragment"
         android:label="fragment_magazine"
-        tools:layout="@layout/fragment_magazine" />
+        tools:layout="@layout/fragment_magazine">
+        <action
+            android:id="@+id/action_magazineFragment_to_addMagazineFragment"
+            app:destination="@id/addMagazineFragment" />
+    </fragment>
     <fragment
         android:id="@+id/vacancyFragment"
         android:name="com.motion.muslimcollection.ui.vacancy.VacancyFragment"
         android:label="fragment_vacancy"
-        tools:layout="@layout/fragment_vacancy" >
+        tools:layout="@layout/fragment_vacancy">
         <action
             android:id="@+id/action_vacancyFragment_to_workFragment"
             app:destination="@id/workFragment" />
@@ -271,11 +274,11 @@
         android:id="@+id/workFragment"
         android:name="com.motion.muslimcollection.ui.menu.WorkFragment"
         android:label="fragment_work"
-        tools:layout="@layout/fragment_work" >
+        tools:layout="@layout/fragment_work">
         <argument
             android:name="vacancyId"
-            app:argType="integer"
-            android:defaultValue="-1" />
+            android:defaultValue="-1"
+            app:argType="integer" />
         <action
             android:id="@+id/action_workFragment_to_addVacancyFragment"
             app:destination="@id/addVacancyFragment" />
@@ -284,17 +287,17 @@
         android:id="@+id/addVacancyFragment"
         android:name="com.motion.muslimcollection.ui.vacancy.AddVacancyFragment"
         android:label="fragment_add_vacancy"
-        tools:layout="@layout/fragment_add_vacancy" >
+        tools:layout="@layout/fragment_add_vacancy">
         <argument
             android:name="vacancy"
-            app:argType="string"
-            android:defaultValue="default" />
+            android:defaultValue="default"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/addMadrasahFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.AddMadrasahFragment"
         android:label="fragment_add_madrasah"
-        tools:layout="@layout/fragment_add_madrasah" >
+        tools:layout="@layout/fragment_add_madrasah">
         <action
             android:id="@+id/action_addMadrasahFragment_to_madrasahFragment"
             app:destination="@id/madrasahFragment" />
@@ -303,7 +306,7 @@
         android:id="@+id/addMosqueCollegeFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_college.AddMosqueCollegeFragment"
         android:label="fragment_add_mosque__college"
-        tools:layout="@layout/fragment_add_mosque__college" >
+        tools:layout="@layout/fragment_add_mosque__college">
         <action
             android:id="@+id/action_addMosqueCollegeFragment_to_mosqueCollegeFragment"
             app:destination="@id/mosqueCollegeFragment" />
@@ -312,7 +315,7 @@
         android:id="@+id/addRoomFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_room.AddRoomFragment"
         android:label="fragment_add__room"
-        tools:layout="@layout/fragment_add__room" >
+        tools:layout="@layout/fragment_add__room">
         <action
             android:id="@+id/action_addRoomFragment_to_roomFragment"
             app:destination="@id/roomFragment" />
@@ -321,7 +324,7 @@
         android:id="@+id/addLibraryFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_library.AddLibraryFragment"
         android:label="fragment_add_library"
-        tools:layout="@layout/fragment_add_library" >
+        tools:layout="@layout/fragment_add_library">
         <action
             android:id="@+id/action_addLibraryFragment_to_libraryFragment"
             app:destination="@id/libraryFragment" />
@@ -330,7 +333,7 @@
         android:id="@+id/addUniversityFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_university.AddUniversityFragment"
         android:label="fragment_add_university"
-        tools:layout="@layout/fragment_add_university" >
+        tools:layout="@layout/fragment_add_university">
         <action
             android:id="@+id/action_addUniversityFragment_to_universityFragment"
             app:destination="@id/universityFragment" />
@@ -344,51 +347,53 @@
         android:id="@+id/madrasahMapsFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.maps.MadrasahMapsFragment"
         android:label="fragment_madrasah_maps"
-        tools:layout="@layout/fragment_madrasah_maps" >
+        tools:layout="@layout/fragment_madrasah_maps">
         <argument
             android:name="madrasah_maps"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/libraryMapsFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_library.maps.LibraryMapsFragment"
-        android:label="LibraryMapsFragment" >
+        android:label="LibraryMapsFragment">
         <argument
             android:name="lb_maps"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/collegeMapsFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_college.maps.CollegeMapsFragment"
-        android:label="CollegeMapsFragment" >
+        android:label="CollegeMapsFragment">
         <argument
             android:name="cl_maps"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/roomMapsFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosque_room.maps.RoomMapsFragment"
         android:label="fragment_room_maps"
-        tools:layout="@layout/fragment_room_maps" >
+        tools:layout="@layout/fragment_room_maps">
         <argument
             android:name="rm_maps"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/mosquesMapsFragment"
         android:name="com.motion.muslimcollection.ui.mosque.mosques.maps.MosquesMapsFragment"
         android:label="fragment_mosques_maps"
-        tools:layout="@layout/fragment_mosques_maps" >
+        tools:layout="@layout/fragment_mosques_maps">
         <argument
             android:name="ms_maps"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
+
     </fragment>
     <fragment
+
         android:id="@+id/cityPickerFragment"
         android:name="com.motion.muslimcollection.ui.menu.CityPickerFragment"
         android:label="fragment_city_picker"
@@ -401,4 +406,20 @@
         android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
         android:label="fragment_add_cafe"
         tools:layout="@layout/fragment_add_cafe" />
+
+        android:id="@+id/addRestaurantFragment"
+        android:name="com.motion.muslimcollection.ui.eat.restaurant.AddRestaurantFragment"
+        android:label="fragment_add_restaurant"
+        tools:layout="@layout/fragment_add_restaurant" />
+    <fragment
+        android:id="@+id/addMagazineFragment"
+        android:name="com.motion.muslimcollection.ui.eat.magazine.AddMagazineFragment"
+        android:label="fragment_add_magazine"
+        tools:layout="@layout/fragment_add_magazine" />
+    <fragment
+        android:id="@+id/addFastfoodFragment"
+        android:name="com.motion.muslimcollection.ui.eat.fastfood.AddFastfoodFragment"
+        android:label="fragment_add_fast_food"
+        tools:layout="@layout/fragment_add_fast_food" />
+
 </navigation>
