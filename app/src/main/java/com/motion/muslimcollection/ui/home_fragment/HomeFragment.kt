@@ -44,6 +44,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
     }
 
+
     override fun onPause() {
         super.onPause()
         updateHandler.removeCallbacksAndMessages(null)
@@ -100,6 +101,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
             passedSeconds++
             updateCurrentTime()
         }, ONE_SECOND)
+
+    override fun setupObservers() {
+
     }
 
 
@@ -122,7 +126,9 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     }
     override fun showBottomNavigation() {
         super.showBottomNavigation()
+
         requireActivity().nav_view.visibility = View.VISIBLE
+
     }
 
     private fun closeScreen() {
