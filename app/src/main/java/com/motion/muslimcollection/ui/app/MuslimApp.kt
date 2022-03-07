@@ -7,6 +7,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class MuslimApp : Application() {
+
     override fun onCreate() {
         super.onCreate()
         NetworkConnectivityChecker.init(this.applicationContext)
