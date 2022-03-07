@@ -81,4 +81,16 @@
     <string name="certificate">Сертификат халал присуствует</string>
     <string name="nameOfCafe">Название кафе</string>
     <string name="yes">есть</string>
+    <string name="muslim_road_site">Muslim Road сайт</string>
+    <string name="instagram_muslim_road">instagram Muslim Road</string>
+    <string name="facebook_muslim_road">Facebook Muslim Road</string>
+    <string name="vkontakte_muslim_road">Vkontakte Muslim Road</string>
+    <string name="odnoclassnic_muslim_road">Одноклассники Muslim Road</string>
+    <string name="english">Английский</string>
+    <string name="kyrgyzsha">Кыргызча</string>
+    <string name="russia">Русский</string>
+    <string name="city_picker">Выберите город</string>
+    <string name="setting">Настройки</string>
+    <string name="apple_apple_apple_apple_apple">Аккумуляторы и адаптеры питания сторонних производителей, иногда выдаваемые за продукцию Apple, по причине неверной конструкции могут представлять угрозу безопасности. Обращаясь по поводу замены аккумулятора в авторизованный сервисный центр компании Apple, вы можете быть уверены в том, что будет установлена оригинальная запасная часть Apple. Если вам нужен новый адаптер для зарядки устройств Apple, рекомендуется приобрести адаптер питания производства Apple.</string>
+    <string name="Support">Служба поддержки</string>
 </resources>
