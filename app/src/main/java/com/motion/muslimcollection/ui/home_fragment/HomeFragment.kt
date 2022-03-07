@@ -66,6 +66,8 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     private fun setUpTime() {
         val date = Date()
         val formatter = SimpleDateFormat("yyyy-MM-dd")
+        val str = SimpleDateFormat("yyyy.MM.dd")
+        home_toolbar_text.text = str.format(Date())
         val strDate = formatter.format(date)
         viewModel.getTimeItem(strDate)
 
