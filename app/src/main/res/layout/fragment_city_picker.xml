@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.menu.CityPickerFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:background="@color/colorPrimaryTool"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:text="Выберите город"
+            android:id="@+id/toolbar_text"
+            style="@style/text_mosque_toolbar" />
+
+        <ImageView
+            android:id="@+id/exit_city"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="335dp"
+        android:layout_height="585dp"
+        android:background="@drawable/setting_shape_abdu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="35dp">
+
+        <RadioGroup
+            android:id="@+id/group_country"
+            style="@style/center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/recycler_margin_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <RadioButton
+                android:id="@+id/country_1"
+                style="@style/radio_btn"
+                android:text="Австралия" />
+
+            <RadioButton
+                android:id="@+id/country_2"
+                style="@style/radio_btn"
+                android:text="Азия"/>
+
+            <RadioButton
+                android:id="@+id/country_3"
+                style="@style/radio_btn"
+                android:text="Африка" />
+
+            <RadioButton
+                android:id="@+id/country_4"
+                style="@style/radio_btn"
+                android:text="Европа" />
+
+            <RadioButton
+                android:id="@+id/country_5"
+                style="@style/radio_btn"
+                android:text="СНГ" />
+
+            <RadioButton
+                android:id="@+id/country_6"
+                style="@style/radio_btn"
+                android:text="Кыргызстан" />
+
+            <RadioButton
+                android:id="@+id/country_7"
+                style="@style/radio_btn"
+                android:text="Россия" />
+
+            <RadioButton
+                android:id="@+id/country_8"
+                style="@style/radio_btn"
+                android:text="Северная Америка" />
+
+            <RadioButton
+                android:id="@+id/country_9"
+                style="@style/radio_btn"
+                android:text="Южная Америка"/>
+
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

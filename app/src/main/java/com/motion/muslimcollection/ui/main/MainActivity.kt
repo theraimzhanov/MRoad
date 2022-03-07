@@ -8,6 +8,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseActivity
 
+import kotlinx.android.synthetic.main.activity_main.*
+
+
 class MainActivity : BaseActivity(R.layout.activity_main) {
 
     lateinit var navController: NavController
