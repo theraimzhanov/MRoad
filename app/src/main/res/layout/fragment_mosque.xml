@@ -37,13 +37,11 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_room"
             style="@style/_card_view"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="400dp"
+            android:layout_marginTop="15dp"
             android:clickable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="@+id/btn_madrasah"
+            app:layout_constraintStart_toStartOf="@+id/btn_madrasah"
+            app:layout_constraintTop_toBottomOf="@+id/btn_madrasah">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
@@ -62,9 +60,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_college"
             style="@style/_card_view"
-            android:layout_marginEnd="13dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_room"
-            app:layout_constraintEnd_toStartOf="@+id/btn_room">
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_mosques_"
+            app:layout_constraintStart_toStartOf="@+id/btn_mosques_"
+            app:layout_constraintTop_toBottomOf="@+id/btn_mosques_">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
@@ -81,10 +80,12 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_mosques_"
             style="@style/_card_view"
-            android:layout_marginBottom="15dp"
             app:cardElevation="55dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_college"
-            app:layout_constraintStart_toStartOf="@+id/btn_college">
+
+            app:layout_constraintBottom_toBottomOf="@+id/btn_madrasah"
+            app:layout_constraintEnd_toStartOf="@+id/btn_madrasah"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_madrasah">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
@@ -101,9 +102,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_madrasah"
             style="@style/_card_view"
-            android:layout_marginStart="13dp"
-            app:layout_constraintStart_toEndOf="@+id/btn_mosques_"
-            app:layout_constraintTop_toTopOf="@+id/btn_mosques_">
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
@@ -120,7 +122,8 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_university"
             style="@style/_card_view"
-            android:layout_marginStart="13dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_madrasah"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_madrasah"
             app:layout_constraintTop_toTopOf="@+id/btn_madrasah">
 
@@ -140,10 +143,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_library"
             style="@style/_card_view"
-            android:layout_marginStart="13dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btn_room"
-            app:layout_constraintStart_toEndOf="@+id/btn_room"
-            app:layout_constraintTop_toTopOf="@+id/btn_room">
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_university"
+            app:layout_constraintStart_toStartOf="@+id/btn_university"
+            app:layout_constraintTop_toBottomOf="@+id/btn_university">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
 
@@ -160,17 +163,16 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/btn_west"
             style="@style/_card_view"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/btn_college"
             app:layout_constraintStart_toStartOf="@+id/btn_college"
             app:layout_constraintTop_toBottomOf="@+id/btn_college">
 
             <androidx.cardview.widget.CardView style="@style/_card_view_icon">
-
                 <ImageView
                     style="@style/_card_view_img"
                     android:src="@drawable/ic_west" />
             </androidx.cardview.widget.CardView>
-
             <TextView
                 style="@style/_card_view_text"
                 android:text="@string/west" />

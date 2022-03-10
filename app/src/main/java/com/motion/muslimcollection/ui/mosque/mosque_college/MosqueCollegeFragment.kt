@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.mosque.mosque_college
 
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
@@ -7,6 +8,7 @@ import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosque_college.adapter.CollegeAdapter
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
@@ -30,8 +32,10 @@ class MosqueCollegeFragment : BaseFragment(R.layout.fragment_mosque_college) {
     }
     private fun shareIdMadrasah() {
         collegeAdapter.onCollegeItemClickListener = {
-            val action = MosqueCollegeFragmentDirections.actionMosqueCollegeFragmentToCollegeMapsFragment(it.id)
-            (activity as MainActivity).navController.navigate(action)
+            val intent = MapsIntentActivity.getLocationIntent(requireContext()
+                ,it.name,it.latitude,it.longitude)
+            startActivity(intent)
+            Log.d("TAG", "shareIdMadrasah:$it ")
         }
     }
 

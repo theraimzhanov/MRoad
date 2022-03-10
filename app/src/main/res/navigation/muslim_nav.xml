@@ -53,9 +53,6 @@
         <action
             android:id="@+id/action_mosquesFragment_to_addMosqueFragment2"
             app:destination="@id/addMosqueFragment2" />
-        <action
-            android:id="@+id/action_mosquesFragment_to_mosquesMapsFragment"
-            app:destination="@id/mosquesMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -90,9 +87,6 @@
 
             android:id="@+id/action_mosqueFragment_to_addMosqueFragment2"
             app:destination="@id/addMosqueFragment2" />
-
-        android:id="@+id/action_mosqueFragment_to_madrasahFragment"
-        app:destination="@id/madrasahFragment" />
         <action
             android:id="@+id/action_mosqueFragment_to_mosquesFragment"
             app:destination="@id/mosquesFragment" />
@@ -111,6 +105,9 @@
         <action
             android:id="@+id/action_mosqueFragment_to_madrasahFragment"
             app:destination="@id/madrasahFragment" />
+        <action
+            android:id="@+id/action_mosqueFragment_to_mapsActivity"
+            app:destination="@id/mapsActivity" />
 
     </fragment>
     <fragment
@@ -176,9 +173,6 @@
         <action
             android:id="@+id/action_madrasahFragment_to_addMadrasahFragment"
             app:destination="@id/addMadrasahFragment" />
-        <action
-            android:id="@+id/action_madrasahFragment_to_madrasahMapsFragment"
-            app:destination="@id/madrasahMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/mosqueCollegeFragment"
@@ -188,9 +182,6 @@
         <action
             android:id="@+id/action_mosqueCollegeFragment_to_addMosqueCollegeFragment"
             app:destination="@id/addMosqueCollegeFragment" />
-        <action
-            android:id="@+id/action_mosqueCollegeFragment_to_collegeMapsFragment"
-            app:destination="@id/collegeMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/roomFragment"
@@ -200,9 +191,6 @@
         <action
             android:id="@+id/action_roomFragment_to_addRoomFragment"
             app:destination="@id/addRoomFragment" />
-        <action
-            android:id="@+id/action_roomFragment_to_roomMapsFragment"
-            app:destination="@id/roomMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/libraryFragment"
@@ -212,9 +200,6 @@
         <action
             android:id="@+id/action_libraryFragment_to_addLibraryFragment"
             app:destination="@id/addLibraryFragment" />
-        <action
-            android:id="@+id/action_libraryFragment_to_libraryMapsFragment"
-            app:destination="@id/libraryMapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/universityFragment"
@@ -344,55 +329,6 @@
         android:label="fragment_add_cafe"
         tools:layout="@layout/fragment_add_cafe" />
     <fragment
-        android:id="@+id/madrasahMapsFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosque_madrasah.maps.MadrasahMapsFragment"
-        android:label="fragment_madrasah_maps"
-        tools:layout="@layout/fragment_madrasah_maps">
-        <argument
-            android:name="madrasah_maps"
-            android:defaultValue="0"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/libraryMapsFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosque_library.maps.LibraryMapsFragment"
-        android:label="LibraryMapsFragment">
-        <argument
-            android:name="lb_maps"
-            android:defaultValue="0"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/collegeMapsFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosque_college.maps.CollegeMapsFragment"
-        android:label="CollegeMapsFragment">
-        <argument
-            android:name="cl_maps"
-            android:defaultValue="0"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/roomMapsFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosque_room.maps.RoomMapsFragment"
-        android:label="fragment_room_maps"
-        tools:layout="@layout/fragment_room_maps">
-        <argument
-            android:name="rm_maps"
-            android:defaultValue="0"
-            app:argType="integer" />
-    </fragment>
-    <fragment
-        android:id="@+id/mosquesMapsFragment"
-        android:name="com.motion.muslimcollection.ui.mosque.mosques.maps.MosquesMapsFragment"
-        android:label="fragment_mosques_maps"
-        tools:layout="@layout/fragment_mosques_maps">
-        <argument
-            android:name="ms_maps"
-            android:defaultValue="0"
-            app:argType="integer" />
-
-    </fragment>
-    <fragment
 
         android:id="@+id/cityPickerFragment"
         android:name="com.motion.muslimcollection.ui.menu.CityPickerFragment"
@@ -402,15 +338,6 @@
             android:id="@+id/action_cityPickerFragment_to_settingsFragment2"
             app:destination="@id/settingsFragment2" />
     </fragment>
-    android:id="@+id/addCafeFragment"
-        android:name="com.motion.muslimcollection.ui.eat.cafe.AddCafeFragment"
-        android:label="fragment_add_cafe"
-        tools:layout="@layout/fragment_add_cafe" />
-
-        android:id="@+id/addRestaurantFragment"
-        android:name="com.motion.muslimcollection.ui.eat.restaurant.AddRestaurantFragment"
-        android:label="fragment_add_restaurant"
-        tools:layout="@layout/fragment_add_restaurant" />
     <fragment
         android:id="@+id/addMagazineFragment"
         android:name="com.motion.muslimcollection.ui.eat.magazine.AddMagazineFragment"
@@ -426,5 +353,10 @@
         android:name="com.motion.muslimcollection.ui.eat.restaurant.AddRestaurantFragment"
         android:label="fragment_add_restaurant"
         tools:layout="@layout/fragment_add_restaurant" />
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.motion.muslimcollection.ui.mosque.location.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
 
 </navigation>
