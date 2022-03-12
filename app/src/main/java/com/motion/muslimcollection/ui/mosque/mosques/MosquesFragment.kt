@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.mosque.mosques
 
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
@@ -8,6 +9,7 @@ import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
 import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
 import kotlinx.android.synthetic.main.fragment_add_mechet.*
@@ -26,8 +28,10 @@ class MosquesFragment : BaseFragment(R.layout.fragment_mosques) {
     }
     private fun shareIdMaps() {
         mosqueAdapter.onMosquesItemClickListener = {
-            val action = MosquesFragmentDirections.actionMosquesFragmentToMosquesMapsFragment(it.id)
-            (activity as MainActivity).navController.navigate(action)
+            val intent = MapsIntentActivity.getLocationIntent(requireContext()
+                ,it.name,it.latitude,it.longitude)
+            startActivity(intent)
+            Log.d("TAG", "shareIdMadrasah:$it ")
         }
     }
     private fun RecyclerView() {

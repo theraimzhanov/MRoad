@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.mosque.mosque_library
 
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
@@ -7,6 +8,7 @@ import com.motion.muslimcollection.ext.showMessage
 import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosque_library.adapter.LibraryAdapter
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
 import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
@@ -28,8 +30,10 @@ class LibraryFragment : BaseFragment(R.layout.fragment_library) {
     }
     private fun shareIdMadrasah() {
         libraryAdapter.onLibraryItemClickListener = {
-            val action = LibraryFragmentDirections.actionLibraryFragmentToLibraryMapsFragment(it.id)
-            (activity as MainActivity).navController.navigate(action)
+      val intent = MapsIntentActivity.getLocationIntent(requireContext()
+              ,it.name,it.latitude,it.longitude)
+       startActivity(intent)
+            Log.d("TAG", "shareIdMadrasah:$it ")
         }
     }
     override fun setupUI() {

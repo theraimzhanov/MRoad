@@ -101,5 +101,8 @@
     <string name="Support">Служба поддержки</string>
     <string name="timeOfMagazine">Круглосуточно</string>
     <string name="labelLog">Бишкек</string>
+    <string name="title_activity_maps_intent">MapsIntentActivity</string>
+    <string name="NoFound">Не найденно</string>
+    <string name="user_loc">Мое местоположение</string>
 
 </resources>
