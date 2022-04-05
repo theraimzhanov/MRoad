@@ -34,14 +34,15 @@ interface Service {
     @GET("/vacancy/v1/vacancy/{id}/")
     suspend fun getVacancyItem(@Path("id") id: Int): Response<VacancyItem>
 
-    // request for cafe
-    @GET("/cafe/v1/cafes/")
+    // request for cafe setting
+
+    @GET("/cafe-list/")
     suspend fun getAllCafes(): Response<List<CafeItem>>
 
     @POST("/cafe/v1/cafes/")
     suspend fun postCafeItem(@Body cafeItem: CafeItemV): Response<CafeItemV>
 
-    @GET("/cafe/v1/cafes/{id}/")
+    @GET("/cafe-detail/{id}/")
     suspend fun getCafeItemByID(@Path("id") id: Int): Response<CafeItem>
 
     @DELETE("/cafe/v1/cafes/{id}/")
@@ -161,7 +162,7 @@ interface Service {
     suspend fun deleteRoomItemById(@Path("id") id: Int): Response<RoomItem>
 
 
-    @GET("/address/v1/mosques/")
+    @GET("/mosques/")
     suspend fun getAllMosqueItem(): Response<List<MosqueItem>>
 
     @POST("/address/v1/mosques/")

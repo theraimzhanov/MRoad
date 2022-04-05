@@ -1,5 +1,5 @@
 package com.motion.muslimcollection.helper
 
 object Constant {
-    const val  BASE_URL =  "https://muslimroad.herokuapp.com"
+    const val  BASE_URL =  "https://muslimr.herokuapp.com"
 }

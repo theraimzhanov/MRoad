@@ -10,6 +10,7 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.eat.cafe.adapter.CafeAdapter
 import com.motion.muslimcollection.ui.main.MainActivity
+import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
 import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_cafe.*
@@ -73,6 +74,10 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
     }
     private fun shareCafeItem() {
         cafeAdapter.onCafeItemClickListener = {
+            val intent = MapsIntentActivity.getLocationIntent(requireContext()
+                ,it.name, it.latitude.toString(),it.longitude.toString())
+            startActivity(intent)
+            Log.d("TAG", "shareIdMadrasah:$it ")
 
         }
     }

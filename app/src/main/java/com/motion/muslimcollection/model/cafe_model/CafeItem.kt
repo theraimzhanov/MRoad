@@ -7,6 +7,8 @@ data class CafeItem(
     var certificate: Boolean = false,
     var mosqueRoom: Boolean = false,
     var images: String? = null,
+    val longitude:String? = null,
+    val latitude:String? = null,
     var id: Int = UN_KNOW_ID,
 ){
     companion object{
