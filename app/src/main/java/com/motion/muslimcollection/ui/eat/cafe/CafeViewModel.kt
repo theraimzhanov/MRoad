@@ -32,7 +32,7 @@ class CafeViewModel(private val repository: CafeRepository) : BaseViewModel() {
         get() = _item
 
     // post CafeItem
-    fun postCafeItem(name: String,location: String,phone: String,certificate:Boolean,mosqueRoom:Boolean) {
+    fun postCafeItem(name: String?,location: String?,phone: String?,certificate:Boolean,mosqueRoom:Boolean,) {
 
         val nameC = parseInputField(name)
         val locationC = parseInputField(location)
@@ -41,7 +41,6 @@ class CafeViewModel(private val repository: CafeRepository) : BaseViewModel() {
         if (boolean){
             val item = CafeItemV(nameC,locationC,phoneC.toString(),certificate,mosqueRoom)
             repository.postCafeItem(item)
-            finishWork()
         }
     }
 
@@ -94,7 +93,7 @@ class CafeViewModel(private val repository: CafeRepository) : BaseViewModel() {
     fun resetErrorInputPhone() {
         _errorInputPhoneNumber.value = false
     }
-    private fun finishWork() {
+     fun finishWork() {
         _shouldCloseScreen.value = Unit
     }
 }

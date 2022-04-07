@@ -18,12 +18,6 @@ class AddRestaurantFragment : BaseFragment(R.layout.fragment_add_restaurant) {
 
     override fun setupUI() {
         super.setupUI()
-        addRestaurant()
     }
 
-    private fun addRestaurant(){
-        btnAddRestaurantItem.setOnClickListener {
-
-        }
-    }
 }
