@@ -12,6 +12,7 @@ import com.motion.muslimcollection.ui.mosque.mosque_college.MosqueCollegeReposit
 import com.motion.muslimcollection.ui.mosque.mosque_library.LibraryRepository
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahRepository
 import com.motion.muslimcollection.ui.mosque.mosque_room.RoomRepository
+import com.motion.muslimcollection.ui.mosque.mosque_university.UniversityRepository
 import com.motion.muslimcollection.ui.vacancy.VacancyRepository
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -31,5 +32,7 @@ val repoModules: Module = module {
     single { MadrasahRepository(get()) }
     single { RoomRepository(get()) }
     single { MosqueRepository(get()) }
+    single { UniversityRepository(get()) }
+
 
 }

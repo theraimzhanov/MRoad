@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.motion.muslimcollection.R
 
 class RestaurantViewHolder(val view: View):RecyclerView.ViewHolder(view) {
-    val nameRestaurant: TextView = view.findViewById(R.id.nameOfCafe)
-    val prayerRestaurant: TextView = view.findViewById(R.id.prayerCafe)
-    val phoneRestaurant: TextView = view.findViewById(R.id.phoneOfCafe)
-    val locationRestaurant: TextView = view.findViewById(R.id.locationCafe)
-    val imageViewRestaurant: ImageView = view.findViewById(R.id.imageViewCafe)
+    val nameRestaurant: TextView = view.findViewById(R.id.res_name)
+    val prayerRestaurant: TextView = view.findViewById(R.id.res_ms_room_yes)
+    val phoneRestaurant: TextView = view.findViewById(R.id.res_phone)
+    val locationRestaurant: TextView = view.findViewById(R.id.res_address)
+    val imageViewRestaurant: ImageView = view.findViewById(R.id.img_restaurant)
 }

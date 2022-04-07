@@ -9,6 +9,8 @@ data class MagazineItem(
     var certificate: Boolean = false,
     var images: String? = null,
     var mosqueRoom: Boolean = false,
+    val longitude:String? = null,
+    val latitude:String? = null,
     var productsCertificate: Boolean = false,
     var id: Int = UN_KNOW_ID
 ){

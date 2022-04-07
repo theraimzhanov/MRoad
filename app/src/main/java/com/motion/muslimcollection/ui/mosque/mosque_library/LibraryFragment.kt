@@ -10,11 +10,7 @@ import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosque_library.adapter.LibraryAdapter
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
-import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
-import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
 import kotlinx.android.synthetic.main.fragment_library.*
-import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
 
 class LibraryFragment : BaseFragment(R.layout.fragment_library) {

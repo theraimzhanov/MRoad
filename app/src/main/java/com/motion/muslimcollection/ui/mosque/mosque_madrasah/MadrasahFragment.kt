@@ -10,12 +10,7 @@ import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
-import com.motion.muslimcollection.ui.mosque.mosques.MosqueViewModel
-import com.motion.muslimcollection.ui.mosque.mosques.adapter.MosqueAdapter
-import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
-import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_madrasah.*
-import kotlinx.android.synthetic.main.fragment_mosques.*
 import org.koin.android.ext.android.inject
 
 class MadrasahFragment : BaseFragment(R.layout.fragment_madrasah) {
@@ -31,8 +26,7 @@ class MadrasahFragment : BaseFragment(R.layout.fragment_madrasah) {
     }
     private fun shareIdMadrasah() {
         madrasahAdapter.onMadrasahItemClickListener = {
-            val intent = MapsIntentActivity.getLocationIntent(requireContext()
-                ,it.name.toString(),it.latitude,it.longitude)
+            val intent = MapsIntentActivity.getLocationIntent(requireContext(),it.name.toString(),it.latitude,it.longitude)
             startActivity(intent)
             Log.d("TAG", "shareIdMadrasah:$it ")
         }

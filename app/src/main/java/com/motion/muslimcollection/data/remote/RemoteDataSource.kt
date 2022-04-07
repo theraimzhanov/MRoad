@@ -56,8 +56,15 @@ class RemoteDataSource(private val apiService: Service) : BaseDataSource() {
     suspend fun getAllMosqueRoom() = getResult {
         apiService.getAllRoom()
     }
+    suspend fun getAllUniversity() = getResult {
+        apiService.getAllUniversityItem()
+    }
 
     //  request -- post
+
+    suspend fun postUniversity(universityItem: UniversityItem) = getResult {
+        apiService.postUniversityItem(universityItem)
+    }
     suspend fun postVacancyList(vacancyItem: VacancyItem) = getResult {
         apiService.addVacancyItem(vacancyItem)
     }
@@ -138,6 +145,10 @@ class RemoteDataSource(private val apiService: Service) : BaseDataSource() {
     suspend fun getRoomItemById(id: Int) = getResult {
         apiService.getRoomItemById(id)
     }
+    suspend fun getUniversity(id:Int) = getResult {
+        apiService.getIDUniversityItem(id)
+    }
+
     // cafe request --- delete by id & by date
     suspend fun deleteCafeItemById(id: Int) = getResult {
         apiService.deleteCafeItemById(id)

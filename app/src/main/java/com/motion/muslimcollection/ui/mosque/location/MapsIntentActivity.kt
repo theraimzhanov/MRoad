@@ -23,8 +23,9 @@ class MapsIntentActivity : AppCompatActivity(), OnMapReadyCallback {
         private const val EXTRA_LOCATION_NAME = "location_name"
         private const val EXTRA_LOCATION_LATITUDE = "location_latitude"
         private const val EXTRA_LOCATION_LONGITUDE = "location_longitude"
-        private const val DEFAULT_LOCATION1 = 41.49794
-        private const val DEFAULT_LOCATION2 = 74.42994
+        private const val DEFAULT_LOCATION1 = 42.859491342903745
+        private const val DEFAULT_LOCATION2 = 74.5836190306363
+
         fun getLocationIntent(
             context: Context,
             name: String,
@@ -39,6 +40,7 @@ class MapsIntentActivity : AppCompatActivity(), OnMapReadyCallback {
             intent.putExtra(EXTRA_LOCATION_LONGITUDE, longitudeL)
             return intent
         }
+
 
         fun parseLatitude(context: Context, number: String): Double? {
             var result: Double?
@@ -93,7 +95,6 @@ class MapsIntentActivity : AppCompatActivity(), OnMapReadyCallback {
         val longitude = intent.getDoubleExtra(EXTRA_LOCATION_LONGITUDE, DEFAULT_LOCATION2)
         try {
             val sydney = LatLng(latitude, longitude)
-
             mMap.addMarker(MarkerOptions().position(sydney).title(name))
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16f))
         } catch (e: Exception) {
