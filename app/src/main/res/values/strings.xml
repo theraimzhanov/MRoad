@@ -1,14 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name"></string>
     <string name="home">Главная</string>
     <string name="ss">Мечеть</string>
     <string name="eat">Покушать</string>
-    <string name="first_prayer_name">Фаджр</string>
-    <string name="second_prayer_name">Восход</string>
-    <string name="third_prayer_name">Зухр</string>
-    <string name="fourth_prayer_name">Аср</string>
-    <string name="fifth_prayer_name">Магриб</string>
-    <string name="sixth_prayer_name">Иша</string>
+    <string name="first_prayer_name" translatable="false">Фаджр</string>
+    <string name="second_prayer_name" translatable="false">Восход</string>
+    <string name="third_prayer_name" translatable="false">Зухр</string>
+    <string name="fourth_prayer_name" translatable="false">Аср</string>
+    <string name="fifth_prayer_name" translatable="false">Магриб</string>
+    <string name="sixth_prayer_name" translatable="false">Иша</string>
     <string name="lessons">Уроки</string>
     <string name="tv_res">Другие ресурсы</string>
     <string name="tv_settings">Настройки</string>
@@ -99,10 +99,10 @@
     <string name="setting">Настройки</string>
     <string name="apple_apple_apple_apple_apple">Аккумуляторы и адаптеры питания сторонних производителей, иногда выдаваемые за продукцию Apple, по причине неверной конструкции могут представлять угрозу безопасности. Обращаясь по поводу замены аккумулятора в авторизованный сервисный центр компании Apple, вы можете быть уверены в том, что будет установлена оригинальная запасная часть Apple. Если вам нужен новый адаптер для зарядки устройств Apple, рекомендуется приобрести адаптер питания производства Apple.</string>
     <string name="Support">Служба поддержки</string>
-    <string name="timeOfMagazine">Круглосуточно</string>
-    <string name="labelLog">Бишкек</string>
-    <string name="title_activity_maps_intent">MapsIntentActivity</string>
-    <string name="NoFound">Не найденно</string>
+    <string name="timeOfMagazine" translatable="false">Круглосуточно</string>
+    <string name="labelLog" translatable="false">Бишкек</string>
+    <string name="title_activity_maps_intent" translatable="false">MapsIntentActivity</string>
+    <string name="NoFound" translatable="false">Не найденно</string>
     <string name="user_loc">Мое местоположение</string>
 
 </resources>

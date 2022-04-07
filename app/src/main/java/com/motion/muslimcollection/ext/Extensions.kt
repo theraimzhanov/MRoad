@@ -1,14 +1,19 @@
 package com.motion.muslimcollection.ext
 
 import android.content.Context
+import android.text.Editable
 import android.text.SpannableString
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import com.bumptech.glide.Glide
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -69,3 +74,14 @@ var View.invisible: Boolean
 interface ItemClickListener {
     fun onItemClick(position: Int)
 }
+ fun parseInputField(fields: String?): String {
+    return fields?.trim() ?: ""}
+
+ fun parseNumber(number: String?): Long {
+    return try {
+        number?.trim()?.toLong() ?: 0
+    } catch (e: Exception) {
+        0
+    }
+}
+

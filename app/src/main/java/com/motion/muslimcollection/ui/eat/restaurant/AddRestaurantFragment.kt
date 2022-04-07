@@ -2,9 +2,12 @@ package com.motion.muslimcollection.ui.eat.restaurant
 
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
+import kotlinx.android.synthetic.main.fragment_add_restaurant.*
 
 
 class AddRestaurantFragment : BaseFragment(R.layout.fragment_add_restaurant) {
+
+
     override fun setupObservers() {
 
     }
@@ -13,11 +16,14 @@ class AddRestaurantFragment : BaseFragment(R.layout.fragment_add_restaurant) {
 
     }
 
-
-
     override fun setupUI() {
         super.setupUI()
+        addRestaurant()
     }
 
+    private fun addRestaurant(){
+        btnAddRestaurantItem.setOnClickListener {
 
+        }
+    }
 }
