@@ -4,6 +4,8 @@ import android.provider.ContactsContract
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.motion.muslimcollection.core.base.BaseViewModel
+import com.motion.muslimcollection.ext.parseInputField
+import com.motion.muslimcollection.ext.parseNumber
 import com.motion.muslimcollection.model.cafe_model.CafeItem
 import com.motion.muslimcollection.model.cafe_model.CafeItemV
 import com.motion.muslimcollection.network.result.Resource
@@ -64,16 +66,7 @@ class CafeViewModel(private val repository: CafeRepository) : BaseViewModel() {
     val shouldCloseScreen: LiveData<Unit>
         get() = _shouldCloseScreen
 
-    private fun parseInputField(fields: String?): String {
-        return fields?.trim() ?: ""}
 
-    private fun parseNumber(number: String?): Long {
-        return try {
-            number?.trim()?.toLong() ?: 0
-        } catch (e: Exception) {
-            0
-        }
-    }
     private fun validateInputName(name:String,phone:Long,
                                   location:String
                                  ):Boolean{

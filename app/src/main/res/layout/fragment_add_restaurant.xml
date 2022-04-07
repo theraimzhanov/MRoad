@@ -1,16 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.eat.restaurant.AddRestaurantFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_restaurant_toolbar"
+        style="@style/toolbar"
+        android:background="@color/colorPrimaryTool"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.Menu"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/exitAddRestaurant"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@string/add"
+            android:id="@+id/toolbar_text"
+            style="@style/text_mosque_toolbar" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/add_restaurant_toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:id="@+id/layout_add_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/labelData"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nameOfRestaurant"
+                android:textColorHint="#FC858181"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTextNameOfRestaurant"
+                    android:hint="@string/nameOfCafe"
+                    android:background="@drawable/ettext"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginVertical="8dp"
+                android:textSize="14sp"
+                android:text="Сертификат халал присуствует"/>
+            <RadioGroup
+                android:id="@+id/rg_res_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/yesRes"
+                    android:text="Да"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/noRes"
+                    android:text="Нет"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginVertical="@dimen/size_8dp"
+                android:text="Намазкана"/>
+            <RadioGroup
+                android:id="@+id/rg_res_prayer_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/yesResMs"
+                    android:text="Да"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/noResMs"
+                    android:text="Нет"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
 
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_phoneOfRestaurant"
+                android:textColorHint="#FC858181"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTextPhoneOfRestaurant"
+                    android:hint="@string/phone"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_locationOfRestaurant"
+                android:layout_marginTop="15dp"
+                android:textColorHint="#FC858181"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTextLocationOfRestaurant"
+                    android:hint="@string/location"
+                    android:textSize="15dp"
+                    android:background="@drawable/ettext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:id="@+id/addImageOfRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/add_image"
+                android:paddingVertical="12dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_vector"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_image"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/btnOkVacancy"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/btnAddRestaurantItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="#006953"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingVertical="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 
-
-
-</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
