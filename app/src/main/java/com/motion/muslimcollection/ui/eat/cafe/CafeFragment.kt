@@ -1,8 +1,6 @@
 package com.motion.muslimcollection.ui.eat.cafe
 import android.util.Log
-import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
 import com.motion.muslimcollection.ext.showMessage
@@ -11,10 +9,7 @@ import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.eat.cafe.adapter.CafeAdapter
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
-import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
-import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
 import kotlinx.android.synthetic.main.fragment_cafe.*
-import kotlinx.android.synthetic.main.fragment_vacancy.*
 import org.koin.android.ext.android.inject
 
 class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
@@ -75,7 +70,7 @@ class CafeFragment : BaseFragment(R.layout.fragment_cafe) {
     private fun shareCafeItem() {
         cafeAdapter.onCafeItemClickListener = {
             val intent = MapsIntentActivity.getLocationIntent(requireContext()
-                ,it.name, it.latitude.toString(),it.longitude.toString())
+                ,it.name,it.latitude.toString(),it.longitude.toString())
             startActivity(intent)
             Log.d("TAG", "shareIdMadrasah:$it ")
 

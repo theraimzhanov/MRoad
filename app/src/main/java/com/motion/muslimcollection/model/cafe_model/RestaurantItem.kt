@@ -7,6 +7,8 @@ data class RestaurantItem(
     var certificate: Boolean = false,
     var mosqueRoom: Boolean = false,
     var bigHall: Int = SIZE_BIG_HALL,
+    val longitude:String? = null,
+    val latitude:String? = null,
     var images:String? = null,
     var  id:Int = UN_KNOW_ID
 ){

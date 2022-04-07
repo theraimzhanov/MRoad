@@ -1,5 +1,6 @@
 package com.motion.muslimcollection.ui.eat.magazine
 
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.motion.muslimcollection.R
 import com.motion.muslimcollection.core.base.BaseFragment
@@ -8,11 +9,8 @@ import com.motion.muslimcollection.ext.visible
 import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.eat.magazine.adapter.MagazineAdapter
 import com.motion.muslimcollection.ui.main.MainActivity
-import com.motion.muslimcollection.ui.vacancy.VacancyFragmentDirections
-import com.motion.muslimcollection.ui.vacancy.VacancyViewModel
-import com.motion.muslimcollection.ui.vacancy.adapter.VacancyAdapter
+import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import kotlinx.android.synthetic.main.fragment_magazine.*
-import kotlinx.android.synthetic.main.fragment_vacancy.*
 import org.koin.android.ext.android.inject
 
 
@@ -31,6 +29,10 @@ class MagazineFragment : BaseFragment( R.layout.fragment_magazine) {
 
     private fun shareIdVacancy() {
         magazineadapter.onMagazineItemClickListener = {
+            val intent = MapsIntentActivity.getLocationIntent(requireContext()
+                ,it.name,it.latitude.toString(),it.longitude.toString())
+            startActivity(intent)
+            Log.d("TAG", "shareIdMadrasah:$it ")
         }
     }
 

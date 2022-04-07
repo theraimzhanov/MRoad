@@ -15,7 +15,7 @@ class RestaurantAdapter(val context: Context):ListAdapter<RestaurantItem,Restaur
     var onItemRestaurantClickListener:((RestaurantItem)->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.cafe_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_restaurant,parent,false)
         return RestaurantViewHolder(view)
     }
 

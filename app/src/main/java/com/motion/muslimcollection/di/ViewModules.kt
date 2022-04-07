@@ -13,6 +13,7 @@ import com.motion.muslimcollection.ui.mosque.mosque_college.MosqueCollegeViewMod
 import com.motion.muslimcollection.ui.mosque.mosque_library.LibraryViewModel
 import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
 import com.motion.muslimcollection.ui.mosque.mosque_room.RoomViewModel
+import com.motion.muslimcollection.ui.mosque.mosque_university.UniversityViewModel
 
 import com.motion.muslimcollection.ui.vacancy.VacancyViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -33,4 +34,5 @@ val viewModules: Module = module {
     viewModel { MadrasahViewModel(get()) }
     viewModel { RoomViewModel(get()) }
     viewModel { MosqueViewModel(get()) }
+    viewModel { UniversityViewModel(get()) }
 }

@@ -61,7 +61,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fastFood_toolbar"
-        tools:listitem="@layout/cafe_item" />
+        tools:listitem="@layout/list_fast_food" />
 
     <ProgressBar
         android:id="@+id/loadingFastFood"

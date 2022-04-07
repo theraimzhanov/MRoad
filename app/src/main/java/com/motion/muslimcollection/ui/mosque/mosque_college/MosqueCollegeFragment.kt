@@ -10,10 +10,6 @@ import com.motion.muslimcollection.network.result.Status
 import com.motion.muslimcollection.ui.main.MainActivity
 import com.motion.muslimcollection.ui.mosque.location.MapsIntentActivity
 import com.motion.muslimcollection.ui.mosque.mosque_college.adapter.CollegeAdapter
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahFragmentDirections
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.MadrasahViewModel
-import com.motion.muslimcollection.ui.mosque.mosque_madrasah.adapter.MadrasahAdapter
-import kotlinx.android.synthetic.main.fragment_madrasah.*
 import kotlinx.android.synthetic.main.fragment_mosque_college.*
 import org.koin.android.ext.android.inject
 

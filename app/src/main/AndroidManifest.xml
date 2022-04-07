@@ -17,10 +17,9 @@
         android:allowBackup="true"
         android:enabled="true"
         android:exported="true"
-        android:icon="@drawable/ic_logo"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo_mr"
+        android:label="Muslim Road"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/ic_rectangle_splash"
         android:supportsRtl="true"
         android:theme="@style/Theme.MuslimCollection">
         <meta-data

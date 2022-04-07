@@ -19,7 +19,7 @@ class FastFoodAdapter(val context: Context): androidx.recyclerview.widget.ListAd
     var onFastFoodItemClickListener:((FastFoodItem)->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastFoodViewHolder {
-       val view = LayoutInflater.from(parent.context).inflate(R.layout.cafe_item,parent,false)
+       val view = LayoutInflater.from(parent.context).inflate(R.layout.list_fast_food,parent,false)
         return FastFoodViewHolder(view)
     }
 

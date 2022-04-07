@@ -9,6 +9,8 @@ data class FastFoodItem(
     var certificate: Boolean = false,
     var mosqueRoom: Boolean = false,
     var images: String? = null,
+    val longitude:String,
+    val latitude:String,
     var id: Int = UN_KNOW_ID
 ){
     companion object{
