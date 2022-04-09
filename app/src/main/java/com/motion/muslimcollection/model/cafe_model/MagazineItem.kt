@@ -4,10 +4,11 @@ data class MagazineItem(
     val name: String,
     val contacts: String,
     val address: String,
-    val site: String,
+    val site: String = EMPTY_PAGE,
     var alcohol: Boolean = false,
     var certificate: Boolean = false,
     var images: String? = null,
+    var worktime:String = WORK_PAGE,
     var mosqueRoom: Boolean = false,
     val longitude:String? = null,
     val latitude:String? = null,
@@ -16,5 +17,7 @@ data class MagazineItem(
 ){
     companion object{
         const val UN_KNOW_ID = -1
+        const val EMPTY_PAGE = "Atabek"
+        const val WORK_PAGE = "8:00"
     }
 }

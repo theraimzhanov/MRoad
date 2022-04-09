@@ -104,7 +104,9 @@
     <string name="title_activity_maps_intent" translatable="false">MapsIntentActivity</string>
     <string name="NoFound" translatable="false">Не найденно</string>
     <string name="user_loc">Мое местоположение</string>
-    <string name="no">Нет</string>
-    <string name="da">Да</string>
+
+    <string name="hint_yes">Да</string>
+    <string name="hint_no">Нет</string>
+
 
 </resources>
