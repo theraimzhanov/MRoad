@@ -41,7 +41,7 @@ Developers are welcome to explore, modify, and extend the application.
 The full UI/UX design is available in Figma.  
 If you would like access to the design files, please contact:
 
-📧 **raimjanovnursultan**
+📧 **raimjanovnursultan@gmail.com**
 
 ---
 
